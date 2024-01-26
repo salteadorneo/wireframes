@@ -41,7 +41,7 @@
     font-family: var(--font-family);
     color: var(--line-color);
     text-wrap: pretty;
-    margin: 0 0 .5rem 0;
+    margin: 0;
 }
 
 .flex {
@@ -75,6 +75,7 @@
 }
 
 .image {
+    display: flex;
     background: var(--background);
     border: var(--line-width) solid var(--line-color);
     position: relative;
