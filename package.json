@@ -1,0 +1,11 @@
+{
+  "name": "wireframe-ui",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [],
+  "author": "salteadorneo",
+  "license": "MIT"
+}
