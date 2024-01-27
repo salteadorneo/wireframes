@@ -5,7 +5,13 @@
   "workspaces": [
     "packages/*"
   ],
-  "keywords": [],
+  "keywords": [
+    "wireframe",
+    "ui",
+    "design",
+    "components",
+    "react"
+  ],
   "author": "salteadorneo",
-  "license": "MIT"
+  "license": "BSD-3-Clause"
 }
