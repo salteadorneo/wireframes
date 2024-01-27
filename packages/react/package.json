@@ -1,7 +1,7 @@
 {
   "name": "wireframe-ui-react",
-  "private": true,
-  "version": "0.0.1",
+  "private": false,
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -11,12 +11,18 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salteadorneo/Wireframe-UI"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --p ./tsconfig-build.json && vite build --w",
+    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "build:w": "tsc --p ./tsconfig-build.json && vite build --w",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish": "npm run build && npm publish"
   },
   "peerDependencies": {
     "react": "^18.2.0",
