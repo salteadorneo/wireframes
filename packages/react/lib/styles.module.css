@@ -99,7 +99,7 @@
     border: var(--line-width) solid var(--line-color);
     position: relative;
 
-    svg {
+    &svg {
         position: absolute;
         top: 50%;
         left: 50%;
