@@ -1,2 +1,2 @@
-# Wireframe UI
+# Wireframes
 

@@ -1,6 +1,6 @@
 {
   "name": "wireframes",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "",
   "keywords": [
     "wireframe",
@@ -21,7 +21,7 @@
   "unpkg": "dist/wireframes.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/salteadorneo/wireframes"
   },
   "files": [
     "dist/",
