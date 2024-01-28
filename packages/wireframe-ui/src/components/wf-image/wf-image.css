@@ -1,0 +1,19 @@
+div {
+    display: flex;
+    background: var(--background);
+    border: var(--line-width) solid var(--line-color);
+    position: relative;
+    background:
+        linear-gradient(to top left,
+            transparent 0%,
+            transparent calc(50% - var(--line-width)),
+            var(--line-color) 50%,
+            transparent calc(50% + var(--line-width)),
+            transparent 100%),
+        linear-gradient(to top right,
+            transparent 0%,
+            transparent calc(50% - var(--line-width)),
+            var(--line-color) 50%,
+            transparent calc(50% + var(--line-width)),
+            transparent 100%);
+}

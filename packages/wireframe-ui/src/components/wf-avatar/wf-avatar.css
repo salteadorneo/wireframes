@@ -1,0 +1,6 @@
+div {
+    aspect-ratio: 1 / 1;
+    background: var(--background);
+    border: var(--line-width) solid var(--line-color);
+    border-radius: 50%;
+}

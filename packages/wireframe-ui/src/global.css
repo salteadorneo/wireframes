@@ -1,0 +1,30 @@
+:root {
+    --line-width: 2px;
+    --line-color: black;
+    --background: white;
+
+    --font-family: 'Virgil', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+[data-theme="dark"] {
+    --line-color: white;
+    --background: black;
+}
+
+@font-face {
+    font-family: 'Virgil';
+    src: url('../fonts/Virgil.woff2') format('woff2'),
+        url('../fonts/Virgil.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.logos {
+    filter: grayscale(100%);
+}

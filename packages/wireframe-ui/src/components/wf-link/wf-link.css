@@ -1,0 +1,6 @@
+a {
+    font-family: var(--font-family);
+    color: var(--line-color) !important;
+    border-bottom: var(--line-width) solid var(--line-color) !important;
+    text-decoration: none;
+}

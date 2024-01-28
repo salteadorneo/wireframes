@@ -1,0 +1,11 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family);
+    color: var(--line-color);
+    text-wrap: balance;
+    margin: .5rem 0;
+}

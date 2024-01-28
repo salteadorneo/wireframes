@@ -1,0 +1,6 @@
+p {
+  font-family: var(--font-family);
+  color: var(--line-color);
+  text-wrap: pretty;
+  margin: 0;
+}
