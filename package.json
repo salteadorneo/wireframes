@@ -1,6 +1,6 @@
 {
-  "name": "wireframe-ui",
-  "version": "0.0.3",
+  "name": "wireframes",
+  "version": "0.0.1",
   "description": "",
   "keywords": [
     "wireframe",
@@ -18,7 +18,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/wireframe-ui/wireframe-ui.esm.js",
+  "unpkg": "dist/wireframes.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"

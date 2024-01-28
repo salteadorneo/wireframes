@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default  |
-| -------- | --------- | ----------- | -------- | -------- |
-| `size`   | `size`    |             | `string` | `"64px"` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `size`   | `size`    |             | `string` | `'64px'`    |
+| `text`   | `text`    |             | `string` | `undefined` |
 
 
 ----------------------------------------------

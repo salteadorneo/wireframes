@@ -6,9 +6,9 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class WfButton {
-  @Prop() backgroundColor?: string = 'white';
-  @Prop() color?: string = 'black';
-  @Prop() borderColor?: string = 'black';
+  @Prop() backgroundColor?: string;
+  @Prop() color?: string;
+  @Prop() borderColor?: string;
 
   render() {
     return (

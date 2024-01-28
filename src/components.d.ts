@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface WfAvatar {
         "size"?: string;
+        "text"?: string;
     }
     interface WfButton {
         "backgroundColor"?: string;
@@ -27,7 +28,9 @@ export namespace Components {
     }
     interface WfImage {
         "aspectRatio"?: string;
+        "borderRadius"?: string;
         "height"?: string;
+        "text"?: string;
         "width"?: string;
     }
     interface WfLink {
@@ -126,6 +129,7 @@ declare global {
 declare namespace LocalJSX {
     interface WfAvatar {
         "size"?: string;
+        "text"?: string;
     }
     interface WfButton {
         "backgroundColor"?: string;
@@ -145,7 +149,9 @@ declare namespace LocalJSX {
     }
     interface WfImage {
         "aspectRatio"?: string;
+        "borderRadius"?: string;
         "height"?: string;
+        "text"?: string;
         "width"?: string;
     }
     interface WfLink {

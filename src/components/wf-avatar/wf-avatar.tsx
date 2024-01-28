@@ -7,6 +7,7 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class WfAvatar {
   @Prop() size?: string = '64px';
+  @Prop() text?: string;
 
   render() {
     return (
@@ -15,7 +16,9 @@ export class WfAvatar {
           width: this.size,
           height: this.size,
         }}
-      />
+      >
+        {this.text}
+      </div>
     );
   }
 }

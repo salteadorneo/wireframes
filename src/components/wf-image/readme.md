@@ -7,11 +7,13 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type     | Default  |
-| ------------- | -------------- | ----------- | -------- | -------- |
-| `aspectRatio` | `aspect-ratio` |             | `string` | `"1"`    |
-| `height`      | `height`       |             | `string` | `'auto'` |
-| `width`       | `width`        |             | `string` | `'auto'` |
+| Property       | Attribute       | Description | Type     | Default     |
+| -------------- | --------------- | ----------- | -------- | ----------- |
+| `aspectRatio`  | `aspect-ratio`  |             | `string` | `undefined` |
+| `borderRadius` | `border-radius` |             | `string` | `undefined` |
+| `height`       | `height`        |             | `string` | `undefined` |
+| `text`         | `text`          |             | `string` | `undefined` |
+| `width`        | `width`         |             | `string` | `undefined` |
 
 
 ----------------------------------------------

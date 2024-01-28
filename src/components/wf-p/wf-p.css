@@ -1,6 +1,6 @@
 p {
   font-family: var(--font-family);
-  color: var(--line-color);
+  color: var(--line-color, black);
   text-wrap: pretty;
   margin: 0;
 }

@@ -1,7 +1,9 @@
 button {
   font-family: var(--font-family);
-  color: var(--line-color);
-  background: var(--background);
-  border: var(--line-width) solid var(--line-color);
+  color: var(--line-color, black);
+  background: var(--background, white);
+  border-width: var(--line-width, 2px);
+  border-style: solid;
+  border-color: var(--line-color, black);
   padding: .5rem 1rem;
 }

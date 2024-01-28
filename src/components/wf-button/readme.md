@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property          | Attribute          | Description | Type     | Default   |
-| ----------------- | ------------------ | ----------- | -------- | --------- |
-| `backgroundColor` | `background-color` |             | `string` | `'white'` |
-| `borderColor`     | `border-color`     |             | `string` | `'black'` |
-| `color`           | `color`            |             | `string` | `'black'` |
+| Property          | Attribute          | Description | Type     | Default     |
+| ----------------- | ------------------ | ----------- | -------- | ----------- |
+| `backgroundColor` | `background-color` |             | `string` | `undefined` |
+| `borderColor`     | `border-color`     |             | `string` | `undefined` |
+| `color`           | `color`            |             | `string` | `undefined` |
 
 
 ----------------------------------------------

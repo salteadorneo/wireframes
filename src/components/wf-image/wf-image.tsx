@@ -6,9 +6,11 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class WfImage {
-  @Prop() width?: string = 'auto';
-  @Prop() height?: string = 'auto';
-  @Prop() aspectRatio?: string = '1';
+  @Prop() width?: string;
+  @Prop() height?: string;
+  @Prop() aspectRatio?: string;
+  @Prop() text?: string;
+  @Prop() borderRadius?: string;
 
   render() {
     return (
@@ -17,8 +19,11 @@ export class WfImage {
           width: this.width,
           height: this.height,
           aspectRatio: this.aspectRatio,
+          borderRadius: this.borderRadius,
         }}
-      />
+      >
+        {this.text}
+      </div>
     );
   }
 }

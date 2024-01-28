@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'wireframe-ui',
+  namespace: 'wireframes',
   globalStyle: 'src/global.css',
   outputTargets: [
     {
