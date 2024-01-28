@@ -43,6 +43,17 @@ export namespace Components {
         "fontSize"?: string;
         "textAlign"?: 'left' | 'center' | 'right' | 'justify';
     }
+    interface WfTabContent {
+        "getChild": () => Promise<{ select: any; unselect: any; name: string; }>;
+        "name"?: string;
+    }
+    interface WfTabHeader {
+        "getChild": () => Promise<{ select: any; unselect: any; name: string; }>;
+        "name"?: string;
+    }
+    interface WfTabs {
+        "names"?: string;
+    }
     interface WfTitle {
         "fontWeight"?: string;
         "textAlign"?: string;
@@ -54,6 +65,10 @@ export namespace Components {
         "margin"?: string;
         "width"?: string;
     }
+}
+export interface WfTabHeaderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLWfTabHeaderElement;
 }
 declare global {
     interface HTMLWfButtonElement extends Components.WfButton, HTMLStencilElement {
@@ -98,6 +113,35 @@ declare global {
         prototype: HTMLWfPElement;
         new (): HTMLWfPElement;
     };
+    interface HTMLWfTabContentElement extends Components.WfTabContent, HTMLStencilElement {
+    }
+    var HTMLWfTabContentElement: {
+        prototype: HTMLWfTabContentElement;
+        new (): HTMLWfTabContentElement;
+    };
+    interface HTMLWfTabHeaderElementEventMap {
+        "selected": any;
+    }
+    interface HTMLWfTabHeaderElement extends Components.WfTabHeader, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLWfTabHeaderElementEventMap>(type: K, listener: (this: HTMLWfTabHeaderElement, ev: WfTabHeaderCustomEvent<HTMLWfTabHeaderElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLWfTabHeaderElementEventMap>(type: K, listener: (this: HTMLWfTabHeaderElement, ev: WfTabHeaderCustomEvent<HTMLWfTabHeaderElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLWfTabHeaderElement: {
+        prototype: HTMLWfTabHeaderElement;
+        new (): HTMLWfTabHeaderElement;
+    };
+    interface HTMLWfTabsElement extends Components.WfTabs, HTMLStencilElement {
+    }
+    var HTMLWfTabsElement: {
+        prototype: HTMLWfTabsElement;
+        new (): HTMLWfTabsElement;
+    };
     interface HTMLWfTitleElement extends Components.WfTitle, HTMLStencilElement {
     }
     var HTMLWfTitleElement: {
@@ -118,6 +162,9 @@ declare global {
         "wf-link": HTMLWfLinkElement;
         "wf-lorem": HTMLWfLoremElement;
         "wf-p": HTMLWfPElement;
+        "wf-tab-content": HTMLWfTabContentElement;
+        "wf-tab-header": HTMLWfTabHeaderElement;
+        "wf-tabs": HTMLWfTabsElement;
         "wf-title": HTMLWfTitleElement;
         "wf-video": HTMLWfVideoElement;
     }
@@ -160,6 +207,16 @@ declare namespace LocalJSX {
         "fontSize"?: string;
         "textAlign"?: 'left' | 'center' | 'right' | 'justify';
     }
+    interface WfTabContent {
+        "name"?: string;
+    }
+    interface WfTabHeader {
+        "name"?: string;
+        "onSelected"?: (event: WfTabHeaderCustomEvent<any>) => void;
+    }
+    interface WfTabs {
+        "names"?: string;
+    }
     interface WfTitle {
         "fontWeight"?: string;
         "textAlign"?: string;
@@ -179,6 +236,9 @@ declare namespace LocalJSX {
         "wf-link": WfLink;
         "wf-lorem": WfLorem;
         "wf-p": WfP;
+        "wf-tab-content": WfTabContent;
+        "wf-tab-header": WfTabHeader;
+        "wf-tabs": WfTabs;
         "wf-title": WfTitle;
         "wf-video": WfVideo;
     }
@@ -194,6 +254,9 @@ declare module "@stencil/core" {
             "wf-link": LocalJSX.WfLink & JSXBase.HTMLAttributes<HTMLWfLinkElement>;
             "wf-lorem": LocalJSX.WfLorem & JSXBase.HTMLAttributes<HTMLWfLoremElement>;
             "wf-p": LocalJSX.WfP & JSXBase.HTMLAttributes<HTMLWfPElement>;
+            "wf-tab-content": LocalJSX.WfTabContent & JSXBase.HTMLAttributes<HTMLWfTabContentElement>;
+            "wf-tab-header": LocalJSX.WfTabHeader & JSXBase.HTMLAttributes<HTMLWfTabHeaderElement>;
+            "wf-tabs": LocalJSX.WfTabs & JSXBase.HTMLAttributes<HTMLWfTabsElement>;
             "wf-title": LocalJSX.WfTitle & JSXBase.HTMLAttributes<HTMLWfTitleElement>;
             "wf-video": LocalJSX.WfVideo & JSXBase.HTMLAttributes<HTMLWfVideoElement>;
         }
