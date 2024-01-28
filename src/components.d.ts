@@ -43,6 +43,11 @@ export namespace Components {
     interface WfTitle {
         "variant"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     }
+    interface WfVideo {
+        "aspectRatio"?: string;
+        "height"?: string;
+        "width"?: string;
+    }
 }
 declare global {
     interface HTMLWfAvatarElement extends Components.WfAvatar, HTMLStencilElement {
@@ -99,6 +104,12 @@ declare global {
         prototype: HTMLWfTitleElement;
         new (): HTMLWfTitleElement;
     };
+    interface HTMLWfVideoElement extends Components.WfVideo, HTMLStencilElement {
+    }
+    var HTMLWfVideoElement: {
+        prototype: HTMLWfVideoElement;
+        new (): HTMLWfVideoElement;
+    };
     interface HTMLElementTagNameMap {
         "wf-avatar": HTMLWfAvatarElement;
         "wf-button": HTMLWfButtonElement;
@@ -109,6 +120,7 @@ declare global {
         "wf-lorem": HTMLWfLoremElement;
         "wf-p": HTMLWfPElement;
         "wf-title": HTMLWfTitleElement;
+        "wf-video": HTMLWfVideoElement;
     }
 }
 declare namespace LocalJSX {
@@ -149,6 +161,11 @@ declare namespace LocalJSX {
     interface WfTitle {
         "variant"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     }
+    interface WfVideo {
+        "aspectRatio"?: string;
+        "height"?: string;
+        "width"?: string;
+    }
     interface IntrinsicElements {
         "wf-avatar": WfAvatar;
         "wf-button": WfButton;
@@ -159,6 +176,7 @@ declare namespace LocalJSX {
         "wf-lorem": WfLorem;
         "wf-p": WfP;
         "wf-title": WfTitle;
+        "wf-video": WfVideo;
     }
 }
 export { LocalJSX as JSX };
@@ -174,6 +192,7 @@ declare module "@stencil/core" {
             "wf-lorem": LocalJSX.WfLorem & JSXBase.HTMLAttributes<HTMLWfLoremElement>;
             "wf-p": LocalJSX.WfP & JSXBase.HTMLAttributes<HTMLWfPElement>;
             "wf-title": LocalJSX.WfTitle & JSXBase.HTMLAttributes<HTMLWfTitleElement>;
+            "wf-video": LocalJSX.WfVideo & JSXBase.HTMLAttributes<HTMLWfVideoElement>;
         }
     }
 }
