@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    gap: 10px;
+    font-family: var(--font-family);
+    color: var(--line-color, black);
+    border-bottom: 1px solid var(--line-color, white);
+}
+
+.content {
+    font-family: var(--font-family);
+    color: var(--line-color, black);
+    padding: 16px 0;
+}

@@ -1,0 +1,8 @@
+div {
+    cursor: default;
+    padding: 4px 16px;
+}
+
+.selected {
+    border-bottom: var(--line-width, 2px) solid var(--line-color, white);
+}
