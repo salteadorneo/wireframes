@@ -1,10 +1,7 @@
 {
   "name": "wireframe-ui",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "",
-  "workspaces": [
-    "packages/*"
-  ],
   "keywords": [
     "wireframe",
     "ui",
@@ -13,5 +10,38 @@
     "react"
   ],
   "author": "salteadorneo",
-  "license": "BSD-3-Clause"
+  "license": "BSD-3-Clause",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.js",
+  "es2017": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/wireframe-ui/wireframe-ui.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@stencil/core": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.6",
+    "@types/node": "^16.18.11",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "puppeteer": "21.1.1"
+  }
 }
