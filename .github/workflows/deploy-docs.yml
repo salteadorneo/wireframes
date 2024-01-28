@@ -2,7 +2,7 @@
 #
 # To get started with Astro see: https://docs.astro.build/en/getting-started/
 #
-name: Deploy Astro site to Pages
+name: Deploy site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -25,7 +25,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: docs
+  BUILD_PATH: "."
 
 jobs:
   build:
@@ -64,14 +64,12 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         run: |
-          ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+          ${{ steps.detect-package-manager.outputs.runner }} run build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_PATH }}/dist
+          path: ${{ env.BUILD_PATH }}/www
 
   deploy:
     environment:
