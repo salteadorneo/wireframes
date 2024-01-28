@@ -6,9 +6,10 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class WfVideo {
-  @Prop() width?: string = 'auto';
-  @Prop() height?: string = 'auto';
+  @Prop() width?: string;
+  @Prop() height?: string;
   @Prop() aspectRatio?: string = '16 / 9';
+  @Prop() margin?: string;
 
   render() {
     return (
@@ -17,6 +18,7 @@ export class WfVideo {
           width: this.width,
           height: this.height,
           aspectRatio: this.aspectRatio,
+          margin: this.margin,
         }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".1" stroke="currentColor">

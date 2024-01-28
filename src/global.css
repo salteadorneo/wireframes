@@ -6,17 +6,17 @@
     --font-family: 'Virgil', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
     :root {
         --line-color: white;
         --background: black;
     }
 
     body {
-        background: black;
+        background: rgb(41, 41, 41);
         color: white;
     }
-}
+}*/
 
 * {
     box-sizing: border-box;

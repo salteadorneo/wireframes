@@ -6,10 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface WfAvatar {
-        "size"?: string;
-        "text"?: string;
-    }
     interface WfButton {
         "backgroundColor"?: string;
         "borderColor"?: string;
@@ -17,8 +13,11 @@ export namespace Components {
     }
     interface WfFlex {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
+        "flexDirection"?: string;
         "gap"?: string;
+        "height"?: string;
         "justifyContent"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
+        "margin"?: string;
     }
     interface WfGrid {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
@@ -35,6 +34,7 @@ export namespace Components {
     }
     interface WfLink {
         "href"?: string;
+        "target"?: string;
     }
     interface WfLorem {
         "words"?: number;
@@ -44,21 +44,18 @@ export namespace Components {
         "textAlign"?: 'left' | 'center' | 'right' | 'justify';
     }
     interface WfTitle {
+        "fontWeight"?: string;
+        "textAlign"?: string;
         "variant"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     }
     interface WfVideo {
         "aspectRatio"?: string;
         "height"?: string;
+        "margin"?: string;
         "width"?: string;
     }
 }
 declare global {
-    interface HTMLWfAvatarElement extends Components.WfAvatar, HTMLStencilElement {
-    }
-    var HTMLWfAvatarElement: {
-        prototype: HTMLWfAvatarElement;
-        new (): HTMLWfAvatarElement;
-    };
     interface HTMLWfButtonElement extends Components.WfButton, HTMLStencilElement {
     }
     var HTMLWfButtonElement: {
@@ -114,7 +111,6 @@ declare global {
         new (): HTMLWfVideoElement;
     };
     interface HTMLElementTagNameMap {
-        "wf-avatar": HTMLWfAvatarElement;
         "wf-button": HTMLWfButtonElement;
         "wf-flex": HTMLWfFlexElement;
         "wf-grid": HTMLWfGridElement;
@@ -127,10 +123,6 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface WfAvatar {
-        "size"?: string;
-        "text"?: string;
-    }
     interface WfButton {
         "backgroundColor"?: string;
         "borderColor"?: string;
@@ -138,8 +130,11 @@ declare namespace LocalJSX {
     }
     interface WfFlex {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
+        "flexDirection"?: string;
         "gap"?: string;
+        "height"?: string;
         "justifyContent"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
+        "margin"?: string;
     }
     interface WfGrid {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
@@ -156,6 +151,7 @@ declare namespace LocalJSX {
     }
     interface WfLink {
         "href"?: string;
+        "target"?: string;
     }
     interface WfLorem {
         "words"?: number;
@@ -165,15 +161,17 @@ declare namespace LocalJSX {
         "textAlign"?: 'left' | 'center' | 'right' | 'justify';
     }
     interface WfTitle {
+        "fontWeight"?: string;
+        "textAlign"?: string;
         "variant"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     }
     interface WfVideo {
         "aspectRatio"?: string;
         "height"?: string;
+        "margin"?: string;
         "width"?: string;
     }
     interface IntrinsicElements {
-        "wf-avatar": WfAvatar;
         "wf-button": WfButton;
         "wf-flex": WfFlex;
         "wf-grid": WfGrid;
@@ -189,7 +187,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "wf-avatar": LocalJSX.WfAvatar & JSXBase.HTMLAttributes<HTMLWfAvatarElement>;
             "wf-button": LocalJSX.WfButton & JSXBase.HTMLAttributes<HTMLWfButtonElement>;
             "wf-flex": LocalJSX.WfFlex & JSXBase.HTMLAttributes<HTMLWfFlexElement>;
             "wf-grid": LocalJSX.WfGrid & JSXBase.HTMLAttributes<HTMLWfGridElement>;

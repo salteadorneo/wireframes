@@ -1,7 +1,6 @@
 div {
     display: flex;
     justify-content: center;
-    background: var(--background);
     border-width: var(--line-width, 2px);
     border-style: solid;
     border-color: var(--line-color, black);

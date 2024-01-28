@@ -8,19 +8,7 @@ div {
     border-color: var(--line-color, black);
     aspect-ratio: 1 / 1;
     position: relative;
-    background:
-        linear-gradient(to top left,
-            transparent 0%,
-            transparent calc(50% - var(--line-width, 2px)),
-            var(--line-color, black) 50%,
-            transparent calc(50% + var(--line-width, 2px)),
-            transparent 100%),
-        linear-gradient(to top right,
-            transparent 0%,
-            transparent calc(50% - var(--line-width, 2px)),
-            var(--line-color, black) 50%,
-            transparent calc(50% + var(--line-width, 2px)),
-            transparent 100%);
     font-family: var(--font-family);
     color: var(--line-color, black) !important;
+    box-sizing: border-box;
 }
