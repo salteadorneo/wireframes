@@ -9,7 +9,7 @@ describe('wf-button', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('renders changes to the name data', async () => {
+  it('renders changes to content', async () => {
     const page = await newE2EPage();
 
     await page.setContent('<wf-button>Test</wf-button>');
