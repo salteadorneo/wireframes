@@ -6,8 +6,8 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class WfP {
-  @Prop() fontSize?: string = '16px';
-  @Prop() textAlign?: 'left' | 'center' | 'right' | 'justify' = 'left';
+  @Prop() fontSize?: string;
+  @Prop() textAlign?: 'left' | 'center' | 'right' | 'justify';
 
   render() {
     return (

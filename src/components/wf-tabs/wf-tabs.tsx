@@ -13,6 +13,7 @@ export class WfTabs {
   componentDidLoad() {
     const tabsHeaderEl = Array.from(this.host.querySelectorAll('wf-tab-header')) as any[];
     const [tabHeaderEl] = tabsHeaderEl;
+    if (!tabHeaderEl) return;
     tabHeaderEl.getChild().then(tabHeader => {
       tabHeader.select();
     });
