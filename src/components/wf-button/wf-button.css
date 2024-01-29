@@ -6,4 +6,9 @@ button {
   border-style: solid;
   border-color: var(--line-color, black);
   padding: .5rem 1rem;
+
+  &:hover {
+    color: var(--color-hover, black);
+    background: var(--background-hover, black);
+  }
 }

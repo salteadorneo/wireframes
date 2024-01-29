@@ -1,7 +1,12 @@
 :root {
     --line-width: 2px;
     --line-color: black;
+
+    --color: black;
     --background: white;
+
+    --color-hover: white;
+    --background-hover: black;
 
     --font-family: 'Virgil', sans-serif;
 }

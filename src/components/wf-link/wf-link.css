@@ -3,4 +3,8 @@ a {
     color: var(--line-color, black) !important;
     border-bottom: var(--line-width, 2px) solid var(--line-color, black) !important;
     text-decoration: none;
+
+    &:hover {
+        border-width: 0 !important;
+    }
 }
