@@ -10,6 +10,11 @@
   <script nomodule src="build/wireframes.js"></script>
   <link rel="stylesheet" href="build/wireframes.css" />
 
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/a11y-dark.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/languages/javascript.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
   <style>
     @media (prefers-color-scheme: dark) {
       :root {
@@ -31,13 +36,12 @@
       margin: 0 auto;
     }
 
-    pre {
-      padding: 16px;
-      border: 2px solid var(--line-color);
-    }
-
     a {
       color: inherit;
+    }
+
+    footer {
+      padding: 40px 16px;
     }
   </style>
 </head>
@@ -47,7 +51,7 @@
     <wf-flex justify-content="space-between" align-items="center" gap="10px">
       <a href="/" style="text-decoration:none;">
         <wf-flex align-items="center" gap="10px">
-          <wf-image width="70px" height="40px" text="Logo"></wf-image>
+          <wf-image width="50px" text="Logo" border-radius="50%"></wf-image>
           <wf-title variant="h1" font-weight="normal">Wireframes</wf-title>
         </wf-flex>
       </a>
@@ -60,7 +64,6 @@
               fill="currentColor" />
           </svg>
         </a>
-        <wf-image width="48px" text="User" border-radius="50%"></wf-image>
       </wf-flex>
     </wf-flex>
   </header>
@@ -76,9 +79,6 @@
         <wf-button onclick="window.location.href='#get-started'">
           Get started
         </wf-button>
-        <wf-link href="https://github.com/salteadorneo/wireframes/tree/main/src/components" target="_blank">
-          Components
-        </wf-link>
       </wf-flex>
     </wf-flex>
 
@@ -86,63 +86,60 @@
 
     <wf-title variant="h2" id="get-started">Get started</wf-title>
 
-    <wf-title variant="h3">Installation</wf-title><wf-flex align-items="center" gap="20px" margin="20px 0">
-      <code>npm i wireframes</code>
-    </wf-flex>
+    <wf-title variant="h3">Installation</wf-title>
 
-    <wf-flex align-items="center" gap="20px" margin="20px 0">
-      <code>pnpm i wireframes</code>
-    </wf-flex>
+    <wf-tabs>
+      <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
+      <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
+      <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
+      <wf-tab-content slot="content" name="npm">
+        <wf-p>
+          Run the following command using npm:
+        </wf-p>
+        <pre><code>npm i wireframes</code></pre>
+      </wf-tab-content>
+      <wf-tab-content slot="content" name="pnpm">
+        <wf-p>
+          Run the following command using pnpm:
+        </wf-p>
+        <pre><code>pnpm i wireframes</code></pre>
+      </wf-tab-content>
+      <wf-tab-content slot="content" name="yarn">
+        <wf-p>
+          Run the following command using yarn:
+        </wf-p>
+        <pre><code>yarn add wireframes</code></pre>
+      </wf-tab-content>
+    </wf-tabs>
 
-    <wf-flex align-items="center" gap="20px" margin="20px 0">
-      <code>yarn add wireframes</code>
-    </wf-flex>
+    <wf-title variant="h3">Setup</wf-title>
 
-    <pre><code>import {
-    applyPolyfills,
-    defineCustomElements,
+    <wf-p>
+      Insert the following code in React, Vue, Angular, Svelte, Astro or any other framework, in the
+      index.js file.
+    </wf-p>
+    <pre><code class="language-js">...
+
+import {
+  applyPolyfills,
+  defineCustomElements,
 } from 'wireframes/loader';
 import 'wireframes/dist/wireframes/wireframes.css';
 
 applyPolyfills().then(() => {
-    defineCustomElements();
-});</code></pre>
+  defineCustomElements();
+});
 
-    <wf-link></wf-link>
-    <wf-flex gap="8px">
-      <wf-button></wf-button>
-      <wf-button background-color="black" color="white">Test</wf-button>
-    </wf-flex>
-    <wf-flex gap="4px" justify-content="space-around">
-      <wf-grid justify-items="center" gap="12px">
-        <wf-image height="80px" aspect-ratio="16/9"></wf-image>
-        <wf-p text-align="center">
-          <wf-lorem />
-        </wf-p>
-        <wf-button />
-      </wf-grid>
-      <wf-grid justify-items="center" gap="12px">
-        <wf-image height="80px" aspect-ratio="16/9"></wf-image>
-        <wf-p text-align="center">
-          <wf-lorem />
-        </wf-p>
-        <wf-button />
-      </wf-grid>
-      <wf-grid justify-items="center" gap="12px">
-        <wf-image height="80px" aspect-ratio="16/9"></wf-image>
-        <wf-p text-align="center">
-          <wf-lorem />
-        </wf-p>
-        <wf-button />
-      </wf-grid>
-    </wf-flex>
+...</code></pre>
   </main>
   <footer>
-    <wf-flex gap="8px">
-      <wf-link></wf-link>
-      <wf-link></wf-link>
-      <wf-link></wf-link>
-      <wf-link></wf-link>
+    <wf-flex justify-content="center" gap="8px">
+      <wf-link href="https://twitter.com/salteadorneodev" target="_blank">
+        @salteadorneodev
+      </wf-link>
+      <wf-link href="https://github.com/salteadorneo/wireframes" target="_blank">
+        @salteadorneo/wireframes
+      </wf-link>
     </wf-flex>
   </footer>
 </body>
