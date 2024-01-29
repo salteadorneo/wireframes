@@ -1,4 +1,4 @@
-# wf-link
+# wf-tabs
 
 
 
@@ -9,8 +9,7 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `href`   | `href`    |             | `string` | `undefined` |
-| `target` | `target`  |             | `string` | `undefined` |
+| `names`  | `names`   |             | `string` | `undefined` |
 
 
 ----------------------------------------------

@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                                           | Default |
-| --------- | --------- | ----------- | ---------------------------------------------- | ------- |
-| `variant` | `variant` |             | `"h1" \| "h2" \| "h3" \| "h4" \| "h5" \| "h6"` | `'h1'`  |
+| Property     | Attribute     | Description | Type                                           | Default     |
+| ------------ | ------------- | ----------- | ---------------------------------------------- | ----------- |
+| `fontWeight` | `font-weight` |             | `string`                                       | `undefined` |
+| `textAlign`  | `text-align`  |             | `string`                                       | `undefined` |
+| `variant`    | `variant`     |             | `"h1" \| "h2" \| "h3" \| "h4" \| "h5" \| "h6"` | `'h1'`      |
 
 
 ----------------------------------------------
