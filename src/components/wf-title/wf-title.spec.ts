@@ -17,4 +17,20 @@ describe('wf-title', () => {
       </wf-title>
     `);
   });
+
+  it('renders tag', async () => {
+    const { root } = await newSpecPage({
+      components: [WfTitle],
+      html: '<wf-title tag="h2"></wf-title>',
+    });
+    expect(root).toEqualHtml(`
+      <wf-title tag="h2">
+        <mock:shadow-root>
+          <h2>
+            <slot></slot>
+          </h2>
+        </mock:shadow-root>
+      </wf-title>
+    `);
+  });
 });

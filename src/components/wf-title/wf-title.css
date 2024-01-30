@@ -9,3 +9,31 @@ h6 {
     text-wrap: balance;
     margin: .5rem 0;
 }
+
+h1 {
+    &.sm {
+        font-size: 1.5rem;
+    }
+
+    &.lg {
+        font-size: 2.5rem;
+    }
+
+    &.xl {
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    &.sm {
+        font-size: 1rem;
+    }
+
+    &.lg {
+        font-size: 2rem;
+    }
+
+    &.xl {
+        font-size: 2.5rem;
+    }
+}

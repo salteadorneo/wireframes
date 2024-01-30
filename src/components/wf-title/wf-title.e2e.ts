@@ -16,4 +16,12 @@ describe('wf-title', () => {
     const element = await page.find('wf-title');
     expect(element.textContent).toEqual(`Title`);
   });
+
+  it('renders h2', async () => {
+    const page = await newE2EPage();
+
+    await page.setContent('<wf-title tag="h2">Heading 2</wf-title>');
+    const element = await page.find('wf-title');
+    expect(element.textContent).toEqual(`Heading 2`);
+  });
 });
