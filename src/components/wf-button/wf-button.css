@@ -11,4 +11,19 @@ button {
     color: var(--color-hover, black);
     background: var(--background-hover, black);
   }
+
+  &.sm {
+    font-size: .75rem;
+    padding: .25rem .5rem;
+  }
+
+  &.lg {
+    font-size: 1.25rem;
+    padding: .75rem 1.5rem;
+  }
+
+  &.xl {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
 }

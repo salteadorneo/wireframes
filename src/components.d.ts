@@ -10,6 +10,7 @@ export namespace Components {
         "backgroundColor"?: string;
         "borderColor"?: string;
         "color"?: string;
+        "variant"?: 'sm' | 'md' | 'lg' | 'xl';
     }
     interface WfFlex {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
@@ -24,6 +25,8 @@ export namespace Components {
         "gap"?: string;
         "justifyContent"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
         "justifyItems"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
+    }
+    interface WfHr {
     }
     interface WfImage {
         "aspectRatio"?: string;
@@ -56,8 +59,9 @@ export namespace Components {
     }
     interface WfTitle {
         "fontWeight"?: string;
+        "tag"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
         "textAlign"?: string;
-        "variant"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+        "variant"?: 'sm' | 'md' | 'lg' | 'xl';
     }
     interface WfVideo {
         "aspectRatio"?: string;
@@ -88,6 +92,12 @@ declare global {
     var HTMLWfGridElement: {
         prototype: HTMLWfGridElement;
         new (): HTMLWfGridElement;
+    };
+    interface HTMLWfHrElement extends Components.WfHr, HTMLStencilElement {
+    }
+    var HTMLWfHrElement: {
+        prototype: HTMLWfHrElement;
+        new (): HTMLWfHrElement;
     };
     interface HTMLWfImageElement extends Components.WfImage, HTMLStencilElement {
     }
@@ -158,6 +168,7 @@ declare global {
         "wf-button": HTMLWfButtonElement;
         "wf-flex": HTMLWfFlexElement;
         "wf-grid": HTMLWfGridElement;
+        "wf-hr": HTMLWfHrElement;
         "wf-image": HTMLWfImageElement;
         "wf-link": HTMLWfLinkElement;
         "wf-lorem": HTMLWfLoremElement;
@@ -174,6 +185,7 @@ declare namespace LocalJSX {
         "backgroundColor"?: string;
         "borderColor"?: string;
         "color"?: string;
+        "variant"?: 'sm' | 'md' | 'lg' | 'xl';
     }
     interface WfFlex {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
@@ -188,6 +200,8 @@ declare namespace LocalJSX {
         "gap"?: string;
         "justifyContent"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
         "justifyItems"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
+    }
+    interface WfHr {
     }
     interface WfImage {
         "aspectRatio"?: string;
@@ -219,8 +233,9 @@ declare namespace LocalJSX {
     }
     interface WfTitle {
         "fontWeight"?: string;
+        "tag"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
         "textAlign"?: string;
-        "variant"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+        "variant"?: 'sm' | 'md' | 'lg' | 'xl';
     }
     interface WfVideo {
         "aspectRatio"?: string;
@@ -232,6 +247,7 @@ declare namespace LocalJSX {
         "wf-button": WfButton;
         "wf-flex": WfFlex;
         "wf-grid": WfGrid;
+        "wf-hr": WfHr;
         "wf-image": WfImage;
         "wf-link": WfLink;
         "wf-lorem": WfLorem;
@@ -250,6 +266,7 @@ declare module "@stencil/core" {
             "wf-button": LocalJSX.WfButton & JSXBase.HTMLAttributes<HTMLWfButtonElement>;
             "wf-flex": LocalJSX.WfFlex & JSXBase.HTMLAttributes<HTMLWfFlexElement>;
             "wf-grid": LocalJSX.WfGrid & JSXBase.HTMLAttributes<HTMLWfGridElement>;
+            "wf-hr": LocalJSX.WfHr & JSXBase.HTMLAttributes<HTMLWfHrElement>;
             "wf-image": LocalJSX.WfImage & JSXBase.HTMLAttributes<HTMLWfImageElement>;
             "wf-link": LocalJSX.WfLink & JSXBase.HTMLAttributes<HTMLWfLinkElement>;
             "wf-lorem": LocalJSX.WfLorem & JSXBase.HTMLAttributes<HTMLWfLoremElement>;

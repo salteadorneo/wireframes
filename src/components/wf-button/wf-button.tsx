@@ -9,10 +9,12 @@ export class WfButton {
   @Prop() backgroundColor?: string;
   @Prop() color?: string;
   @Prop() borderColor?: string;
+  @Prop() variant?: 'sm' | 'md' | 'lg' | 'xl';
 
   render() {
     return (
       <button
+        class={this.variant}
         style={{
           background: this.backgroundColor,
           color: this.color,

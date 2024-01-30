@@ -34,4 +34,21 @@ describe('wf-button', () => {
       </wf-button>
     `);
   });
+
+  it('renders variant', async () => {
+    const { root } = await newSpecPage({
+      components: [WfButton],
+      html: `<wf-button variant="sm">Test</wf-button>`,
+    });
+    expect(root).toEqualHtml(`
+      <wf-button variant="sm">
+        <mock:shadow-root>
+          <button class="sm">
+            <slot>Button</slot>
+          </button>
+        </mock:shadow-root>
+        Test
+      </wf-button>
+    `);
+  });
 });

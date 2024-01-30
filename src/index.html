@@ -28,6 +28,19 @@
       }
     }
 
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+      background: #444;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ffffff;
+    }
+
     header,
     main,
     footer {
@@ -54,7 +67,7 @@
       <a href="https://salteadorneo.github.io/wireframes/" style="text-decoration:none;">
         <wf-flex align-items="center" gap="10px">
           <wf-image width="50px" text="Logo" border-radius="50%"></wf-image>
-          <wf-title variant="h1" font-weight="normal">Wireframes</wf-title>
+          <wf-title font-weight="normal" variant="sm">Wireframes</wf-title>
         </wf-flex>
       </a>
       <wf-flex align-items="center" gap="16px">
@@ -77,19 +90,21 @@
               fill="currentColor" />
           </svg>
         </a>
+        <iframe src="https://ghbtns.com/github-btn.html?user=salteadorneo&repo=wireframes&type=star&count=true"
+          frameborder="0" scrolling="0" width="85" height="20" title="GitHub"></iframe>
       </wf-flex>
     </wf-flex>
   </header>
   <main>
     <wf-flex flex-direction="column" align-items="center" margin="60px 0 0">
-      <wf-title variant="h1" font-weight="normal" text-align="center">
+      <wf-title tag="h2" font-weight="normal" text-align="center">
         Web Components UI library for building wireframes and prototypes
       </wf-title>
       <wf-p>
         Framework agnostic. Open source.
       </wf-p>
-      <wf-flex align-items="center" gap="12px" margin="20px 0 0">
-        <wf-button onclick="window.location.href='#get-started'">
+      <wf-flex align-items="center" gap="12px" margin="40px 0">
+        <wf-button onclick="window.location.href='#get-started'" variant="lg">
           Get started
         </wf-button>
       </wf-flex>
@@ -97,11 +112,13 @@
 
     <wf-video margin="60px 0"></wf-video>
 
-    <wf-title variant="h2" id="get-started">Get started</wf-title>
+    <wf-title tag="h3" id="get-started">Get started</wf-title>
 
-    <hr style="margin: 0 0 30px;" />
+    <wf-hr></wf-hr>
 
-    <wf-title variant="h3">Installation</wf-title>
+    <br />
+
+    <wf-title tag="h4">Installation</wf-title>
 
     <wf-tabs>
       <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
@@ -127,7 +144,7 @@
       </wf-tab-content>
     </wf-tabs>
 
-    <wf-title variant="h3">Setup</wf-title>
+    <wf-title tag="h4">Setup</wf-title>
 
     <wf-p>
       Insert the following code in React, Vue, Angular, Svelte, Astro or any other framework, in the
@@ -149,16 +166,30 @@ applyPolyfills().then(() => {
 
     <br />
 
-    <wf-title variant="h3">
+    <wf-title tag="h4">CDN</wf-title>
+
+    <wf-p>
+      Alternatively, you can use the CDN to load the components in your project.
+    </wf-p>
+    <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@0.0.5/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://www.unpkg.com/wireframes@0.0.5/dist/wireframes/wireframes.css" /&gt;</code></pre>
+
+    <br />
+
+    <wf-title tag="h3">
       Usage
     </wf-title>
 
+    <wf-hr></wf-hr>
+
+    <br />
+
     <wf-p>
-      Use the following code to use the components in your project.
+      Now you can use the components in your project.
     </wf-p>
-    <pre><code class="language-html">&lt;wf-image aspect-ratio="16/9" /&gt;</code></pre>
-    <pre><code class="language-html">&lt;wf-title&gt;Hello world&lt;/wf-title&gt;</code></pre>
-    <pre><code class="language-html">&lt;wf-button /&gt;</code></pre>
+    <pre><code class="language-html">&lt;wf-image aspect-ratio="16/9" /&gt;
+&lt;wf-title&gt;Hello world&lt;/wf-title&gt;
+&lt;wf-button /&gt;</code></pre>
 
     <wf-link href="https://github.com/salteadorneo/wireframes/tree/main/src/components" target="_blank">
       See all components
@@ -168,9 +199,14 @@ applyPolyfills().then(() => {
     <br />
     <br />
 
-    <wf-title variant="h2">
+    <wf-title tag="h3">
       Contributing
     </wf-title>
+
+    <wf-hr></wf-hr>
+
+    <br />
+
     <wf-p>
       Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
     </wf-p>

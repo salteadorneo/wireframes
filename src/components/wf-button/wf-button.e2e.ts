@@ -16,4 +16,12 @@ describe('wf-button', () => {
     const element = await page.find('wf-button');
     expect(element.textContent).toEqual(`Test`);
   });
+
+  it('renders variant', async () => {
+    const page = await newE2EPage();
+
+    await page.setContent('<wf-button variant="sm">Small</wf-button>');
+    const element = await page.find('wf-button');
+    expect(element.textContent).toEqual(`Small`);
+  });
 });
