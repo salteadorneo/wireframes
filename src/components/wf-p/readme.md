@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type                                         | Default  |
-| ----------- | ------------ | ----------- | -------------------------------------------- | -------- |
-| `fontSize`  | `font-size`  |             | `string`                                     | `'16px'` |
-| `textAlign` | `text-align` |             | `"center" \| "justify" \| "left" \| "right"` | `'left'` |
+| Property    | Attribute    | Description | Type                                         | Default     |
+| ----------- | ------------ | ----------- | -------------------------------------------- | ----------- |
+| `fontSize`  | `font-size`  |             | `string`                                     | `undefined` |
+| `textAlign` | `text-align` |             | `"center" \| "justify" \| "left" \| "right"` | `undefined` |
 
 
 ----------------------------------------------
