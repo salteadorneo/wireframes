@@ -11,6 +11,15 @@
   ],
   "author": "salteadorneo",
   "license": "BSD-3-Clause",
+  "homepage": "https://salteadorneo.github.io/wireframes/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salteadorneo/wireframes"
+  },
+  "bugs": {
+    "url": "https://github.com/salteadorneo/wireframes/issues",
+    "email": "hola@salteadorneo.dev"
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.js",
@@ -19,10 +28,6 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/wireframes.esm.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/salteadorneo/wireframes"
-  },
   "files": [
     "dist/",
     "loader/"
