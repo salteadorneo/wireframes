@@ -4,7 +4,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-  <title>Wireframes</title>
+  <title>Wireframes | Web Components UI library for building wireframes and prototypes</title>
+
+  <meta name="description"
+    content="UI library for building wireframes and prototypes. Framework agnostic. Open source." />
+  <meta name="keywords" content="web components, wireframes, ui library" />
+  <meta name="author" content="salteadorneo" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://salteadorneo.github.io/wireframes/" />
 
   <script type="module" src="build/wireframes.esm.js"></script>
   <script nomodule src="build/wireframes.js"></script>
@@ -41,6 +49,10 @@
       background: #ffffff;
     }
 
+    body {
+      margin: 20px 0;
+    }
+
     header,
     main,
     footer {
@@ -72,8 +84,7 @@
       </a>
       <wf-flex align-items="center" gap="16px">
         <a href="https://www.npmjs.com/package/wireframes" target="_blank">
-          <svg width="31" height="13" xmlns="http://www.w3.org/2000/svg"
-            class="quick-stats-bar__logo-icon quick-stats-bar__logo-icon--npm">
+          <svg width="31" height="13" xmlns="http://www.w3.org/2000/svg">
             <g fill="currentColor" fill-rule="nonzero">
               <path
                 d="M0 .43v10.33h8.61v1.73h6.89v-1.73H31V.43H0zm8.61 8.6H6.89V3.88H5.17v5.17H1.72V2.15h6.89v6.89zm5.17 0v1.73h-3.45v-8.6h6.9v6.88h-3.45zm15.5 0h-1.72V3.88h-1.73v5.17h-1.72V3.87h-1.72v5.17h-3.45V2.15h10.34v6.89z">
@@ -152,10 +163,7 @@
     </wf-p>
     <pre><code class="language-js">...
 
-import {
-  applyPolyfills,
-  defineCustomElements,
-} from 'wireframes/loader';
+import { applyPolyfills, defineCustomElements } from 'wireframes/loader';
 import 'wireframes/dist/wireframes/wireframes.css';
 
 applyPolyfills().then(() => {
@@ -182,14 +190,32 @@ applyPolyfills().then(() => {
 
     <wf-hr></wf-hr>
 
-    <br />
-
     <wf-p>
       Now you can use the components in your project.
     </wf-p>
-    <pre><code class="language-html">&lt;wf-image aspect-ratio="16/9" /&gt;
-&lt;wf-title&gt;Hello world&lt;/wf-title&gt;
-&lt;wf-button /&gt;</code></pre>
+
+    <br />
+    <br />
+
+    <wf-image aspect-ratio="16/9"></wf-image>
+    <pre><code class="language-html">&lt;wf-image aspect-ratio="16/9"&gt;&lt;/wf-image&gt;</code></pre>
+    <br />
+
+    <wf-title tag="h4">Hello world</wf-title>
+    <pre><code class="language-html">&lt;wf-title&gt;Hello world&lt;/wf-title&gt;</code></pre>
+    <br />
+
+    <wf-button></wf-button>
+    <pre><code class="language-html">&lt;wf-button&gt;&lt;/wf-button&gt;</code></pre>
+    <br />
+
+    <wf-link href="https://salteadorneo.github.io/wireframes/"></wf-link>
+    <pre><code class="language-html">&lt;wf-link href="https://salteadorneo.github.io/wireframes/"&gt;&lt;/wf-link&gt;</code></pre>
+    <br />
+
+    <wf-checkbox></wf-checkbox>
+    <pre><code class="language-html">&lt;wf-checkbox&gt;&lt;/wf-checkbox&gt;</code></pre>
+    <br />
 
     <wf-link href="https://github.com/salteadorneo/wireframes/tree/main/src/components" target="_blank">
       See all components
