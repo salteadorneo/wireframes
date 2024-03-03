@@ -5,7 +5,8 @@ div {
     border-style: solid;
     border-color: var(--line-color, black);
     position: relative;
-    background:
+    background-color: var(--background, white);
+    background-image:
         linear-gradient(to top left,
             transparent 0%,
             transparent calc(50% - var(--line-width, 2px)),

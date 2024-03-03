@@ -7,6 +7,7 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class WfVideo {
   @Prop() width?: string;
+  @Prop() maxWidth?: string;
   @Prop() height?: string;
   @Prop() aspectRatio?: string = '16 / 9';
   @Prop() margin?: string;
@@ -16,6 +17,7 @@ export class WfVideo {
       <div
         style={{
           width: this.width,
+          maxWidth: this.maxWidth,
           height: this.height,
           aspectRatio: this.aspectRatio,
           margin: this.margin,
