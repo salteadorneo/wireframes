@@ -37,6 +37,12 @@ export namespace Components {
         "text"?: string;
         "width"?: string;
     }
+    interface WfInput {
+        "maxWidth"?: string;
+        "placeholder": string;
+        "variant"?: 'sm' | 'md' | 'lg' | 'xl';
+        "width"?: string;
+    }
     interface WfLink {
         "href"?: string;
         "target"?: string;
@@ -45,7 +51,13 @@ export namespace Components {
         "words"?: number;
     }
     interface WfP {
+        /**
+          * Size of the font
+         */
         "fontSize"?: string;
+        /**
+          * Text align
+         */
         "textAlign"?: 'left' | 'center' | 'right' | 'justify';
     }
     interface WfTabContent {
@@ -69,6 +81,7 @@ export namespace Components {
         "aspectRatio"?: string;
         "height"?: string;
         "margin"?: string;
+        "maxWidth"?: string;
         "width"?: string;
     }
 }
@@ -112,6 +125,12 @@ declare global {
     var HTMLWfImageElement: {
         prototype: HTMLWfImageElement;
         new (): HTMLWfImageElement;
+    };
+    interface HTMLWfInputElement extends Components.WfInput, HTMLStencilElement {
+    }
+    var HTMLWfInputElement: {
+        prototype: HTMLWfInputElement;
+        new (): HTMLWfInputElement;
     };
     interface HTMLWfLinkElement extends Components.WfLink, HTMLStencilElement {
     }
@@ -179,6 +198,7 @@ declare global {
         "wf-grid": HTMLWfGridElement;
         "wf-hr": HTMLWfHrElement;
         "wf-image": HTMLWfImageElement;
+        "wf-input": HTMLWfInputElement;
         "wf-link": HTMLWfLinkElement;
         "wf-lorem": HTMLWfLoremElement;
         "wf-p": HTMLWfPElement;
@@ -221,6 +241,12 @@ declare namespace LocalJSX {
         "text"?: string;
         "width"?: string;
     }
+    interface WfInput {
+        "maxWidth"?: string;
+        "placeholder"?: string;
+        "variant"?: 'sm' | 'md' | 'lg' | 'xl';
+        "width"?: string;
+    }
     interface WfLink {
         "href"?: string;
         "target"?: string;
@@ -229,7 +255,13 @@ declare namespace LocalJSX {
         "words"?: number;
     }
     interface WfP {
+        /**
+          * Size of the font
+         */
         "fontSize"?: string;
+        /**
+          * Text align
+         */
         "textAlign"?: 'left' | 'center' | 'right' | 'justify';
     }
     interface WfTabContent {
@@ -252,6 +284,7 @@ declare namespace LocalJSX {
         "aspectRatio"?: string;
         "height"?: string;
         "margin"?: string;
+        "maxWidth"?: string;
         "width"?: string;
     }
     interface IntrinsicElements {
@@ -261,6 +294,7 @@ declare namespace LocalJSX {
         "wf-grid": WfGrid;
         "wf-hr": WfHr;
         "wf-image": WfImage;
+        "wf-input": WfInput;
         "wf-link": WfLink;
         "wf-lorem": WfLorem;
         "wf-p": WfP;
@@ -281,6 +315,7 @@ declare module "@stencil/core" {
             "wf-grid": LocalJSX.WfGrid & JSXBase.HTMLAttributes<HTMLWfGridElement>;
             "wf-hr": LocalJSX.WfHr & JSXBase.HTMLAttributes<HTMLWfHrElement>;
             "wf-image": LocalJSX.WfImage & JSXBase.HTMLAttributes<HTMLWfImageElement>;
+            "wf-input": LocalJSX.WfInput & JSXBase.HTMLAttributes<HTMLWfInputElement>;
             "wf-link": LocalJSX.WfLink & JSXBase.HTMLAttributes<HTMLWfLinkElement>;
             "wf-lorem": LocalJSX.WfLorem & JSXBase.HTMLAttributes<HTMLWfLoremElement>;
             "wf-p": LocalJSX.WfP & JSXBase.HTMLAttributes<HTMLWfPElement>;
