@@ -18,7 +18,7 @@
   <script nomodule src="build/wireframes.js"></script>
   <link rel="stylesheet" href="build/wireframes.css" />
 
-  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/a11y-dark.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/dark.min.css">
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/languages/javascript.min.js"></script>
   <script>hljs.highlightAll();</script>
@@ -32,6 +32,7 @@
 
       body {
         background: black;
+        background-image: radial-gradient(#dddddd3d 1px, transparent 0) !important;
         color: white;
       }
     }
@@ -42,23 +43,30 @@
     }
 
     ::-webkit-scrollbar-track-piece {
-      background: #444;
+      background: #fff;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #ffffff;
+      background: #444;
     }
 
     body {
-      margin: 20px 0;
+      margin: 0;
+      background-image: radial-gradient(#1111113d 1px, transparent 0);
+      background-size: 1.5rem 1.5rem;
     }
 
     header,
     main,
     footer {
-      padding: 0 16px;
-      max-width: 600px;
+      padding: 0 1rem;
       margin: 0 auto;
+      max-width: 1400px;
+    }
+
+    header {
+      width: 100%;
+      padding: 1rem;
     }
 
     a {
@@ -66,7 +74,47 @@
     }
 
     footer {
-      padding: 30px 16px;
+      padding: 1rem;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .aa {
+      display: flex;
+
+      &>div:first-child {
+        flex-basis: 20%;
+      }
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+
+      ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+          margin-bottom: 1rem;
+        }
+      }
+
+      a {
+        display: block;
+        padding: .5rem;
+        text-decoration: none;
+
+        &:hover {
+          background: #444;
+        }
+      }
+    }
+
+    .container {
+      padding: 2rem;
     }
   </style>
 
@@ -76,13 +124,14 @@
 <body>
   <header>
     <wf-flex justify-content="space-between" align-items="center" gap="10px">
-      <a href="https://salteadorneo.github.io/wireframes/" style="text-decoration:none;">
+      <a href="index.html" style="text-decoration:none;">
         <wf-flex align-items="center" gap="10px">
           <wf-image width="50px" text="Logo" border-radius="50%"></wf-image>
           <wf-title font-weight="normal" variant="sm">Wireframes</wf-title>
         </wf-flex>
       </a>
-      <wf-flex align-items="center" gap="16px">
+      <!-- <wf-input placeholder="Search"></wf-input> -->
+      <wf-flex align-items="center" gap="2rem">
         <a href="https://www.npmjs.com/package/wireframes" target="_blank">
           <svg width="31" height="13" xmlns="http://www.w3.org/2000/svg">
             <g fill="currentColor" fill-rule="nonzero">
@@ -107,136 +156,21 @@
     </wf-flex>
   </header>
   <main>
-    <wf-flex flex-direction="column" align-items="center" margin="60px 0 0">
-      <wf-title tag="h2" font-weight="normal" text-align="center">
+    <wf-flex flex-direction="column" align-items="center" margin="120px auto">
+      <wf-title tag="h1" font-weight="normal" text-align="center" variant="xl">
         Web Components UI library for building wireframes and prototypes
       </wf-title>
       <wf-p>
         Framework agnostic. Open source.
       </wf-p>
       <wf-flex align-items="center" gap="12px" margin="40px 0">
-        <wf-button onclick="window.location.href='#get-started'" variant="lg">
+        <wf-button onclick="window.location.href='docs.html'" variant="lg">
           Get started
         </wf-button>
       </wf-flex>
     </wf-flex>
 
-    <wf-video margin="60px 0"></wf-video>
-
-    <wf-title tag="h3" id="get-started">Get started</wf-title>
-
-    <wf-hr></wf-hr>
-
-    <br />
-
-    <wf-title tag="h4">Installation</wf-title>
-
-    <wf-tabs>
-      <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
-      <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
-      <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
-      <wf-tab-content slot="content" name="npm">
-        <wf-p>
-          Run the following command using npm:
-        </wf-p>
-        <pre><code>npm i wireframes</code></pre>
-      </wf-tab-content>
-      <wf-tab-content slot="content" name="pnpm">
-        <wf-p>
-          Run the following command using pnpm:
-        </wf-p>
-        <pre><code>pnpm i wireframes</code></pre>
-      </wf-tab-content>
-      <wf-tab-content slot="content" name="yarn">
-        <wf-p>
-          Run the following command using yarn:
-        </wf-p>
-        <pre><code>yarn add wireframes</code></pre>
-      </wf-tab-content>
-    </wf-tabs>
-
-    <wf-title tag="h4">Setup</wf-title>
-
-    <wf-p>
-      Insert the following code in React, Vue, Angular, Svelte, Astro or any other framework, in the
-      index.js file.
-    </wf-p>
-    <pre><code class="language-js">...
-
-import { applyPolyfills, defineCustomElements } from 'wireframes/loader';
-import 'wireframes/dist/wireframes/wireframes.css';
-
-applyPolyfills().then(() => {
-  defineCustomElements();
-});
-
-...</code></pre>
-
-    <br />
-
-    <wf-title tag="h4">CDN</wf-title>
-
-    <wf-p>
-      Alternatively, you can use the CDN to load the components in your project.
-    </wf-p>
-    <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@0.0.5/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" href="https://www.unpkg.com/wireframes@0.0.5/dist/wireframes/wireframes.css" /&gt;</code></pre>
-
-    <br />
-
-    <wf-title tag="h3">
-      Usage
-    </wf-title>
-
-    <wf-hr></wf-hr>
-
-    <wf-p>
-      Now you can use the components in your project.
-    </wf-p>
-
-    <br />
-    <br />
-
-    <wf-image aspect-ratio="16/9"></wf-image>
-    <pre><code class="language-html">&lt;wf-image aspect-ratio="16/9"&gt;&lt;/wf-image&gt;</code></pre>
-    <br />
-
-    <wf-title tag="h4">Hello world</wf-title>
-    <pre><code class="language-html">&lt;wf-title&gt;Hello world&lt;/wf-title&gt;</code></pre>
-    <br />
-
-    <wf-button></wf-button>
-    <pre><code class="language-html">&lt;wf-button&gt;&lt;/wf-button&gt;</code></pre>
-    <br />
-
-    <wf-link href="https://salteadorneo.github.io/wireframes/"></wf-link>
-    <pre><code class="language-html">&lt;wf-link href="https://salteadorneo.github.io/wireframes/"&gt;&lt;/wf-link&gt;</code></pre>
-    <br />
-
-    <wf-checkbox></wf-checkbox>
-    <pre><code class="language-html">&lt;wf-checkbox&gt;&lt;/wf-checkbox&gt;</code></pre>
-    <br />
-
-    <wf-link href="https://github.com/salteadorneo/wireframes/tree/main/src/components" target="_blank">
-      See all components
-    </wf-link>
-
-    <br />
-    <br />
-    <br />
-
-    <wf-title tag="h3">
-      Contributing
-    </wf-title>
-
-    <wf-hr></wf-hr>
-
-    <br />
-
-    <wf-p>
-      Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-    </wf-p>
-
+    <wf-video margin="60px auto" max-width="800px"></wf-video>
   </main>
   <footer>
     <wf-flex justify-content="center" gap="8px">

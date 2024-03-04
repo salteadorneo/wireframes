@@ -29,6 +29,10 @@ export const config: Config = {
           src: '**/*.{woff,woff2}',
           dest: 'fonts',
           warn: true,
+        },
+        {
+          src: '*.html',
+          warn: true,
         }
       ]
     },
