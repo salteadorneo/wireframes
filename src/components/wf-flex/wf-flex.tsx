@@ -12,6 +12,7 @@ export class WfFlex {
   @Prop() margin?: string;
   @Prop() height?: string;
   @Prop() flexDirection?: string;
+  @Prop() flexWrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
 
   render() {
     return (
@@ -23,6 +24,7 @@ export class WfFlex {
           gap: this.gap,
           margin: this.margin,
           height: this.height,
+          flexWrap: this.flexWrap,
         }}
       >
         <slot />
