@@ -17,6 +17,7 @@ export namespace Components {
     interface WfFlex {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
         "flexDirection"?: string;
+        "flexWrap"?: 'wrap' | 'nowrap' | 'wrap-reverse';
         "gap"?: string;
         "height"?: string;
         "justifyContent"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
@@ -221,6 +222,7 @@ declare namespace LocalJSX {
     interface WfFlex {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
         "flexDirection"?: string;
+        "flexWrap"?: 'wrap' | 'nowrap' | 'wrap-reverse';
         "gap"?: string;
         "height"?: string;
         "justifyContent"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
