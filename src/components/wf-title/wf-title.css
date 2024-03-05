@@ -37,3 +37,59 @@ h2 {
         font-size: 2.5rem;
     }
 }
+
+h3 {
+    &.sm {
+        font-size: .75rem;
+    }
+
+    &.lg {
+        font-size: 1.5rem;
+    }
+
+    &.xl {
+        font-size: 2rem;
+    }
+}
+
+h4 {
+    &.sm {
+        font-size: .5rem;
+    }
+
+    &.lg {
+        font-size: 1rem;
+    }
+
+    &.xl {
+        font-size: 1.5rem;
+    }
+}
+
+h5 {
+    &.sm {
+        font-size: .25rem;
+    }
+
+    &.lg {
+        font-size: .75rem;
+    }
+
+    &.xl {
+        font-size: 1rem;
+    }
+}
+
+h6 {
+    &.sm {
+        font-size: .1rem;
+    }
+
+    &.lg {
+        font-size: .5rem;
+    }
+
+    &.xl {
+        font-size: .75rem;
+    }
+}
