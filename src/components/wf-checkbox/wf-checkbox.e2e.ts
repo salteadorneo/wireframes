@@ -14,6 +14,6 @@ describe('wf-checkbox', () => {
 
         await page.setContent('<wf-checkbox>Test</wf-checkbox>');
         const element = await page.find('wf-checkbox');
-        expect(element.textContent).toEqual(`Test`);
+        expect(element.textContent).toEqual(`CheckboxTest`);
     });
 });

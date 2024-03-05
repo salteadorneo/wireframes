@@ -7,7 +7,7 @@ label {
     input[type="checkbox"] {
         -webkit-appearance: none;
         appearance: none;
-        background-color: var(--form-background);
+        background-color: var(--background);
         margin: 0;
 
         font: inherit;
@@ -29,7 +29,7 @@ label {
         transform-origin: bottom left;
         box-shadow: inset 1em 1em var(--form-control-color);
         /* Windows High Contrast Mode */
-        background-color: CanvasText;
+        background-color: var(--line-color, white);
     }
 
     input[type="checkbox"]:checked::before {

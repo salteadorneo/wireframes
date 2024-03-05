@@ -9,12 +9,10 @@ describe('wf-checkbox', () => {
     });
     expect(root).toEqualHtml(`
       <wf-checkbox>
-        <mock:shadow-root>
           <label>
             <input type="checkbox" />
-            <slot>Checkbox</slot>
+            <slot-fb>Checkbox</slot-fb>
           </label>
-        </mock:shadow-root>
       </wf-checkbox>
     `);
   });
