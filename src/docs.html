@@ -24,121 +24,17 @@
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
+  <link rel="stylesheet" href="main.css" />
+
   <style>
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --line-color: white;
-        --background: black;
-      }
-
-      body {
-        background: black;
-        background-image: radial-gradient(#dddddd3d 1px, transparent 0) !important;
-        color: white;
-      }
-    }
-
-    ::-webkit-scrollbar {
-      width: 5px;
-      height: 5px;
-    }
-
-    ::-webkit-scrollbar-track-piece {
-      background: #fff;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #444;
-    }
-
     body {
       display: flex;
       flex-direction: column;
       height: 100dvh;
-      margin: 0;
-      background-image: radial-gradient(#1111113d 1px, transparent 0);
-      background-size: 1.5rem 1.5rem;
-    }
-
-    header,
-    main {
-      width: 100%;
-      margin: 0 auto;
-      max-width: 1400px;
-    }
-
-    header {
-      padding: 1rem;
     }
 
     main {
       overflow: auto;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    pre {
-      margin: 0;
-    }
-
-    .docs {
-      display: flex;
-
-      &>div:first-child {
-        flex-basis: 15%;
-      }
-
-      &>div:last-child {
-        flex-basis: 85%;
-      }
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      padding: 1rem;
-
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-
-        li {
-          margin-bottom: 1rem;
-        }
-      }
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 100%;
-      min-height: 100dvh;
-      padding: 0 2rem;
-      margin-bottom: 7rem;
-
-      table {
-        width: 100%;
-        border: 1px solid;
-
-        * {
-          font-family: 'Virgil', sans-serif;
-        }
-
-        th,
-        td {
-          text-align: left;
-          padding: 0.5rem;
-          background-color: var(--background);
-        }
-
-        th {
-          border-bottom: 1px solid;
-        }
-      }
     }
   </style>
 
@@ -178,7 +74,7 @@
         </wf-flex>
       </a>
       <!-- <wf-input placeholder="Search"></wf-input> -->
-      <wf-flex align-items="center" gap="2rem">
+      <wf-flex align-items="center" gap="1rem">
         <a href="https://www.npmjs.com/package/wireframes" target="_blank">
           <svg width="31" height="13" xmlns="http://www.w3.org/2000/svg">
             <g fill="currentColor" fill-rule="nonzero">
@@ -285,8 +181,9 @@ applyPolyfills().then(() => {
           <wf-p>
             Alternatively, you can use the CDN to load the components in your project.
           </wf-p>
-          <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@0.0.7/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" href="https://www.unpkg.com/wireframes@0.0.7/dist/wireframes/wireframes.css" /&gt;</code></pre>
+          <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
+
+&lt;link rel="stylesheet" href="https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.css" /&gt;</code></pre>
 
         </section>
 
@@ -301,7 +198,9 @@ applyPolyfills().then(() => {
         <section id="button" class="container">
           <wf-title id="button" tag="h3">Button</wf-title>
 
-          <wf-button></wf-button>
+          <section class="components">
+            <wf-button></wf-button>
+          </section>
 
           <script defer>
             document.querySelector('#button').appendChild(getPre(`<wf-button></wf-button>`));
@@ -315,7 +214,9 @@ applyPolyfills().then(() => {
         <section id="checkbox" class="container">
           <wf-title id="checkbox" tag="h3">Checkbox</wf-title>
 
-          <wf-checkbox></wf-checkbox>
+          <section class="components">
+            <wf-checkbox></wf-checkbox>
+          </section>
 
           <script defer>
             document.querySelector('#checkbox').appendChild(getPre(`<wf-checkbox></wf-checkbox>`));
@@ -329,7 +230,13 @@ applyPolyfills().then(() => {
         <section id="flex" class="container">
           <wf-title id="flex" tag="h3">Flex</wf-title>
 
-          <wf-flex></wf-flex>
+          <section class="components">
+            <wf-flex gap="2rem">
+              <wf-button>Button 1</wf-button>
+              <wf-button>Button 2</wf-button>
+              <wf-button>Button 3</wf-button>
+            </wf-flex>
+          </section>
 
           <script defer>
             document.querySelector('#flex').appendChild(getPre(`<wf-flex></wf-flex>`));
@@ -343,7 +250,13 @@ applyPolyfills().then(() => {
         <section id="grid" class="container">
           <wf-title id="grid" tag="h3">Grid</wf-title>
 
-          <wf-grid></wf-grid>
+          <section class="components">
+            <wf-grid gap="2rem">
+              <wf-button>Button 1</wf-button>
+              <wf-button>Button 2</wf-button>
+              <wf-button>Button 3</wf-button>
+            </wf-grid>
+          </section>
 
           <script defer>
             document.querySelector('#grid').appendChild(getPre(`<wf-grid></wf-grid>`));
@@ -357,7 +270,9 @@ applyPolyfills().then(() => {
         <section id="hr" class="container">
           <wf-title id="hr" tag="h3">Line</wf-title>
 
-          <wf-hr></wf-hr>
+          <section class="components">
+            <wf-hr></wf-hr>
+          </section>
 
           <script defer>
             document.querySelector('#hr').appendChild(getPre(`<wf-hr></wf-hr>`));
@@ -371,13 +286,15 @@ applyPolyfills().then(() => {
         <section id="image" class="container">
           <wf-title id="image" tag="h3">Image</wf-title>
 
-          <wf-flex align-items="end" gap="1rem">
-            <wf-image width="200px"></wf-image>
-            <wf-image aspect-ratio="16/9" width="200px"></wf-image>
-            <wf-image aspect-ratio="16/9" width="200px" text="Image"></wf-image>
-            <wf-image border-radius="50%" height="100px"></wf-image>
-            <wf-image border-radius="50%" height="48px" text="User"></wf-image>
-          </wf-flex>
+          <section class="components">
+            <wf-flex align-items="end" gap="1rem" flex-wrap="wrap">
+              <wf-image width="200px"></wf-image>
+              <wf-image aspect-ratio="16/9" width="200px"></wf-image>
+              <wf-image aspect-ratio="16/9" width="200px" text="Image"></wf-image>
+              <wf-image border-radius="50%" height="100px"></wf-image>
+              <wf-image border-radius="50%" height="48px" text="User"></wf-image>
+            </wf-flex>
+          </section>
 
           <script defer>
             document.querySelector('#image').appendChild(getPre(`<wf-image width="200px"></wf-image>
@@ -399,10 +316,15 @@ applyPolyfills().then(() => {
         <section id="input" class="container">
           <wf-title id="input" tag="h3">Input</wf-title>
 
-          <wf-input placeholder="Search"></wf-input>
+          <section class="components">
+            <wf-input placeholder="Input default"></wf-input><br /><br />
+            <wf-input placeholder="Width 150px" width="150px"></wf-input>
+          </section>
 
           <script defer>
-            document.querySelector('#input').appendChild(getPre(`<wf-input placeholder="Search"></wf-input>`));
+            document.querySelector('#input').appendChild(getPre(`<wf-input placeholder="Input default"></wf-input>
+
+<wf-input placeholder="Width 150px" width="150px"></wf-input>`));
           </script>
 
           <script defer>
@@ -413,7 +335,9 @@ applyPolyfills().then(() => {
         <section id="link" class="container">
           <wf-title id="link" tag="h3">Link</wf-title>
 
-          <wf-link></wf-link>
+          <section class="components">
+            <wf-link></wf-link>
+          </section>
 
           <script defer>
             document.querySelector('#link').appendChild(getPre(`<wf-link></wf-link>`));
@@ -427,8 +351,10 @@ applyPolyfills().then(() => {
         <section id="lorem" class="container">
           <wf-title id="lorem" tag="h3">Lorem ipsum</wf-title>
 
-          <wf-p><wf-lorem></wf-lorem></wf-p>
-          <wf-p><wf-lorem words="250"></wf-lorem></wf-p>
+          <section class="components">
+            <wf-p><wf-lorem></wf-lorem></wf-p>
+            <wf-p><wf-lorem words="250"></wf-lorem></wf-p>
+          </section>
 
           <script defer>
             document.querySelector('#lorem').appendChild(getPre(`<wf-lorem></wf-lorem>
@@ -444,7 +370,9 @@ applyPolyfills().then(() => {
         <section id="p" class="container">
           <wf-title id="p" tag="h3">Paragraph</wf-title>
 
-          <wf-p>Default text</wf-p>
+          <section class="components">
+            <wf-p>Default text</wf-p>
+          </section>
 
           <script defer>
             document.querySelector('#p').appendChild(getPre("<wf-p>Default text</wf-p>"));
@@ -458,26 +386,28 @@ applyPolyfills().then(() => {
         <section id="tabs" class="container">
           <wf-title id="tabs" tag="h3">Tabs</wf-title>
 
-          <wf-tabs>
-            <wf-tab-header slot="header" name="tab1">Tab 1</wf-tab-header>
-            <wf-tab-header slot="header" name="tab2">Tab 2</wf-tab-header>
-            <wf-tab-header slot="header" name="tab3">Tab 3</wf-tab-header>
-            <wf-tab-content slot="content" name="tab1">
-              <wf-p>
-                Content for tab 1
-              </wf-p>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="tab2">
-              <wf-p>
-                Description for tab 2
-              </wf-p>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="tab3">
-              <wf-p>
-                Another content for tab 3
-              </wf-p>
-            </wf-tab-content>
-          </wf-tabs>
+          <section class="components">
+            <wf-tabs>
+              <wf-tab-header slot="header" name="tab1">Tab 1</wf-tab-header>
+              <wf-tab-header slot="header" name="tab2">Tab 2</wf-tab-header>
+              <wf-tab-header slot="header" name="tab3">Tab 3</wf-tab-header>
+              <wf-tab-content slot="content" name="tab1">
+                <wf-p>
+                  Content for tab 1
+                </wf-p>
+              </wf-tab-content>
+              <wf-tab-content slot="content" name="tab2">
+                <wf-p>
+                  Description for tab 2
+                </wf-p>
+              </wf-tab-content>
+              <wf-tab-content slot="content" name="tab3">
+                <wf-p>
+                  Another content for tab 3
+                </wf-p>
+              </wf-tab-content>
+            </wf-tabs>
+          </section>
 
           <script defer>
             document.querySelector('#tabs').appendChild(getPre(`<wf-tabs>
@@ -510,10 +440,24 @@ applyPolyfills().then(() => {
         <section id="title" class="container">
           <wf-title id="title" tag="h3">Title</wf-title>
 
-          <wf-title tag="h4">Default title</wf-title>
+          <section class="components">
+            <wf-title tag="h4">Default title</wf-title><br /><br />
+            <wf-title tag="h4" variant="sm">Title variant</wf-title>
+            <wf-title tag="h4" variant="md">Title variant</wf-title>
+            <wf-title tag="h4" variant="lg">Title variant</wf-title>
+            <wf-title tag="h4" variant="xl">Title variant</wf-title>
+          </section>
 
           <script defer>
-            document.querySelector('#title').appendChild(getPre(`<wf-title tag="h4">Default title</wf-title>`));
+            document.querySelector('#title').appendChild(getPre(`<wf-title tag="h4">Default title</wf-title>
+
+<wf-title tag="h4" variant="sm">Title SM</wf-title>
+
+<wf-title tag="h4" variant="md">Title MD</wf-title>
+
+<wf-title tag="h4" variant="lg">Title LG</wf-title>
+
+<wf-title tag="h4" variant="xl">Title XL</wf-title>`));
           </script>
 
           <script defer>
@@ -524,7 +468,9 @@ applyPolyfills().then(() => {
         <section id="video" class="container">
           <wf-title id="video" tag="h3">Video</wf-title>
 
-          <wf-video width="600px"></wf-video>
+          <section class="components">
+            <wf-video width="600px"></wf-video>
+          </section>
 
           <script defer>
             document.querySelector('#video').appendChild(getPre(`<wf-video width="600px"></wf-video>`));

@@ -18,105 +18,7 @@
   <script nomodule src="build/wireframes.js"></script>
   <link rel="stylesheet" href="build/wireframes.css" />
 
-  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/dark.min.css">
-  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
-  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/languages/javascript.min.js"></script>
-  <script>hljs.highlightAll();</script>
-
-  <style>
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --line-color: white;
-        --background: black;
-      }
-
-      body {
-        background: black;
-        background-image: radial-gradient(#dddddd3d 1px, transparent 0) !important;
-        color: white;
-      }
-    }
-
-    ::-webkit-scrollbar {
-      width: 5px;
-      height: 5px;
-    }
-
-    ::-webkit-scrollbar-track-piece {
-      background: #fff;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #444;
-    }
-
-    body {
-      margin: 0;
-      background-image: radial-gradient(#1111113d 1px, transparent 0);
-      background-size: 1.5rem 1.5rem;
-    }
-
-    header,
-    main,
-    footer {
-      padding: 0 1rem;
-      margin: 0 auto;
-      max-width: 1400px;
-    }
-
-    header {
-      width: 100%;
-      padding: 1rem;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    footer {
-      padding: 1rem;
-    }
-
-    pre {
-      margin: 0;
-    }
-
-    .aa {
-      display: flex;
-
-      &>div:first-child {
-        flex-basis: 20%;
-      }
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-
-      ul {
-        padding: 0;
-        list-style: none;
-
-        li {
-          margin-bottom: 1rem;
-        }
-      }
-
-      a {
-        display: block;
-        padding: .5rem;
-        text-decoration: none;
-
-        &:hover {
-          background: #444;
-        }
-      }
-    }
-
-    .container {
-      padding: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css" />
 
   <script data-no-cookie async src="https://cdn.splitbee.io/sb.js"></script>
 </head>
@@ -131,7 +33,7 @@
         </wf-flex>
       </a>
       <!-- <wf-input placeholder="Search"></wf-input> -->
-      <wf-flex align-items="center" gap="2rem">
+      <wf-flex align-items="center" gap="1rem">
         <a href="https://www.npmjs.com/package/wireframes" target="_blank">
           <svg width="31" height="13" xmlns="http://www.w3.org/2000/svg">
             <g fill="currentColor" fill-rule="nonzero">

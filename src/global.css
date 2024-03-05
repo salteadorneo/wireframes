@@ -11,18 +11,6 @@
     --font-family: 'Virgil', sans-serif;
 }
 
-/*@media (prefers-color-scheme: dark) {
-    :root {
-        --line-color: white;
-        --background: black;
-    }
-
-    body {
-        background: rgb(41, 41, 41);
-        color: white;
-    }
-}*/
-
 * {
     box-sizing: border-box;
     min-width: 0;

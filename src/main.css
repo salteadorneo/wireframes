@@ -1,0 +1,125 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --line-color: white;
+        --background: black;
+    }
+
+    body {
+        background: black;
+        background-image: linear-gradient(180deg, #ffffff00 0%, rgb(0, 0, 0) 100%), radial-gradient(#dddddd3d 1px, transparent 0) !important;
+        color: white;
+    }
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-color) var(--background);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(180deg, #ffffff00 0%, rgb(255, 255, 255) 100%), radial-gradient(#1111113d 1px, transparent 0);
+    background-size: 1.5rem 1.5rem;
+}
+
+header,
+main,
+footer {
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+}
+
+header {
+    width: 100%;
+    padding: 1rem;
+}
+
+a {
+    color: inherit;
+}
+
+footer {
+    padding: 1rem;
+}
+
+pre {
+    margin: 0;
+}
+
+.docs {
+    display: flex;
+
+    &>div:first-child {
+        flex-basis: 15%;
+    }
+
+    &>div:last-child {
+        flex-basis: 85%;
+    }
+}
+
+@media (width < 780px) {
+    .docs {
+        &>div:first-child {
+            display: none;
+        }
+
+        &>div:last-child {
+            flex-basis: 100%;
+        }
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin-bottom: 5rem;
+
+    .components {
+        padding: 1rem;
+        background-color: var(--background);
+    }
+
+    table {
+        width: 100%;
+        border: 1px solid;
+        border-collapse: collapse;
+
+        * {
+            font-family: 'Virgil', sans-serif;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 0.5rem;
+            background-color: var(--background);
+        }
+
+        th {
+            border-bottom: 1px solid;
+        }
+    }
+}

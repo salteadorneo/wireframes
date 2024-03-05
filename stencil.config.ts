@@ -33,6 +33,10 @@ export const config: Config = {
         {
           src: '*.html',
           warn: true,
+        },
+        {
+          src: 'main.css',
+          warn: true,
         }
       ]
     },
