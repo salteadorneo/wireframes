@@ -5,12 +5,11 @@ h4,
 h5,
 h6 {
     font-family: var(--font-family);
+    font-size: 2rem;
     color: var(--line-color, black);
     text-wrap: balance;
     margin: .5rem 0;
-}
 
-h1 {
     &.sm {
         font-size: 1.5rem;
     }
@@ -21,75 +20,5 @@ h1 {
 
     &.xl {
         font-size: 3rem;
-    }
-}
-
-h2 {
-    &.sm {
-        font-size: 1rem;
-    }
-
-    &.lg {
-        font-size: 2rem;
-    }
-
-    &.xl {
-        font-size: 2.5rem;
-    }
-}
-
-h3 {
-    &.sm {
-        font-size: .75rem;
-    }
-
-    &.lg {
-        font-size: 1.5rem;
-    }
-
-    &.xl {
-        font-size: 2rem;
-    }
-}
-
-h4 {
-    &.sm {
-        font-size: .5rem;
-    }
-
-    &.lg {
-        font-size: 1rem;
-    }
-
-    &.xl {
-        font-size: 1.5rem;
-    }
-}
-
-h5 {
-    &.sm {
-        font-size: .25rem;
-    }
-
-    &.lg {
-        font-size: .75rem;
-    }
-
-    &.xl {
-        font-size: 1rem;
-    }
-}
-
-h6 {
-    &.sm {
-        font-size: .1rem;
-    }
-
-    &.lg {
-        font-size: .5rem;
-    }
-
-    &.xl {
-        font-size: .75rem;
     }
 }
