@@ -1,6 +1,6 @@
 input {
     font-family: var(--font-family);
-    color: var(--line-background, white);
+    color: var(--line-background, black);
     background: transparent;
     border-width: var(--line-width, 2px);
     border-style: solid;
