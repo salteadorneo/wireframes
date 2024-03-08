@@ -1,6 +1,4 @@
-# Wireframes
-
-Web Components UI library for building wireframes and prototypes
+![Wireframes](https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/assets/og.png)
 
 ## Installation
 
