@@ -14,7 +14,7 @@
   "homepage": "https://salteadorneo.github.io/wireframes/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/salteadorneo/wireframes"
+    "url": "git+https://github.com/salteadorneo/wireframes.git"
   },
   "bugs": {
     "url": "https://github.com/salteadorneo/wireframes/issues",
