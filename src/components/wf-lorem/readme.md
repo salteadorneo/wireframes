@@ -9,7 +9,7 @@
 
 | Property | Attribute | Description | Type     | Default |
 | -------- | --------- | ----------- | -------- | ------- |
-| `words`  | `words`   |             | `number` | `10`    |
+| `words`  | `words`   |             | `number` | `2`     |
 
 
 ----------------------------------------------
