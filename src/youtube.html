@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Wireframes | Component library for building wireframes and prototypes</title>
+
+  <meta name="description"
+    content="Web Components UI library for building wireframes and prototypes. Framework agnostic. Open source." />
+  <meta name="keywords" content="web components, wireframes, ui library" />
+  <meta name="author" content="salteadorneo" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://salteadorneo.github.io/wireframes/youtube.html" />
+
+  <script type="module" src="build/wireframes.esm.js"></script>
+  <script nomodule src="build/wireframes.js"></script>
+  <link rel="stylesheet" href="build/wireframes.css" />
+
+  <script data-no-cookie async src="https://cdn.splitbee.io/sb.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+    }
+
+    main {
+      display: flex;
+      overflow: auto;
+      gap: 3rem;
+      padding: 0 0 0 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      overflow-y: auto;
+      padding-right: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://salteadorneo.github.io/wireframes/" style="position: fixed; top: -25px; right: 25px; z-index: 9999; padding-top: 0.5rem;padding-bottom: 0.5rem; width: 250px; text-align: center; 
+color: white; background: black; transform: rotate(45deg) translateX(50%); transform-origin: top; 
+ text-decoration: none; font-family: 'Virgil';">
+    Made with Wireframes
+  </a>
+  <header>
+    <wf-flex align-items="center" gap="1rem">
+      <wf-image aspect-ratio="16/9" height="28px" text="▶" border-radius="6px"></wf-image>
+      <wf-title tag="h1">YouTube</wf-title>
+    </wf-flex>
+
+    <wf-input placeholder="Search"></wf-input>
+
+    <wf-flex flex-direction="row" justify-content="center" gap="2rem">
+      <wf-button>Upload</wf-button>
+    </wf-flex>
+  </header>
+  <main>
+    <wf-grid style="width:210px;" gap="1.5rem">
+      <wf-grid gap="1rem">
+        <wf-link>Home</wf-link>
+        <wf-link>Explore</wf-link>
+        <wf-link>Subscriptions</wf-link>
+        <wf-link>Library</wf-link>
+      </wf-grid>
+      <wf-hr></wf-hr>
+      <wf-grid gap="1rem">
+        <wf-link>History</wf-link>
+        <wf-link>Your videos</wf-link>
+        <wf-link>Watch later</wf-link>
+        <wf-link>Liked videos</wf-link>
+      </wf-grid>
+      <wf-hr></wf-hr>
+      <wf-grid gap="1rem">
+        <wf-link>Music</wf-link>
+        <wf-link>Sports</wf-link>
+        <wf-link>Gaming</wf-link>
+        <wf-link>Movies</wf-link>
+        <wf-link>News</wf-link>
+        <wf-link>Live</wf-link>
+        <wf-link>Learning</wf-link>
+        <wf-link>Spotlight</wf-link>
+      </wf-grid>
+    </wf-grid>
+    <section class="grid">
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+      <article>
+        <wf-video width="100%"></wf-video>
+        <wf-title tag="h2" variant="sm">Title</wf-title>
+        <wf-p>Channel</wf-p>
+        <wf-p>999 views · 1 hour ago</wf-p>
+      </article>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Wireframes | Component library for building wireframes and prototypes</title>
+
+  <meta name="description"
+    content="Web Components UI library for building wireframes and prototypes. Framework agnostic. Open source." />
+  <meta name="keywords" content="web components, wireframes, ui library" />
+  <meta name="author" content="salteadorneo" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://salteadorneo.github.io/wireframes/google.html" />
+
+  <script type="module" src="build/wireframes.esm.js"></script>
+  <script nomodule src="build/wireframes.js"></script>
+  <link rel="stylesheet" href="build/wireframes.css" />
+
+  <script data-no-cookie async src="https://cdn.splitbee.io/sb.js"></script>
+
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+      height: 100dvh;
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    iframe {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://salteadorneo.github.io/wireframes/" style="position: fixed; top: -25px; right: 25px; z-index: 9999; padding-top: 0.5rem;padding-bottom: 0.5rem; width: 250px; text-align: center; 
+  color: white; background: black; transform: rotate(45deg) translateX(50%); transform-origin: top; 
+   text-decoration: none; font-family: 'Virgil';">
+    Made with Wireframes
+  </a>
+  <main>
+    <wf-title tag="h1" variant="xl">Google</wf-title>
+
+    <wf-input></wf-input>
+
+    <wf-flex justify-content="center" gap="2rem">
+      <wf-button>Google Search</wf-button>
+      <wf-button>I'm Feeling Lucky</wf-button>
+    </wf-flex>
+  </main>
+</body>
+
+</html>
