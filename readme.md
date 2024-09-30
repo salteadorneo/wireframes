@@ -1,5 +1,9 @@
 ![Wireframes](https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/assets/og.png)
 
+<a href="https://www.npmjs.com/package/wireframes">
+<img alt="npm downloads/month" src="https://img.shields.io/npm/dm/wireframes"  />
+</a>
+
 ## Installation
 
 ```bash
