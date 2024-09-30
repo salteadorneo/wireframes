@@ -7,7 +7,7 @@
   <a href="https://www.npmjs.com/package/wireframes">
     <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/wireframes"  />
   </a>
-  <a href="https://github.com/salteadorneo/pokemodle/issues">
+  <a href="../../issues">
     <img alt="PRs welcome!" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"  />
   </a>
   <a href="https://twitter.com/salteadorneodev">
