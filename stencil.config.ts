@@ -1,16 +1,21 @@
 import { Config } from '@stencil/core';
+import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'wireframes',
   globalStyle: 'src/global.css',
   sourceMap: false,
   outputTargets: [
+    reactOutputTarget({
+      outDir: 'dist/wireframes-react/',
+    }),
     {
       type: 'dist',
       esmLoaderPath: '../loader',
     },
     {
       type: 'dist-custom-elements',
+      externalRuntime: false,
       copy: [
         {
           src: '**/*.{woff,woff2}',
