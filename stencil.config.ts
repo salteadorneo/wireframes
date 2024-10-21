@@ -7,7 +7,7 @@ export const config: Config = {
   sourceMap: false,
   outputTargets: [
     reactOutputTarget({
-      outDir: 'dist/wireframes-react/',
+      outDir: 'packages/wireframes-react/src/components/stencil-generated/',
     }),
     {
       type: 'dist',
