@@ -1,11 +1,13 @@
-![Wireframes](https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/assets/og.png)
+# Wireframes
+
+**Wireframes** is a set of components for building wireframes and prototypes with Vue.
 
 <p align="center">
-  <a href="./LICENSE.md">
-    <img alt="Released under the MIT license." src="https://img.shields.io/badge/license-MIT-blue.svg"  />
+  <a href="../../LICENSE">
+    <img alt="Released under the BSD license." src="https://img.shields.io/badge/license-BSD-blue.svg"  />
   </a>
-  <a href="https://www.npmjs.com/package/wireframes">
-    <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/wireframes"  />
+  <a href="https://www.npmjs.com/package/wireframes-vue">
+    <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/wireframes-vue"  />
   </a>
   <a href="../../issues">
     <img alt="PRs welcome!" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"  />
@@ -18,29 +20,26 @@
 ## Installation
 
 ```bash
-npm i wireframes
-```
-
-```bash
-pnpm i wireframes
-```
-
-```bash
-yarn add wireframes
+npm install wireframes-vue@latest
 ```
 
 ## Usage
 
+In your main.js file, import your component library plugin and use it:
+
+```javascript
+import { ComponentLibrary } from 'wireframes-vue';
+
+createApp(App).use(ComponentLibrary).mount('#app');
+```
+
+In your page or component, you can now import and use your component wrappers:
+
 ```html
-<wf-image aspect-ratio="16/9" />
-
-<wf-title>
-    Hello world!
-</wf-title>
-
-<wf-button>
-    Click me!
-</wf-button>
+<template>
+  <wf-title>Demo</wf-title>
+  <wf-button>Click me!</wf-button>
+</template>
 ```
 
 ## Contributing
