@@ -1,8 +1,10 @@
-![Wireframes](https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/assets/og.png)
+# Wireframes
+
+**Wireframes** is a set of components for building wireframes and prototypes with React, Vue or JavaScript.
 
 <p align="center">
-  <a href="./LICENSE.md">
-    <img alt="Released under the MIT license." src="https://img.shields.io/badge/license-MIT-blue.svg"  />
+  <a href="./LICENSE">
+    <img alt="Released under the BSD license." src="https://img.shields.io/badge/license-BSD-blue.svg"  />
   </a>
   <a href="https://www.npmjs.com/package/wireframes">
     <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/wireframes"  />
@@ -15,19 +17,27 @@
   </a>
 </p>
 
+![Wireframes](https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/assets/og.png)
+
 ## Installation
 
 ```bash
-npm i wireframes
+npm install wireframes@latest
+```
+```bash
+npm install wireframes-react@latest
+```
+```bash
+npm install wireframes-vue@latest
 ```
 
-```bash
-pnpm i wireframes
-```
+## Packages
 
-```bash
-yarn add wireframes
-```
+| Name | Version | Downloads |
+| - | - | - |
+| [`wireframes`](https://github.com/salteadorneo/wireframes/tree/main/packages/%40headlessui) | [![npm version](https://img.shields.io/npm/v/wireframes.svg)](https://www.npmjs.com/package/wireframes) | [![npm downloads](https://img.shields.io/npm/dt/wireframes.svg)](https://www.npmjs.com/package/wireframes) |
+| [`wireframes-react`](https://github.com/salteadorneo/wireframes/tree/main/packages/%40headlessui-react) | [![npm version](https://img.shields.io/npm/v/wireframes-react.svg)](https://www.npmjs.com/package/wireframes-react) | [![npm downloads](https://img.shields.io/npm/dt/wireframes-react.svg)](https://www.npmjs.com/package/wireframes-react) |
+| [`wireframes-vue`](https://github.com/salteadorneo/wireframes/tree/main/packages/%40headlessui-vue) | [![npm version](https://img.shields.io/npm/v/wireframes-vue.svg)](https://www.npmjs.com/package/wireframes-vue) | [![npm downloads](https://img.shields.io/npm/dt/wireframes-vue.svg)](https://www.npmjs.com/package/wireframes-vue) |
 
 ## Usage
 
