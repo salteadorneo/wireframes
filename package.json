@@ -1,6 +1,6 @@
 {
   "name": "wireframes",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "",
   "keywords": [
     "wireframe",
@@ -40,10 +40,11 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^4.22.1",
-    "@stencil/react-output-target": "^0.7.1"
+    "@stencil/core": "^4.22.1"
   },
   "devDependencies": {
+    "@stencil/react-output-target": "^0.7.1",
+    "@stencil/vue-output-target": "^0.8.9",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.7",
     "jest": "^29.7.0",
