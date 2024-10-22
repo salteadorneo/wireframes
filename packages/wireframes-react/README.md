@@ -1,11 +1,13 @@
-![Wireframes](https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/assets/og.png)
+# Wireframes
+
+**Wireframes** is a set of components for building wireframes and prototypes with React.
 
 <p align="center">
-  <a href="./LICENSE.md">
-    <img alt="Released under the MIT license." src="https://img.shields.io/badge/license-MIT-blue.svg"  />
+  <a href="../../LICENSE">
+    <img alt="Released under the BSD license." src="https://img.shields.io/badge/license-BSD-blue.svg"  />
   </a>
-  <a href="https://www.npmjs.com/package/wireframes">
-    <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/wireframes"  />
+  <a href="https://www.npmjs.com/package/wireframes-react">
+    <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/wireframes-react"  />
   </a>
   <a href="../../issues">
     <img alt="PRs welcome!" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"  />
@@ -18,29 +20,24 @@
 ## Installation
 
 ```bash
-npm i wireframes
-```
-
-```bash
-pnpm i wireframes
-```
-
-```bash
-yarn add wireframes
+npm install wireframes-react@latest
 ```
 
 ## Usage
 
-```html
-<wf-image aspect-ratio="16/9" />
+To make use of your React component library in your React application, import your components from your React component library in the file where you want to use them.
 
-<wf-title>
-    Hello world!
-</wf-title>
+```jsx
+import { WfTitle, WfButton } from 'wireframes-react';
 
-<wf-button>
-    Click me!
-</wf-button>
+export default function App() {
+  return (
+    <>
+      <WfTitle>Demo</WfTitle>
+      <WfButton>Click me!</WfButton>
+    </>
+  );
+}
 ```
 
 ## Contributing

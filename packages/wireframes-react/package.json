@@ -1,7 +1,7 @@
 {
   "name": "wireframes-react",
   "version": "0.0.5",
-  "description": "",
+  "description": "Component library for building wireframes and prototypes with React",
   "keywords": [
     "wireframe",
     "ui",
@@ -31,7 +31,7 @@
     "tsc": "tsc -p . --outDir ./dist"
   },
   "dependencies": {
-    "wireframes": "^0.0.15"
+    "wireframes": "*"
   },
   "devDependencies": {
     "@types/react": "^18.3.11",
