@@ -35,9 +35,9 @@ npm install wireframes-vue@latest
 
 | Name | Version | Downloads |
 | - | - | - |
-| [`wireframes`](https://github.com/salteadorneo/wireframes/tree/main/packages/%40headlessui) | [![npm version](https://img.shields.io/npm/v/wireframes.svg)](https://www.npmjs.com/package/wireframes) | [![npm downloads](https://img.shields.io/npm/dt/wireframes.svg)](https://www.npmjs.com/package/wireframes) |
-| [`wireframes-react`](https://github.com/salteadorneo/wireframes/tree/main/packages/%40headlessui-react) | [![npm version](https://img.shields.io/npm/v/wireframes-react.svg)](https://www.npmjs.com/package/wireframes-react) | [![npm downloads](https://img.shields.io/npm/dt/wireframes-react.svg)](https://www.npmjs.com/package/wireframes-react) |
-| [`wireframes-vue`](https://github.com/salteadorneo/wireframes/tree/main/packages/%40headlessui-vue) | [![npm version](https://img.shields.io/npm/v/wireframes-vue.svg)](https://www.npmjs.com/package/wireframes-vue) | [![npm downloads](https://img.shields.io/npm/dt/wireframes-vue.svg)](https://www.npmjs.com/package/wireframes-vue) |
+| [`wireframes`](https://github.com/salteadorneo/wireframes/tree/main) | [![npm version](https://img.shields.io/npm/v/wireframes.svg)](https://www.npmjs.com/package/wireframes) | [![npm downloads](https://img.shields.io/npm/dt/wireframes.svg)](https://www.npmjs.com/package/wireframes) |
+| [`wireframes-react`](https://github.com/salteadorneo/wireframes/tree/main/packages/wireframes-react) | [![npm version](https://img.shields.io/npm/v/wireframes-react.svg)](https://www.npmjs.com/package/wireframes-react) | [![npm downloads](https://img.shields.io/npm/dt/wireframes-react.svg)](https://www.npmjs.com/package/wireframes-react) |
+| [`wireframes-vue`](https://github.com/salteadorneo/wireframes/tree/main/packages/wireframes-vue) | [![npm version](https://img.shields.io/npm/v/wireframes-vue.svg)](https://www.npmjs.com/package/wireframes-vue) | [![npm downloads](https://img.shields.io/npm/dt/wireframes-vue.svg)](https://www.npmjs.com/package/wireframes-vue) |
 
 ## Usage
 
