@@ -1,9 +1,10 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import { vueOutputTarget } from '@stencil/vue-output-target';
 
 export const config: Config = {
   namespace: 'wireframes',
-  globalStyle: 'src/global.css',
+  globalStyle: 'src/global/global.css',
   sourceMap: false,
   outputTargets: [
     reactOutputTarget({
@@ -13,6 +14,10 @@ export const config: Config = {
       type: 'dist',
       esmLoaderPath: '../loader',
     },
+    vueOutputTarget({
+      componentCorePackage: 'wireframes',
+      proxiesFile: 'packages/wireframes-vue/src/components.ts',
+    }),
     {
       type: 'dist-custom-elements',
       externalRuntime: false,

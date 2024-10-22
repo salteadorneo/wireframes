@@ -1,0 +1,38 @@
+{
+  "name": "wireframes-vue",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "wireframe",
+    "ui",
+    "design",
+    "components",
+    "vue"
+  ],
+  "author": "salteadorneo",
+  "license": "BSD-3-Clause",
+  "homepage": "https://salteadorneo.github.io/wireframes/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salteadorneo/wireframes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/salteadorneo/wireframes/issues",
+    "email": "hola@salteadorneo.dev"
+  },
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run tsc",
+    "tsc": "tsc -p . --outDir ./dist"
+  },
+  "dependencies": {
+    "wireframes": "^0.0.15"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
