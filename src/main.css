@@ -11,6 +11,10 @@
     }
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--line-color) var(--background);
@@ -35,14 +39,16 @@ footer {
 header {
     width: 100%;
     padding: 1rem;
+
+    .menu {
+        @media (width < 680px) {
+            display: none;
+        }
+    }
 }
 
 a {
     color: inherit;
-}
-
-footer {
-    padding: 1rem;
 }
 
 pre {

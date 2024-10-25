@@ -15,7 +15,6 @@
   <link rel="canonical" href="https://salteadorneo.github.io/wireframes/docs.html" />
 
   <script type="module" src="build/wireframes.esm.js"></script>
-  <script nomodule src="build/wireframes.js"></script>
   <link rel="stylesheet" href="build/wireframes.css" />
 
   <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.min.css">
@@ -80,11 +79,11 @@
           <wf-title font-weight="normal" variant="sm">Wireframes</wf-title>
         </wf-flex>
       </a>
-      <!-- <wf-input placeholder="Search"></wf-input> -->
-      <wf-flex align-items="center" gap="2rem">
+      <wf-flex align-items="center" gap="2rem" class="menu">
         <wf-link href="index.html">Home</wf-link>
-        <wf-link href="docs.html">Docs</wf-link>
-        <wf-link href="examples.html">Examples</wf-link>
+        <wf-link href="docs.html#installation">Docs</wf-link>
+        <wf-link href="docs.html#components">Components</wf-link>
+        <wf-link href="showcase.html">Showcase</wf-link>
         <wf-flex align-items="center" gap="1rem">
           <a href="https://www.npmjs.com/package/wireframes" target="_blank" rel="noopener noreferrer">
             <svg width="31" height="13" xmlns="http://www.w3.org/2000/svg">
@@ -115,9 +114,15 @@
           <ul>
             <li><wf-title tag="h2" variant="sm">Get started</wf-title></li>
             <li><wf-link href="#installation">Installation</wf-link></li>
-            <li><wf-link href="#about">About</wf-link></li>
+            <li style="padding-left: 16px;"><wf-link href="#installation-react">React</wf-link></li>
+            <li style="padding-left: 16px;"><wf-link href="#installation-vue">Vue</wf-link></li>
+            <li style="padding-left: 16px;"><wf-link href="#installation-javascript">JavaScript</wf-link></li>
+            <li><wf-link href="#cdn">CDN</wf-link></li>
+            <li style="padding-left: 16px;"><wf-link href="#cdn-styles">Styles</wf-link></li>
+            <li style="padding-left: 16px;"><wf-link href="#cdn-styles-tailwind">Styles + Tailwind CSS</wf-link></li>
+            <li><wf-link href="#contributing">Contributing</wf-link></li>
             <br />
-            <li><wf-title tag="h2" variant="sm">Components</wf-title></li>
+            <li><wf-link href="#components"><wf-title tag="h2" variant="sm">Components</wf-title></wf-link></li>
             <li><wf-link href="#button">Button</wf-link></li>
             <li><wf-link href="#checkbox">Checkbox</wf-link></li>
             <li><wf-link href="#flex">Flex</wf-link></li>
@@ -138,66 +143,179 @@
         <section id="installation" class="container">
           <wf-title tag="h3">Installation</wf-title>
 
+          <wf-p>
+            Wireframes is available as an npm package. You can install it in your project using the package manager of
+            your
+            choice.
+          </wf-p>
+
+          <wf-title id="installation-react" tag="h4">React</wf-title>
+
           <wf-tabs>
             <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
             <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
             <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
             <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
             <wf-tab-content slot="content" name="npm">
-              <wf-p>
-                Run the following command using npm:
-              </wf-p>
+              <pre><code>npm i wireframes-react</code></pre>
+            </wf-tab-content>
+            <wf-tab-content slot="content" name="pnpm">
+              <pre><code>pnpm i wireframes-react</code></pre>
+            </wf-tab-content>
+            <wf-tab-content slot="content" name="yarn">
+              <pre><code>yarn add wireframes-react</code></pre>
+            </wf-tab-content>
+            <wf-tab-content slot="content" name="bun">
+              <pre><code>bun add wireframes-react</code></pre>
+            </wf-tab-content>
+          </wf-tabs>
+
+          <wf-title id="installation-vue" tag="h4">Vue</wf-title>
+
+          <wf-tabs>
+            <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
+            <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
+            <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
+            <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
+            <wf-tab-content slot="content" name="npm">
+              <pre><code>npm i wireframes-vue</code></pre>
+            </wf-tab-content>
+            <wf-tab-content slot="content" name="pnpm">
+              <pre><code>pnpm i wireframes-vue</code></pre>
+            </wf-tab-content>
+            <wf-tab-content slot="content" name="yarn">
+              <pre><code>yarn add wireframes-vue</code></pre>
+            </wf-tab-content>
+            <wf-tab-content slot="content" name="bun">
+              <pre><code>bun add wireframes-vue</code></pre>
+            </wf-tab-content>
+          </wf-tabs>
+
+          <wf-title id="installation-javascript" tag="h4">JavaScript</wf-title>
+
+          <wf-tabs>
+            <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
+            <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
+            <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
+            <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
+            <wf-tab-content slot="content" name="npm">
               <pre><code>npm i wireframes</code></pre>
             </wf-tab-content>
             <wf-tab-content slot="content" name="pnpm">
-              <wf-p>
-                Run the following command using pnpm:
-              </wf-p>
               <pre><code>pnpm i wireframes</code></pre>
             </wf-tab-content>
             <wf-tab-content slot="content" name="yarn">
-              <wf-p>
-                Run the following command using yarn:
-              </wf-p>
               <pre><code>yarn add wireframes</code></pre>
             </wf-tab-content>
             <wf-tab-content slot="content" name="bun">
-              <wf-p>
-                Run the following command using bun:
-              </wf-p>
               <pre><code>bun add wireframes</code></pre>
             </wf-tab-content>
           </wf-tabs>
 
-          <wf-title tag="h4">Setup</wf-title>
-
           <wf-p>
-            After installing, you need to set up at the root of your application. This can be either in
-            your index.jsx, index.tsx or App.jsx depending on the framework you use.
+            After installing, you need to set up at the root of your application.
           </wf-p>
-          <pre><code class="language-js">...
-
-import { applyPolyfills, defineCustomElements } from 'wireframes/loader';
+          <pre><code class="language-js">import { applyPolyfills, defineCustomElements } from 'wireframes/loader';
 import 'wireframes/dist/wireframes/wireframes.css';
 
 applyPolyfills().then(() => {
   defineCustomElements();
-});
+});</code></pre>
+        </section>
 
-...</code></pre>
-
-          <wf-title tag="h4">CDN</wf-title>
+        <section id="cdn" class="container">
+          <wf-title tag="h3">CDN Custom Elements</wf-title>
 
           <wf-p>
             Alternatively, you can use the CDN to load the components in your project.
           </wf-p>
           <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
-
 &lt;link rel="stylesheet" href="https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.css" /&gt;</code></pre>
+
+          <wf-title tag="h5">Example</wf-title>
+
+          <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;script type=&quot;module&quot; src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.css&quot; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;wf-title tag=&quot;h1&quot;&gt;Login&lt;/wf-title&gt;
+    &lt;wf-input placeholder=&quot;Username&quot;&gt;&lt;/wf-input&gt;
+    &lt;wf-input placeholder=&quot;Password&quot; type=&quot;password&quot;&gt;&lt;/wf-input&gt;
+    &lt;wf-button&gt;Login&lt;/wf-button&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <section id="cdn-styles" class="container">
+          <wf-title tag="h4">CDN Styles</wf-title>
+          <wf-p>You can use the CDN to load the styles into your project. Custom Elements is not included. Normally use
+            headers, input, buttons and these will be styled.</wf-p>
+
+          <pre><code>&lt;link rel="stylesheet" href="https://salteadorneo.github.io/wireframes/cdn/wireframes.css" /&gt;</code></pre>
+
+          <wf-title tag="h5">Example</wf-title>
+
+          <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://salteadorneo.github.io/wireframes/cdn/wireframes.css&quot; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Login&lt;/h1&gt;
+    &lt;input placeholder=&quot;Username&quot;&gt;&lt;/input&gt;
+    &lt;input placeholder=&quot;Password&quot; type=&quot;password&quot;&gt;&lt;/input&gt;
+    &lt;button&gt;Login&lt;/button&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <section id="cdn-styles-tailwind" class="container">
+          <wf-title tag="h4">CDN Styles + Tailwind CSS</wf-title>
+          <wf-p>You can use the CDN to load the styles into your project. Custom Elements is not included. Normally use
+            headers, input, buttons and these will be styled.</wf-p>
+          <wf-p>In addition, you will be able to use the full power of Tailwind CSS for structuring.</wf-p>
+
+          <pre><code>&lt;script src="https://salteadorneo.github.io/wireframes/cdn/wireframes.js"&gt;&lt;/script&gt;</code></pre>
+
+          <wf-title tag="h5">Example</wf-title>
+
+          <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;script src=&quot;https://salteadorneo.github.io/wireframes/cdn/wireframes.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main class=&quot;container mx-auto p-4&quot;&gt;
+        &lt;h1 class=&quot;text-2xl font-medium&quot;&gt;Login&lt;/h1&gt;
+        &lt;input placeholder=&quot;Username&quot;&gt;&lt;/input&gt;
+        &lt;input placeholder=&quot;Password&quot; type=&quot;password&quot;&gt;&lt;/input&gt;
+        &lt;button&gt;Login&lt;/button&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code>
+        </pre>
 
         </section>
 
-        <section id="about" class="container">
+        <section id="contributing" class="container">
           <wf-title tag="h3">Contributing</wf-title>
           <wf-p>
             Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to
@@ -205,16 +323,36 @@ applyPolyfills().then(() => {
           </wf-p>
         </section>
 
+        <section id="components" class="container">
+          <wf-title tag="h3">Components</wf-title>
+          <wf-p>
+            The following components are available in the library.
+          </wf-p>
+        </section>
+
         <section id="button" class="container">
           <wf-title id="button" tag="h3">Button</wf-title>
 
-          <section class="components">
-            <wf-button></wf-button>
-          </section>
-
-          <script defer>
-            document.querySelector('#button').appendChild(getPre(`<wf-button></wf-button>`));
-          </script>
+          <wf-tabs>
+            <wf-tab-header slot="header" name="preview">Preview</wf-tab-header>
+            <wf-tab-header slot="header" name="code">Code</wf-tab-header>
+            <wf-tab-content slot="content" name="preview">
+              <section class="components">
+                <wf-button variant="sm"></wf-button>
+                <wf-button></wf-button>
+                <wf-button variant="lg"></wf-button>
+                <wf-button variant="xl"></wf-button>
+              </section>
+            </wf-tab-content>
+            <wf-tab-content slot="content" name="code">
+              <script defer>
+                document.querySelector('#button wf-tab-content[name=code]').appendChild(getPre(`<wf-button variant="sm"></wf-button>
+<wf-button></wf-button>
+<wf-button variant="lg"></wf-button>
+<wf-button variant="xl"></wf-button>`));
+              </script>
+            </wf-tab-content>
+          </wf-tabs>
 
           <script defer>
             printMarkdown('button');
@@ -242,9 +380,9 @@ applyPolyfills().then(() => {
 
           <section class="components">
             <wf-flex gap="2rem">
-              <wf-button>Button 1</wf-button>
-              <wf-button>Button 2</wf-button>
-              <wf-button>Button 3</wf-button>
+              <wf-image width="50px"></wf-image>
+              <wf-image width="50px"></wf-image>
+              <wf-image width="50px"></wf-image>
             </wf-flex>
           </section>
 
@@ -262,9 +400,9 @@ applyPolyfills().then(() => {
 
           <section class="components">
             <wf-grid gap="2rem">
-              <wf-button>Button 1</wf-button>
-              <wf-button>Button 2</wf-button>
-              <wf-button>Button 3</wf-button>
+              <wf-image width="50px"></wf-image>
+              <wf-image width="50px"></wf-image>
+              <wf-image width="50px"></wf-image>
             </wf-grid>
           </section>
 
@@ -362,14 +500,11 @@ applyPolyfills().then(() => {
           <wf-title id="lorem" tag="h3">Lorem ipsum</wf-title>
 
           <section class="components">
-            <wf-p><wf-lorem></wf-lorem></wf-p>
             <wf-p><wf-lorem words="250"></wf-lorem></wf-p>
           </section>
 
           <script defer>
-            document.querySelector('#lorem').appendChild(getPre(`<wf-lorem></wf-lorem>
-
-<wf-lorem words="250"></wf-lorem>`));
+            document.querySelector('#lorem').appendChild(getPre(`<wf-lorem words="250"></wf-lorem>`));
           </script>
 
           <script defer>
@@ -421,24 +556,24 @@ applyPolyfills().then(() => {
 
           <script defer>
             document.querySelector('#tabs').appendChild(getPre(`<wf-tabs>
-<wf-tab-header slot="header" name="tab1">Tab 1</wf-tab-header>
-<wf-tab-header slot="header" name="tab2">Tab 2</wf-tab-header>
-<wf-tab-header slot="header" name="tab3">Tab 3</wf-tab-header>
-<wf-tab-content slot="content" name="tab1">
-  <wf-p>
-    Content for tab 1
-  </wf-p>
-</wf-tab-content>
-<wf-tab-content slot="content" name="tab2">
-  <wf-p>
-    Description for tab 2
-  </wf-p>
-</wf-tab-content>
-<wf-tab-content slot="content" name="tab3">
-  <wf-p>
-    Another content for tab 3
-  </wf-p>
-</wf-tab-content>
+  <wf-tab-header slot="header" name="tab1">Tab 1</wf-tab-header>
+  <wf-tab-header slot="header" name="tab2">Tab 2</wf-tab-header>
+  <wf-tab-header slot="header" name="tab3">Tab 3</wf-tab-header>
+  <wf-tab-content slot="content" name="tab1">
+    <wf-p>
+      Content for tab 1
+    </wf-p>
+  </wf-tab-content>
+  <wf-tab-content slot="content" name="tab2">
+    <wf-p>
+      Description for tab 2
+    </wf-p>
+  </wf-tab-content>
+  <wf-tab-content slot="content" name="tab3">
+    <wf-p>
+      Another content for tab 3
+    </wf-p>
+  </wf-tab-content>
 </wf-tabs>`));
           </script>
 
