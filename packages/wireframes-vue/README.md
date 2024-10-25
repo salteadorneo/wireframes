@@ -20,7 +20,7 @@
 ## Installation
 
 ```bash
-npm install wireframes-vue@latest
+npm i wireframes-vue
 ```
 
 ## Usage

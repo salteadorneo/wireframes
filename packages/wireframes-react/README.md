@@ -20,7 +20,7 @@
 ## Installation
 
 ```bash
-npm install wireframes-react@latest
+npm i wireframes-react
 ```
 
 ## Usage

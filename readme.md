@@ -22,13 +22,13 @@
 ## Installation
 
 ```bash
-npm install wireframes@latest
+npm i wireframes
 ```
 ```bash
-npm install wireframes-react@latest
+npm i wireframes-react
 ```
 ```bash
-npm install wireframes-vue@latest
+npm i wireframes-vue
 ```
 
 ## Packages
