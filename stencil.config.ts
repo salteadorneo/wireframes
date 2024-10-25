@@ -48,6 +48,11 @@ export const config: Config = {
         {
           src: 'main.css',
           warn: true,
+        },
+        {
+          src: '../packages/cdn/dist/*.*',
+          dest: 'cdn',
+          warn: true,
         }
       ]
     },
