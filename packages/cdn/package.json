@@ -16,7 +16,7 @@
   "license": "BSD-3-Clause",
   "homepage": "https://salteadorneo.github.io/wireframes/",
   "scripts": {
-    "build": "postcss wireframes.css -o dist/wireframes.css"
+    "build": "postcss ./src/wireframes.css -o ./dist/wireframes.css"
   },
   "devDependencies": {
     "cssnano": "^7.0.6",
