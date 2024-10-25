@@ -1,0 +1,27 @@
+@import "../../src/global/global.css";
+
+@import "../../src/components/wf-button/wf-button.css";
+@import "../../src/components/wf-checkbox/wf-checkbox.css";
+@import "../../src/components/wf-flex/wf-flex.css";
+@import "../../src/components/wf-grid/wf-grid.css";
+@import "../../src/components/wf-hr/wf-hr.css";
+@import "../../src/components/wf-image/wf-image.css";
+@import "../../src/components/wf-input/wf-input.css";
+@import "../../src/components/wf-link/wf-link.css";
+@import "../../src/components/wf-p/wf-p.css";
+@import "../../src/components/wf-tabs/wf-tabs.css";
+@import "../../src/components/wf-title/wf-title.css";
+@import "../../src/components/wf-video/wf-video.css";
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --line-color: white;
+        --background: black;
+    }
+
+    body {
+        background: black;
+        background-image: linear-gradient(180deg, #ffffff00 0%, rgb(0, 0, 0) 100%), radial-gradient(#dddddd3d 1px, transparent 0) !important;
+        color: white;
+    }
+}

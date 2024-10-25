@@ -1,0 +1,27 @@
+{
+  "name": "wireframes-cdn",
+  "version": "0.0.1",
+  "description": "Component library for building wireframes and prototypes",
+  "keywords": [
+    "wireframe",
+    "ui",
+    "design",
+    "components",
+    "javascript",
+    "typescript",
+    "react",
+    "vue"
+  ],
+  "author": "salteadorneo",
+  "license": "BSD-3-Clause",
+  "homepage": "https://salteadorneo.github.io/wireframes/",
+  "scripts": {
+    "build": "postcss wireframes.css -o dist/wireframes.css"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0"
+  }
+}
