@@ -15,6 +15,7 @@ export class WfVideo {
   render() {
     return (
       <div
+        class="video"
         style={{
           width: this.width,
           maxWidth: this.maxWidth,

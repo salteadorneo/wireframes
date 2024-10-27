@@ -15,7 +15,7 @@ export class WfImage {
   render() {
     return (
       <div
-        class={!this.text && 'empty'}
+        class={!this.text ? 'img empty' : 'img'}
         style={{
           width: this.width,
           height: this.height,

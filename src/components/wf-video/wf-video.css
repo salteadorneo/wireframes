@@ -1,4 +1,5 @@
-div {
+div.video,
+video {
     display: flex;
     justify-content: center;
     border-width: var(--line-width, 2px);

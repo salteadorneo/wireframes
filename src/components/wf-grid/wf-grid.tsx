@@ -14,6 +14,7 @@ export class WfGrid {
   render() {
     return (
       <div
+        class="grid"
         style={{
           alignItems: this.alignItems,
           justifyContent: this.justifyContent,

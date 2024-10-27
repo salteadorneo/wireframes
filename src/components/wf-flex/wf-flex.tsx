@@ -17,6 +17,7 @@ export class WfFlex {
   render() {
     return (
       <div
+        class="flex"
         style={{
           flexDirection: this.flexDirection,
           justifyContent: this.justifyContent,
