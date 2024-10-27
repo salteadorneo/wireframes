@@ -5,6 +5,7 @@ input {
     border-width: var(--line-width, 2px);
     border-style: solid;
     border-color: var(--line-color, black);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding: .5rem 1rem;
     outline: none;
     appearance: none;
