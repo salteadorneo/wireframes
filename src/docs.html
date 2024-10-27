@@ -44,33 +44,10 @@
     }
   </style>
 
-  <script>
-    function getPre(component) {
-      const $pre = document.createElement('pre');
-      const $code = document.createElement('code');
-      $code.classList.add('language-html');
-      $code.textContent = component.replace(/%3C/g, '<').replace(/%3E/g, '>');
-      $pre.appendChild($code);
-      return $pre;
-    }
-
-    function printMarkdown(id) {
-      fetch(`https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/components/wf-${id}/readme.md`)
-        .then(response => response.text())
-        .then(text => {
-          text = text.split('\n').slice(1).join('\n');
-          text = text.split('\n').slice(0, -4).join('\n');
-          // replace ## Properties
-          text = text.replace(/## Properties/g, '#### Properties');
-          document.querySelector(`#${id}`).insertAdjacentHTML('beforeend', marked.parse(text));
-        });
-    }
-  </script>
-
   <script data-no-cookie async src="https://cdn.splitbee.io/sb.js"></script>
 </head>
 
-<body>
+<body class="docs">
   <header>
     <wf-flex justify-content="space-between" align-items="center" flex-wrap="wrap" gap="10px">
       <a href="index.html" style="text-decoration:none;">
@@ -108,133 +85,132 @@
     </wf-flex>
   </header>
   <main>
-    <section class="docs">
-      <div>
-        <nav>
-          <ul>
-            <li><wf-title tag="h2" variant="sm">Get started</wf-title></li>
-            <li><wf-link href="#installation">Installation</wf-link></li>
-            <li style="padding-left: 16px;"><wf-link href="#installation-react">React</wf-link></li>
-            <li style="padding-left: 16px;"><wf-link href="#installation-vue">Vue</wf-link></li>
-            <li style="padding-left: 16px;"><wf-link href="#installation-javascript">JavaScript</wf-link></li>
-            <li><wf-link href="#cdn">CDN</wf-link></li>
-            <li style="padding-left: 16px;"><wf-link href="#cdn-styles">Styles</wf-link></li>
-            <li style="padding-left: 16px;"><wf-link href="#cdn-styles-tailwind">Styles + Tailwind CSS</wf-link></li>
-            <li><wf-link href="#contributing">Contributing</wf-link></li>
-            <br />
-            <li><wf-link href="#components"><wf-title tag="h2" variant="sm">Components</wf-title></wf-link></li>
-            <li><wf-link href="#button">Button</wf-link></li>
-            <li><wf-link href="#checkbox">Checkbox</wf-link></li>
-            <li><wf-link href="#flex">Flex</wf-link></li>
-            <li><wf-link href="#grid">Grid</wf-link></li>
-            <li><wf-link href="#hr">Line</wf-link></li>
-            <li><wf-link href="#image">Image</wf-link></li>
-            <li><wf-link href="#input">Input</wf-link></li>
-            <li><wf-link href="#link">Link</wf-link></li>
-            <li><wf-link href="#lorem">Lorem ipsum</wf-link></li>
-            <li><wf-link href="#p">Paragraph</wf-link></li>
-            <li><wf-link href="#tabs">Tabs</wf-link></li>
-            <li><wf-link href="#title">Title</wf-link></li>
-            <li><wf-link href="#video">Video</wf-link></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <section id="installation" class="container">
-          <wf-title tag="h3">Installation</wf-title>
+    <section>
+      <nav>
+        <ul>
+          <li><wf-title tag="h2" variant="sm">Get started</wf-title></li>
+          <li><wf-link href="#installation">Installation</wf-link></li>
+          <li style="padding-left: 16px;"><wf-link href="#installation-react">React</wf-link></li>
+          <li style="padding-left: 16px;"><wf-link href="#installation-vue">Vue</wf-link></li>
+          <li style="padding-left: 16px;"><wf-link href="#installation-javascript">JavaScript</wf-link></li>
+          <li><wf-link href="#cdn">CDN</wf-link></li>
+          <li style="padding-left: 16px;"><wf-link href="#cdn-styles">Styles</wf-link></li>
+          <li style="padding-left: 16px;"><wf-link href="#cdn-styles-tailwind">Styles + Tailwind CSS</wf-link></li>
+          <li><wf-link href="#contributing">Contributing</wf-link></li>
+          <br />
+          <li><wf-link href="#components"><wf-title tag="h2" variant="sm">Components</wf-title></wf-link></li>
+          <li><wf-link href="#button">Button</wf-link></li>
+          <li><wf-link href="#checkbox">Checkbox</wf-link></li>
+          <li><wf-link href="#flex">Flex</wf-link></li>
+          <li><wf-link href="#grid">Grid</wf-link></li>
+          <li><wf-link href="#hr">Line</wf-link></li>
+          <li><wf-link href="#image">Image</wf-link></li>
+          <li><wf-link href="#input">Input</wf-link></li>
+          <li><wf-link href="#link">Link</wf-link></li>
+          <li><wf-link href="#lorem">Lorem ipsum</wf-link></li>
+          <li><wf-link href="#p">Paragraph</wf-link></li>
+          <li><wf-link href="#tabs">Tabs</wf-link></li>
+          <li><wf-link href="#title">Title</wf-link></li>
+          <li><wf-link href="#video">Video</wf-link></li>
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <section id="installation" class="container">
+        <wf-title tag="h3">Installation</wf-title>
 
-          <wf-p>
-            Wireframes is available as an npm package. You can install it in your project using the package manager of
-            your
-            choice.
-          </wf-p>
+        <wf-p>
+          Wireframes is available as an npm package. You can install it in your project using the package manager of
+          your
+          choice.
+        </wf-p>
 
-          <wf-title id="installation-react" tag="h4">React</wf-title>
+        <wf-title id="installation-react" tag="h4">React</wf-title>
 
-          <wf-tabs>
-            <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
-            <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
-            <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
-            <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
-            <wf-tab-content slot="content" name="npm">
-              <pre><code>npm i wireframes-react</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="pnpm">
-              <pre><code>pnpm i wireframes-react</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="yarn">
-              <pre><code>yarn add wireframes-react</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="bun">
-              <pre><code>bun add wireframes-react</code></pre>
-            </wf-tab-content>
-          </wf-tabs>
+        <wf-tabs>
+          <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
+          <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
+          <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
+          <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
+          <wf-tab-content slot="content" name="npm">
+            <pre><code>npm i wireframes-react</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="pnpm">
+            <pre><code>pnpm i wireframes-react</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="yarn">
+            <pre><code>yarn add wireframes-react</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="bun">
+            <pre><code>bun add wireframes-react</code></pre>
+          </wf-tab-content>
+        </wf-tabs>
 
-          <wf-title id="installation-vue" tag="h4">Vue</wf-title>
+        <wf-title id="installation-vue" tag="h4">Vue</wf-title>
 
-          <wf-tabs>
-            <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
-            <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
-            <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
-            <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
-            <wf-tab-content slot="content" name="npm">
-              <pre><code>npm i wireframes-vue</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="pnpm">
-              <pre><code>pnpm i wireframes-vue</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="yarn">
-              <pre><code>yarn add wireframes-vue</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="bun">
-              <pre><code>bun add wireframes-vue</code></pre>
-            </wf-tab-content>
-          </wf-tabs>
+        <wf-tabs>
+          <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
+          <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
+          <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
+          <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
+          <wf-tab-content slot="content" name="npm">
+            <pre><code>npm i wireframes-vue</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="pnpm">
+            <pre><code>pnpm i wireframes-vue</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="yarn">
+            <pre><code>yarn add wireframes-vue</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="bun">
+            <pre><code>bun add wireframes-vue</code></pre>
+          </wf-tab-content>
+        </wf-tabs>
 
-          <wf-title id="installation-javascript" tag="h4">JavaScript</wf-title>
+        <wf-title id="installation-javascript" tag="h4">JavaScript</wf-title>
 
-          <wf-tabs>
-            <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
-            <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
-            <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
-            <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
-            <wf-tab-content slot="content" name="npm">
-              <pre><code>npm i wireframes</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="pnpm">
-              <pre><code>pnpm i wireframes</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="yarn">
-              <pre><code>yarn add wireframes</code></pre>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="bun">
-              <pre><code>bun add wireframes</code></pre>
-            </wf-tab-content>
-          </wf-tabs>
+        <wf-tabs>
+          <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
+          <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
+          <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
+          <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
+          <wf-tab-content slot="content" name="npm">
+            <pre><code>npm i wireframes</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="pnpm">
+            <pre><code>pnpm i wireframes</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="yarn">
+            <pre><code>yarn add wireframes</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="bun">
+            <pre><code>bun add wireframes</code></pre>
+          </wf-tab-content>
+        </wf-tabs>
 
-          <wf-p>
-            After installing, you need to set up at the root of your application.
-          </wf-p>
-          <pre><code class="language-js">import { applyPolyfills, defineCustomElements } from 'wireframes/loader';
+        <wf-p>
+          After installing, you need to set up at the root of your application.
+        </wf-p>
+        <pre><code class="language-js">import { applyPolyfills, defineCustomElements } from 'wireframes/loader';
 import 'wireframes/dist/wireframes/wireframes.css';
 
 applyPolyfills().then(() => {
   defineCustomElements();
 });</code></pre>
-        </section>
+      </section>
 
-        <section id="cdn" class="container">
-          <wf-title tag="h3">CDN Custom Elements</wf-title>
+      <section id="cdn" class="container">
+        <wf-title tag="h3">CDN Custom Elements</wf-title>
 
-          <wf-p>
-            Alternatively, you can use the CDN to load the components in your project.
-          </wf-p>
-          <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
+        <wf-p>
+          Alternatively, you can use the CDN to load the components in your project.
+        </wf-p>
+        <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
 &lt;link rel="stylesheet" href="https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.css" /&gt;</code></pre>
 
-          <wf-title tag="h5">Example</wf-title>
+        <wf-title tag="h5">Example</wf-title>
 
-          <pre><code>&lt;!doctype html&gt;
+        <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -252,18 +228,18 @@ applyPolyfills().then(() => {
 &lt;/body&gt;
 
 &lt;/html&gt;</code></pre>
-        </section>
+      </section>
 
-        <section id="cdn-styles" class="container">
-          <wf-title tag="h4">CDN Styles</wf-title>
-          <wf-p>You can use the CDN to load the styles into your project. Custom Elements is not included. Normally use
-            headers, input, buttons and these will be styled.</wf-p>
+      <section id="cdn-styles" class="container">
+        <wf-title tag="h4">CDN Styles</wf-title>
+        <wf-p>You can use the CDN to load the styles into your project. Custom Elements is not included. Normally use
+          headers, input, buttons and these will be styled.</wf-p>
 
-          <pre><code>&lt;link rel="stylesheet" href="https://salteadorneo.github.io/wireframes/cdn/wireframes.css" /&gt;</code></pre>
+        <pre><code>&lt;link rel="stylesheet" href="https://salteadorneo.github.io/wireframes/cdn/wireframes.css" /&gt;</code></pre>
 
-          <wf-title tag="h5">Example</wf-title>
+        <wf-title tag="h5">Example</wf-title>
 
-          <pre><code>&lt;!doctype html&gt;
+        <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -280,19 +256,19 @@ applyPolyfills().then(() => {
 &lt;/body&gt;
 
 &lt;/html&gt;</code></pre>
-        </section>
+      </section>
 
-        <section id="cdn-styles-tailwind" class="container">
-          <wf-title tag="h4">CDN Styles + Tailwind CSS</wf-title>
-          <wf-p>You can use the CDN to load the styles into your project. Custom Elements is not included. Normally use
-            headers, input, buttons and these will be styled.</wf-p>
-          <wf-p>In addition, you will be able to use the full power of Tailwind CSS for structuring.</wf-p>
+      <section id="cdn-styles-tailwind" class="container">
+        <wf-title tag="h4">CDN Styles + Tailwind CSS</wf-title>
+        <wf-p>You can use the CDN to load the styles into your project. Custom Elements is not included. Normally use
+          headers, input, buttons and these will be styled.</wf-p>
+        <wf-p>In addition, you will be able to use the full power of Tailwind CSS for structuring.</wf-p>
 
-          <pre><code>&lt;script src="https://salteadorneo.github.io/wireframes/cdn/wireframes.js"&gt;&lt;/script&gt;</code></pre>
+        <pre><code>&lt;script src="https://salteadorneo.github.io/wireframes/cdn/wireframes.js"&gt;&lt;/script&gt;</code></pre>
 
-          <wf-title tag="h5">Example</wf-title>
+        <wf-title tag="h5">Example</wf-title>
 
-          <pre><code>&lt;!doctype html&gt;
+        <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -313,249 +289,96 @@ applyPolyfills().then(() => {
 &lt;/html&gt;</code>
         </pre>
 
-        </section>
+      </section>
 
-        <section id="contributing" class="container">
-          <wf-title tag="h3">Contributing</wf-title>
-          <wf-p>
-            Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to
-            change.
-          </wf-p>
-        </section>
+      <section id="contributing" class="container">
+        <wf-title tag="h3">Contributing</wf-title>
+        <wf-p>
+          Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to
+          change.
+        </wf-p>
+      </section>
 
-        <section id="components" class="container">
-          <wf-title tag="h3">Components</wf-title>
-          <wf-p>
-            The following components are available in the library.
-          </wf-p>
-        </section>
+      <section id="components" class="container">
+        <wf-title tag="h3">Components</wf-title>
+        <wf-p>
+          The following components are available in the library.
+        </wf-p>
+      </section>
+    </section>
+  </main>
 
-        <section id="button" class="container">
-          <wf-title id="button" tag="h3">Button</wf-title>
+  <script defer>
+    function renderComponent(component, code) {
+      const title = component.charAt(0).toUpperCase() + component.slice(1);
 
-          <wf-tabs>
-            <wf-tab-header slot="header" name="preview">Preview</wf-tab-header>
-            <wf-tab-header slot="header" name="code">Code</wf-tab-header>
-            <wf-tab-content slot="content" name="preview">
-              <section class="components">
-                <wf-button variant="sm"></wf-button>
-                <wf-button></wf-button>
-                <wf-button variant="lg"></wf-button>
-                <wf-button variant="xl"></wf-button>
-              </section>
-            </wf-tab-content>
-            <wf-tab-content slot="content" name="code">
-              <script defer>
-                document.querySelector('#button wf-tab-content[name=code]').appendChild(getPre(`<wf-button variant="sm"></wf-button>
+      document.querySelector(`#components`).innerHTML += `<section id="${component}" class="container">
+  <wf-title tag="h3">${title}</wf-title>
+  <wf-tabs>
+  <wf-tab-header slot="header" name="preview">Preview</wf-tab-header>
+  <wf-tab-header slot="header" name="code">Code</wf-tab-header>
+  <wf-tab-content slot="content" name="preview">
+    <section class="components">${code}</section>
+  </wf-tab-content>
+  <wf-tab-content slot="content" name="code">
+  <pre><code class="language-html"></code></pre>
+  </wf-tab-content>
+  </wf-tabs>
+  </section>`
+      document.querySelector(`#${component} code`).textContent = code.replace(/%3C/g, '<').replace(/%3E/g, '>');
+
+      fetch(`https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/components/wf-${component}/readme.md`)
+        .then(response => response.text())
+        .then(text => {
+          text = text.split('\n').slice(1).join('\n');
+          text = text.split('\n').slice(0, -4).join('\n');
+          text = text.replace(/## Properties/g, '#### Properties');
+          document.querySelector(`#${component}`).insertAdjacentHTML('beforeend', marked.parse(text));
+        });
+    }
+
+    renderComponent('button', `<wf-button variant="sm"></wf-button>
 <wf-button></wf-button>
 <wf-button variant="lg"></wf-button>
-<wf-button variant="xl"></wf-button>`));
-              </script>
-            </wf-tab-content>
-          </wf-tabs>
+<wf-button variant="xl"></wf-button>`);
 
-          <script defer>
-            printMarkdown('button');
-          </script>
-        </section>
+    renderComponent('checkbox', `<wf-checkbox></wf-checkbox>`);
 
-        <section id="checkbox" class="container">
-          <wf-title id="checkbox" tag="h3">Checkbox</wf-title>
+    renderComponent('flex', `<wf-flex gap="2rem">
+  <wf-image width="50px"></wf-image>
+  <wf-image width="50px"></wf-image>
+  <wf-image width="50px"></wf-image>
+</wf-flex>`);
 
-          <section class="components">
-            <wf-checkbox></wf-checkbox>
-          </section>
+    renderComponent('grid', `<wf-grid gap="2rem">
+  <wf-image width="50px"></wf-image>
+  <wf-image width="50px"></wf-image>
+  <wf-image width="50px"></wf-image>
+</wf-grid>`);
 
-          <script defer>
-            document.querySelector('#checkbox').appendChild(getPre(`<wf-checkbox></wf-checkbox>`));
-          </script>
+    renderComponent('hr', `<wf-hr></wf-hr>`);
 
-          <script defer>
-            printMarkdown('checkbox');
-          </script>
-        </section>
+    renderComponent('image', `<wf-flex align-items="end" gap="1rem" flex-wrap="wrap">
+  <wf-image width="200px"></wf-image>
 
-        <section id="flex" class="container">
-          <wf-title id="flex" tag="h3">Flex</wf-title>
+  <wf-image aspect-ratio="16/9" width="200px"></wf-image>
 
-          <section class="components">
-            <wf-flex gap="2rem">
-              <wf-image width="50px"></wf-image>
-              <wf-image width="50px"></wf-image>
-              <wf-image width="50px"></wf-image>
-            </wf-flex>
-          </section>
+  <wf-image aspect-ratio="16/9" width="200px" text="Image"></wf-image>
 
-          <script defer>
-            document.querySelector('#flex').appendChild(getPre(`<wf-flex></wf-flex>`));
-          </script>
+  <wf-image border-radius="50%" height="100px"></wf-image>
 
-          <script defer>
-            printMarkdown('flex');
-          </script>
-        </section>
+  <wf-image border-radius="50%" height="48px" text="User"></wf-image>
+</wf-flex>`);
 
-        <section id="grid" class="container">
-          <wf-title id="grid" tag="h3">Grid</wf-title>
+    renderComponent('input', `<wf-input placeholder="Placeholder" width="210px"></wf-input>`)
 
-          <section class="components">
-            <wf-grid gap="2rem">
-              <wf-image width="50px"></wf-image>
-              <wf-image width="50px"></wf-image>
-              <wf-image width="50px"></wf-image>
-            </wf-grid>
-          </section>
+    renderComponent('link', `<wf-link></wf-link>`);
 
-          <script defer>
-            document.querySelector('#grid').appendChild(getPre(`<wf-grid></wf-grid>`));
-          </script>
+    renderComponent('lorem', `<wf-lorem words="250"></wf-lorem>`);
 
-          <script defer>
-            printMarkdown('grid');
-          </script>
-        </section>
+    renderComponent('p', `<wf-p>Default text</wf-p>`);
 
-        <section id="hr" class="container">
-          <wf-title id="hr" tag="h3">Line</wf-title>
-
-          <section class="components">
-            <wf-hr></wf-hr>
-          </section>
-
-          <script defer>
-            document.querySelector('#hr').appendChild(getPre(`<wf-hr></wf-hr>`));
-          </script>
-
-          <script defer>
-            printMarkdown('hr');
-          </script>
-        </section>
-
-        <section id="image" class="container">
-          <wf-title id="image" tag="h3">Image</wf-title>
-
-          <section class="components">
-            <wf-flex align-items="end" gap="1rem" flex-wrap="wrap">
-              <wf-image width="200px"></wf-image>
-              <wf-image aspect-ratio="16/9" width="200px"></wf-image>
-              <wf-image aspect-ratio="16/9" width="200px" text="Image"></wf-image>
-              <wf-image border-radius="50%" height="100px"></wf-image>
-              <wf-image border-radius="50%" height="48px" text="User"></wf-image>
-            </wf-flex>
-          </section>
-
-          <script defer>
-            document.querySelector('#image').appendChild(getPre(`<wf-image width="200px"></wf-image>
-
-<wf-image aspect-ratio="16/9" width="200px"></wf-image>
-
-<wf-image aspect-ratio="16/9" width="200px" text="Image"></wf-image>
-
-<wf-image border-radius="50%" height="100px"></wf-image>
-
-<wf-image border-radius="50%" height="48px" text="User"></wf-image>`));
-          </script>
-
-          <script defer>
-            printMarkdown('image');
-          </script>
-        </section>
-
-        <section id="input" class="container">
-          <wf-title id="input" tag="h3">Input</wf-title>
-
-          <section class="components">
-            <wf-input placeholder="Input default"></wf-input><br /><br />
-            <wf-input placeholder="Width 150px" width="150px"></wf-input>
-          </section>
-
-          <script defer>
-            document.querySelector('#input').appendChild(getPre(`<wf-input placeholder="Input default"></wf-input>
-
-<wf-input placeholder="Width 150px" width="150px"></wf-input>`));
-          </script>
-
-          <script defer>
-            printMarkdown('input');
-          </script>
-        </section>
-
-        <section id="link" class="container">
-          <wf-title id="link" tag="h3">Link</wf-title>
-
-          <section class="components">
-            <wf-link></wf-link>
-          </section>
-
-          <script defer>
-            document.querySelector('#link').appendChild(getPre(`<wf-link></wf-link>`));
-          </script>
-
-          <script defer>
-            printMarkdown('link');
-          </script>
-        </section>
-
-        <section id="lorem" class="container">
-          <wf-title id="lorem" tag="h3">Lorem ipsum</wf-title>
-
-          <section class="components">
-            <wf-p><wf-lorem words="250"></wf-lorem></wf-p>
-          </section>
-
-          <script defer>
-            document.querySelector('#lorem').appendChild(getPre(`<wf-lorem words="250"></wf-lorem>`));
-          </script>
-
-          <script defer>
-            printMarkdown('lorem');
-          </script>
-        </section>
-
-        <section id="p" class="container">
-          <wf-title id="p" tag="h3">Paragraph</wf-title>
-
-          <section class="components">
-            <wf-p>Default text</wf-p>
-          </section>
-
-          <script defer>
-            document.querySelector('#p').appendChild(getPre("<wf-p>Default text</wf-p>"));
-          </script>
-
-          <script defer>
-            printMarkdown('p');
-          </script>
-        </section>
-
-        <section id="tabs" class="container">
-          <wf-title id="tabs" tag="h3">Tabs</wf-title>
-
-          <section class="components">
-            <wf-tabs>
-              <wf-tab-header slot="header" name="tab1">Tab 1</wf-tab-header>
-              <wf-tab-header slot="header" name="tab2">Tab 2</wf-tab-header>
-              <wf-tab-header slot="header" name="tab3">Tab 3</wf-tab-header>
-              <wf-tab-content slot="content" name="tab1">
-                <wf-p>
-                  Content for tab 1
-                </wf-p>
-              </wf-tab-content>
-              <wf-tab-content slot="content" name="tab2">
-                <wf-p>
-                  Description for tab 2
-                </wf-p>
-              </wf-tab-content>
-              <wf-tab-content slot="content" name="tab3">
-                <wf-p>
-                  Another content for tab 3
-                </wf-p>
-              </wf-tab-content>
-            </wf-tabs>
-          </section>
-
-          <script defer>
-            document.querySelector('#tabs').appendChild(getPre(`<wf-tabs>
+    renderComponent('tabs', `<wf-tabs>
   <wf-tab-header slot="header" name="tab1">Tab 1</wf-tab-header>
   <wf-tab-header slot="header" name="tab2">Tab 2</wf-tab-header>
   <wf-tab-header slot="header" name="tab3">Tab 3</wf-tab-header>
@@ -574,60 +397,28 @@ applyPolyfills().then(() => {
       Another content for tab 3
     </wf-p>
   </wf-tab-content>
-</wf-tabs>`));
-          </script>
+</wf-tabs>`)
 
-          <script defer>
-            printMarkdown('tabs');
-          </script>
-        </section>
+    renderComponent('title', `<wf-title tag="h4">Default title</wf-title>
+  
+<wf-title tag="h4" variant="sm">Title variant</wf-title>
 
-        <section id="title" class="container">
-          <wf-title id="title" tag="h3">Title</wf-title>
+<wf-title tag="h4" variant="md">Title variant</wf-title>
 
-          <section class="components">
-            <wf-title tag="h4">Default title</wf-title><br /><br />
-            <wf-title tag="h4" variant="sm">Title variant</wf-title>
-            <wf-title tag="h4" variant="md">Title variant</wf-title>
-            <wf-title tag="h4" variant="lg">Title variant</wf-title>
-            <wf-title tag="h4" variant="xl">Title variant</wf-title>
-          </section>
+<wf-title tag="h4" variant="lg">Title variant</wf-title>
 
-          <script defer>
-            document.querySelector('#title').appendChild(getPre(`<wf-title tag="h4">Default title</wf-title>
+<wf-title tag="h4" variant="xl">Title variant</wf-title>`);
 
-<wf-title tag="h4" variant="sm">Title SM</wf-title>
+    renderComponent('video', `<wf-video width="600px"></wf-video>`);
 
-<wf-title tag="h4" variant="md">Title MD</wf-title>
-
-<wf-title tag="h4" variant="lg">Title LG</wf-title>
-
-<wf-title tag="h4" variant="xl">Title XL</wf-title>`));
-          </script>
-
-          <script defer>
-            printMarkdown('title');
-          </script>
-        </section>
-
-        <section id="video" class="container">
-          <wf-title id="video" tag="h3">Video</wf-title>
-
-          <section class="components">
-            <wf-video width="600px"></wf-video>
-          </section>
-
-          <script defer>
-            document.querySelector('#video').appendChild(getPre(`<wf-video width="600px"></wf-video>`));
-          </script>
-
-          <script defer>
-            printMarkdown('video');
-          </script>
-        </section>
-      </div>
-    </section>
-  </main>
+    if (window.location.hash) {
+      const hash = window.location.hash.replace('#', '');
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView();
+      }
+    }
+  </script>
 </body>
 
 </html>

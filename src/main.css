@@ -53,38 +53,60 @@ a {
 
 pre {
     margin: 0;
+
+    code {
+        background-color: var(--background) !important;
+        border-width: var(--line-width, 2px);
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.1);
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
 }
 
 .docs {
     display: flex;
-    gap: 2rem;
+    height: 100dvh;
+    overflow: auto;
 
-    &>div:first-child {
-        flex-basis: 20%;
-    }
+    main {
+        display: flex;
+        height: 100%;
+        overflow: auto;
+        padding: 0;
 
-    &>div:last-child {
-        flex-basis: 80%;
+        section {
+            overflow: auto;
+            padding: 0 1rem;
+
+            &:first-child {
+                flex-basis: 20%;
+            }
+
+            &:last-child {
+                flex-basis: 80%;
+            }
+        }
     }
 }
 
 @media (width < 780px) {
     .docs {
-        &>div:first-child {
-            display: none;
-        }
+        main {
+            section {
+                &:first-child {
+                    display: none;
+                }
 
-        &>div:last-child {
-            flex-basis: 100%;
+                &:last-child {
+                    flex-basis: 100%;
+                    padding: 0;
+                }
+            }
         }
     }
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    padding: 1rem;
-
     ul {
         margin: 0;
         padding: 0;
@@ -106,12 +128,19 @@ nav {
     .components {
         padding: 1rem;
         background-color: var(--background);
+        border-width: var(--line-width, 2px);
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.1);
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     }
 
     table {
         width: 100%;
-        border: 1px solid;
         border-collapse: collapse;
+        border-width: var(--line-width, 2px);
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.1);
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 
         * {
             font-family: 'Virgil', sans-serif;
@@ -126,6 +155,7 @@ nav {
 
         th {
             border-bottom: 1px solid;
+            border-color: rgba(255, 255, 255, 0.1);
         }
     }
 }
