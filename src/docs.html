@@ -17,9 +17,15 @@
   <script type="module" src="build/wireframes.esm.js"></script>
   <link rel="stylesheet" href="build/wireframes.css" />
 
-  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.min.css">
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+  <script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.write('<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.min.css">');
+    } else {
+      document.write('<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github.min.css">');
+    }
+    hljs.highlightAll();
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
