@@ -65,6 +65,7 @@ pre {
 
 .docs {
     display: flex;
+    flex-direction: column;
     height: 100dvh;
     overflow: auto;
 

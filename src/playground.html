@@ -27,12 +27,53 @@
         content="Web Components UI library for building wireframes and prototypes. Framework agnostic. Open source." />
     <meta name="twitter:image" content="https://salteadorneo.github.io/wireframes/assets/og.png" />
 
+    <script type="module">
+        import * as monaco from 'https://cdn.jsdelivr.net/npm/monaco-editor@0.52.0/+esm';
+        const value = `<main style="text-align: center;">
+    <wf-title tag="h1" variant="xl">Google</wf-title>
+
+    <wf-input placeholder="Search"></wf-input>
+
+    <wf-flex justify-content="center" gap="2rem">
+        <wf-button>Google Search</wf-button>
+        <wf-button>I'm Feeling Lucky</wf-button>
+    </wf-flex>
+</main>`;
+        document.querySelector('#result').innerHTML = value;
+        const editor = monaco.editor.create(document.querySelector('#monaco'), {
+            value,
+            language: 'html',
+            theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'vs-dark' : "vs",
+        })
+        editor.onDidChangeModelContent(e => {
+            document.querySelector('#result').innerHTML = editor.getValue();
+        });
+    </script>
+
     <script type="module" src="build/wireframes.esm.js"></script>
     <link rel="stylesheet" href="build/wireframes.css" />
 
     <link rel="stylesheet" href="main.css" />
 
     <script data-no-cookie async src="https://cdn.splitbee.io/sb.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100dvh;
+        }
+
+        main {
+            height: 100%;
+            overflow: hidden;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +82,7 @@
             <a href="index.html" style="text-decoration:none;">
                 <wf-flex align-items="center" gap="10px">
                     <wf-image width="50px" text="Logo" border-radius="50%"></wf-image>
-                    <wf-title font-weight="normal" variant="sm">Wireframes</wf-title>
+                    <wf-title font-weight="normal" variant="sm">Wireframes | Playground</wf-title>
                 </wf-flex>
             </a>
             <wf-flex align-items="center" gap="2rem" class="menu">
@@ -73,42 +114,10 @@
         </wf-flex>
     </header>
     <main>
-        <wf-flex flex-direction="column" margin="3rem auto">
-            <wf-title tag="h1" variant="lg">
-                Examples
-            </wf-title>
-            <wf-p>
-                Here are some examples of how you can use Wireframes to build wireframes and prototypes.
-            </wf-p>
-            <wf-flex align-items="center" gap="12px" margin="20px 0">
-                <wf-button onclick="window.location.href='docs.html'" variant="md">
-                    Get started
-                </wf-button>
-            </wf-flex>
-        </wf-flex>
-        <wf-flex>
-            <iframe src="youtube.html" width="300" height="200" style="border:none;"></iframe>
-            <iframe src="google.html" width="300" height="200" style="border:none;"></iframe>
-        </wf-flex>
-        <!-- <wf-flex justify-content="space-between">
-            <div>
-                <wf-title>YouTube</wf-title>
-                <wf-p>
-                    Template for a YouTube page.
-                </wf-p>
-            </div>
-            <iframe src="youtube.html" width="70%" height="800" style="border:none;"></iframe>
-        </wf-flex>
-        <br />
-        <wf-flex justify-content="space-between">
-            <div>
-                <wf-title>Google</wf-title>
-                <wf-p>
-                    Template for a Google page.
-                </wf-p>
-            </div>
-            <iframe src="google.html" width="70%" height="500" style="border:none;"></iframe>
-        </wf-flex> -->
+        <section style="display: grid; grid-template-columns: 1fr 1fr; height: 100%; overflow: auto;">
+            <div id="monaco"></div>
+            <div id="result" style="padding: 1rem;"></div>
+        </section>
     </main>
 </body>
 
