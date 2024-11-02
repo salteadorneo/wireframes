@@ -93,7 +93,7 @@ pre {
 @media (width < 780px) {
     .docs {
         main {
-            section {
+            &>section {
                 &:first-child {
                     display: none;
                 }
