@@ -31,6 +31,7 @@ type WfButtonEvents = NonNullable<unknown>;
 export const WfButton: StencilReactComponent<WfButtonElement, WfButtonEvents> = /*@__PURE__*/ createComponent<WfButtonElement, WfButtonEvents>({
     tagName: 'wf-button',
     elementClass: WfButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfButtonEvents,
     defineCustomElement: defineWfButton
@@ -41,6 +42,7 @@ type WfCheckboxEvents = NonNullable<unknown>;
 export const WfCheckbox: StencilReactComponent<WfCheckboxElement, WfCheckboxEvents> = /*@__PURE__*/ createComponent<WfCheckboxElement, WfCheckboxEvents>({
     tagName: 'wf-checkbox',
     elementClass: WfCheckboxElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfCheckboxEvents,
     defineCustomElement: defineWfCheckbox
@@ -51,6 +53,7 @@ type WfFlexEvents = NonNullable<unknown>;
 export const WfFlex: StencilReactComponent<WfFlexElement, WfFlexEvents> = /*@__PURE__*/ createComponent<WfFlexElement, WfFlexEvents>({
     tagName: 'wf-flex',
     elementClass: WfFlexElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfFlexEvents,
     defineCustomElement: defineWfFlex
@@ -61,6 +64,7 @@ type WfGridEvents = NonNullable<unknown>;
 export const WfGrid: StencilReactComponent<WfGridElement, WfGridEvents> = /*@__PURE__*/ createComponent<WfGridElement, WfGridEvents>({
     tagName: 'wf-grid',
     elementClass: WfGridElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfGridEvents,
     defineCustomElement: defineWfGrid
@@ -71,6 +75,7 @@ type WfHrEvents = NonNullable<unknown>;
 export const WfHr: StencilReactComponent<WfHrElement, WfHrEvents> = /*@__PURE__*/ createComponent<WfHrElement, WfHrEvents>({
     tagName: 'wf-hr',
     elementClass: WfHrElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfHrEvents,
     defineCustomElement: defineWfHr
@@ -81,6 +86,7 @@ type WfImageEvents = NonNullable<unknown>;
 export const WfImage: StencilReactComponent<WfImageElement, WfImageEvents> = /*@__PURE__*/ createComponent<WfImageElement, WfImageEvents>({
     tagName: 'wf-image',
     elementClass: WfImageElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfImageEvents,
     defineCustomElement: defineWfImage
@@ -91,6 +97,7 @@ type WfInputEvents = NonNullable<unknown>;
 export const WfInput: StencilReactComponent<WfInputElement, WfInputEvents> = /*@__PURE__*/ createComponent<WfInputElement, WfInputEvents>({
     tagName: 'wf-input',
     elementClass: WfInputElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfInputEvents,
     defineCustomElement: defineWfInput
@@ -101,6 +108,7 @@ type WfLinkEvents = NonNullable<unknown>;
 export const WfLink: StencilReactComponent<WfLinkElement, WfLinkEvents> = /*@__PURE__*/ createComponent<WfLinkElement, WfLinkEvents>({
     tagName: 'wf-link',
     elementClass: WfLinkElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfLinkEvents,
     defineCustomElement: defineWfLink
@@ -111,6 +119,7 @@ type WfLoremEvents = NonNullable<unknown>;
 export const WfLorem: StencilReactComponent<WfLoremElement, WfLoremEvents> = /*@__PURE__*/ createComponent<WfLoremElement, WfLoremEvents>({
     tagName: 'wf-lorem',
     elementClass: WfLoremElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfLoremEvents,
     defineCustomElement: defineWfLorem
@@ -121,6 +130,7 @@ type WfPEvents = NonNullable<unknown>;
 export const WfP: StencilReactComponent<WfPElement, WfPEvents> = /*@__PURE__*/ createComponent<WfPElement, WfPEvents>({
     tagName: 'wf-p',
     elementClass: WfPElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfPEvents,
     defineCustomElement: defineWfP
@@ -131,6 +141,7 @@ type WfTabContentEvents = NonNullable<unknown>;
 export const WfTabContent: StencilReactComponent<WfTabContentElement, WfTabContentEvents> = /*@__PURE__*/ createComponent<WfTabContentElement, WfTabContentEvents>({
     tagName: 'wf-tab-content',
     elementClass: WfTabContentElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfTabContentEvents,
     defineCustomElement: defineWfTabContent
@@ -141,6 +152,7 @@ type WfTabHeaderEvents = { onSelected: EventName<CustomEvent<any>> };
 export const WfTabHeader: StencilReactComponent<WfTabHeaderElement, WfTabHeaderEvents> = /*@__PURE__*/ createComponent<WfTabHeaderElement, WfTabHeaderEvents>({
     tagName: 'wf-tab-header',
     elementClass: WfTabHeaderElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: { onSelected: 'selected' } as WfTabHeaderEvents,
     defineCustomElement: defineWfTabHeader
@@ -151,6 +163,7 @@ type WfTabsEvents = NonNullable<unknown>;
 export const WfTabs: StencilReactComponent<WfTabsElement, WfTabsEvents> = /*@__PURE__*/ createComponent<WfTabsElement, WfTabsEvents>({
     tagName: 'wf-tabs',
     elementClass: WfTabsElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfTabsEvents,
     defineCustomElement: defineWfTabs
@@ -161,6 +174,7 @@ type WfTitleEvents = NonNullable<unknown>;
 export const WfTitle: StencilReactComponent<WfTitleElement, WfTitleEvents> = /*@__PURE__*/ createComponent<WfTitleElement, WfTitleEvents>({
     tagName: 'wf-title',
     elementClass: WfTitleElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfTitleEvents,
     defineCustomElement: defineWfTitle
@@ -171,6 +185,7 @@ type WfVideoEvents = NonNullable<unknown>;
 export const WfVideo: StencilReactComponent<WfVideoElement, WfVideoEvents> = /*@__PURE__*/ createComponent<WfVideoElement, WfVideoEvents>({
     tagName: 'wf-video',
     elementClass: WfVideoElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: {} as WfVideoEvents,
     defineCustomElement: defineWfVideo
