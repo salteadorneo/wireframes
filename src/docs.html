@@ -15,7 +15,6 @@
   <link rel="canonical" href="https://salteadorneo.github.io/wireframes/docs.html" />
 
   <script type="module" src="build/wireframes.esm.js"></script>
-  <link rel="stylesheet" href="build/wireframes.css" />
 
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
   <script>
@@ -187,12 +186,8 @@
         <wf-p>
           After installing, you need to set up at the root of your application.
         </wf-p>
-        <pre><code class="language-js">import { applyPolyfills, defineCustomElements } from 'wireframes/loader';
-import 'wireframes/dist/wireframes/wireframes.css';
-
-applyPolyfills().then(() => {
-  defineCustomElements();
-});</code></pre>
+        <pre><code class="language-js">import { defineCustomElements } from 'wireframes/loader';
+defineCustomElements();</code></pre>
       </section>
 
       <section id="cdn" class="container">
@@ -201,8 +196,7 @@ applyPolyfills().then(() => {
         <wf-p>
           Alternatively, you can use the CDN to load the components in your project.
         </wf-p>
-        <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" href="https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.css" /&gt;</code></pre>
+        <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;</code></pre>
 
         <wf-title tag="h5">Example</wf-title>
 
@@ -213,7 +207,6 @@ applyPolyfills().then(() => {
     &lt;meta charset=&quot;UTF-8&quot;&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
     &lt;script type=&quot;module&quot; src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.css&quot; /&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
