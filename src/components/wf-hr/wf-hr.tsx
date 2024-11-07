@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'wf-hr',
@@ -6,7 +6,11 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class WfHr {
+  @Prop() width?: string;
+
   render() {
-    return <hr />;
+    return <hr style={{
+      width: this.width,
+    }} />;
   }
 }

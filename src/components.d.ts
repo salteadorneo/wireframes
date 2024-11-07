@@ -34,6 +34,7 @@ export namespace Components {
         "justifyItems"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
     }
     interface WfHr {
+        "width"?: string;
     }
     interface WfImage {
         "aspectRatio"?: string;
@@ -250,6 +251,7 @@ declare namespace LocalJSX {
         "justifyItems"?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
     }
     interface WfHr {
+        "width"?: string;
     }
     interface WfImage {
         "aspectRatio"?: string;

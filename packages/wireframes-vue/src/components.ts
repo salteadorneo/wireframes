@@ -44,7 +44,9 @@ export const WfGrid = /*@__PURE__*/ defineContainer<JSX.WfGrid>('wf-grid', undef
 ]);
 
 
-export const WfHr = /*@__PURE__*/ defineContainer<JSX.WfHr>('wf-hr', undefined);
+export const WfHr = /*@__PURE__*/ defineContainer<JSX.WfHr>('wf-hr', undefined, [
+  'width'
+]);
 
 
 export const WfImage = /*@__PURE__*/ defineContainer<JSX.WfImage>('wf-image', undefined, [
