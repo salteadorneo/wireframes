@@ -36,12 +36,16 @@ footer {
     max-width: 1400px;
 }
 
+h4 {
+    font-size: 1rem;
+}
+
 header {
     width: 100%;
     padding: 1rem;
 
-    .menu {
-        @media (width < 680px) {
+    @media (width < 680px) {
+        .menu {
             display: none;
         }
     }
@@ -88,26 +92,17 @@ pre {
 
             &:first-child {
                 flex-basis: 20%;
+
+                @media (width < 780px) {
+                    display: none;
+                }
             }
 
             &:last-child {
                 flex-basis: 80%;
-            }
-        }
-    }
-}
 
-@media (width < 780px) {
-    .docs {
-        main {
-            &>section {
-                &:first-child {
-                    display: none;
-                }
-
-                &:last-child {
+                @media (width < 780px) {
                     flex-basis: 100%;
-                    padding: 0;
                 }
             }
         }
@@ -142,6 +137,10 @@ nav {
         border-style: solid;
         border-color: rgba(255, 255, 255, 0.1);
         border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+        @media (width < 460px) {
+            padding: .5rem;
+        }
     }
 
     table {

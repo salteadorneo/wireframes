@@ -20,6 +20,9 @@ function renderComponent(component, code) {
       text = text.split('\n').slice(1).join('\n');
       text = text.split('\n').slice(0, -4).join('\n');
       text = text.replace(/## Properties/g, '#### Properties');
+      text = text.replace(/`undefined`/g, '');
+      text = text.replace(/`/g, '');
+      text = text.replace(/"/g, '');
       document.querySelector(`#${component}`).insertAdjacentHTML('beforeend', marked.parse(text));
     });
 }
@@ -43,7 +46,7 @@ renderComponent('grid', `<wf-grid gap="2rem">
   <wf-image width="50px"></wf-image>
 </wf-grid>`);
 
-renderComponent('hr', `<wf-hr></wf-hr>`);
+renderComponent('hr', `<wf-hr width="220px"></wf-hr>`);
 
 renderComponent('image', `<wf-flex align-items="end" gap="1rem" flex-wrap="wrap">
   <wf-image width="200px"></wf-image>
@@ -96,7 +99,7 @@ renderComponent('title', `<wf-title tag="h4">Default title</wf-title>
 
 <wf-title tag="h4" variant="xl">Title variant</wf-title>`);
 
-renderComponent('video', `<wf-video width="600px"></wf-video>`);
+renderComponent('video', `<wf-video width="300px"></wf-video>`);
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
