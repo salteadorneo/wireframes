@@ -19,6 +19,12 @@ export const WfButton = /*@__PURE__*/ defineContainer<JSX.WfButton>('wf-button',
 export const WfCheckbox = /*@__PURE__*/ defineContainer<JSX.WfCheckbox>('wf-checkbox', undefined);
 
 
+export const WfContainer = /*@__PURE__*/ defineContainer<JSX.WfContainer>('wf-container', undefined, [
+  'width',
+  'padding'
+]);
+
+
 export const WfFlex = /*@__PURE__*/ defineContainer<JSX.WfFlex>('wf-flex', undefined, [
   'alignItems',
   'justifyContent',

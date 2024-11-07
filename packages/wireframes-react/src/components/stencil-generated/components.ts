@@ -12,6 +12,7 @@ import { createComponent } from '@stencil/react-output-target/runtime';
 import React from 'react';
 import { WfButton as WfButtonElement, defineCustomElement as defineWfButton } from "wireframes/dist/components/wf-button.js";
 import { WfCheckbox as WfCheckboxElement, defineCustomElement as defineWfCheckbox } from "wireframes/dist/components/wf-checkbox.js";
+import { WfContainer as WfContainerElement, defineCustomElement as defineWfContainer } from "wireframes/dist/components/wf-container.js";
 import { WfFlex as WfFlexElement, defineCustomElement as defineWfFlex } from "wireframes/dist/components/wf-flex.js";
 import { WfGrid as WfGridElement, defineCustomElement as defineWfGrid } from "wireframes/dist/components/wf-grid.js";
 import { WfHr as WfHrElement, defineCustomElement as defineWfHr } from "wireframes/dist/components/wf-hr.js";
@@ -46,6 +47,17 @@ export const WfCheckbox: StencilReactComponent<WfCheckboxElement, WfCheckboxEven
     react: React,
     events: {} as WfCheckboxEvents,
     defineCustomElement: defineWfCheckbox
+});
+
+type WfContainerEvents = NonNullable<unknown>;
+
+export const WfContainer: StencilReactComponent<WfContainerElement, WfContainerEvents> = /*@__PURE__*/ createComponent<WfContainerElement, WfContainerEvents>({
+    tagName: 'wf-container',
+    elementClass: WfContainerElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as WfContainerEvents,
+    defineCustomElement: defineWfContainer
 });
 
 type WfFlexEvents = NonNullable<unknown>;

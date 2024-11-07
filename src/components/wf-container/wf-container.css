@@ -1,0 +1,7 @@
+:host {
+  display: inline-block;
+  border-width: var(--line-width, 2px);
+  border-style: solid;
+  border-color: var(--line-color, black);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
