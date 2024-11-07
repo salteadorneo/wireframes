@@ -34,6 +34,8 @@ renderComponent('button', `<wf-button variant="sm"></wf-button>
 
 renderComponent('checkbox', `<wf-checkbox></wf-checkbox>`);
 
+renderComponent('container', `<wf-container width="150px" padding="24px"></wf-container>`);
+
 renderComponent('flex', `<wf-flex gap="2rem">
   <wf-image width="50px"></wf-image>
   <wf-image width="50px"></wf-image>

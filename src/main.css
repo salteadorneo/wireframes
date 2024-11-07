@@ -139,7 +139,7 @@ nav {
         border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 
         @media (width < 460px) {
-            padding: .5rem;
+            padding: 2rem .5rem;
         }
     }
 

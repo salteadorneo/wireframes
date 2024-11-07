@@ -38,7 +38,7 @@ renderBlock('cards', {
   <wf-button>Read more</wf-button>
 </wf-container>`,
   horizontal: `<wf-container>
-  <wf-flex>
+  <wf-flex flex-wrap="wrap">
     <wf-image height="180px" aspect-ratio="1/1"></wf-image>
     <div style="padding:8px 16px;">
       <wf-title>Card</wf-title>
