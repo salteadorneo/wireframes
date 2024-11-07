@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Virgil';
-    src: url('../fonts/Virgil.woff2') format('woff2'),
-        url('../fonts/Virgil.woff') format('woff');
+    src: url('https://salteadorneo.github.io/wireframes/fonts/Virgil.woff2') format('woff2'),
+        url('https://salteadorneo.github.io/wireframes/fonts/Virgil.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
