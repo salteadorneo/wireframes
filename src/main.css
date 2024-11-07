@@ -51,6 +51,13 @@ a {
     color: inherit;
 }
 
+.border {
+    border-width: var(--line-width, 2px);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
 pre {
     margin: 0;
 
@@ -75,7 +82,7 @@ pre {
         overflow: auto;
         padding: 0;
 
-        section {
+        &>section {
             overflow: auto;
             padding: 0 1rem;
 
@@ -127,7 +134,9 @@ nav {
     margin-bottom: 5rem;
 
     .components {
-        padding: 1rem;
+        padding: 2rem;
+        display: grid;
+        place-content: center;
         background-color: var(--background);
         border-width: var(--line-width, 2px);
         border-style: solid;

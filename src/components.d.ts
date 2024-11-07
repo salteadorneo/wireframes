@@ -14,6 +14,10 @@ export namespace Components {
     }
     interface WfCheckbox {
     }
+    interface WfContainer {
+        "padding"?: string;
+        "width"?: string;
+    }
     interface WfFlex {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
         "flexDirection"?: string;
@@ -102,6 +106,12 @@ declare global {
     var HTMLWfCheckboxElement: {
         prototype: HTMLWfCheckboxElement;
         new (): HTMLWfCheckboxElement;
+    };
+    interface HTMLWfContainerElement extends Components.WfContainer, HTMLStencilElement {
+    }
+    var HTMLWfContainerElement: {
+        prototype: HTMLWfContainerElement;
+        new (): HTMLWfContainerElement;
     };
     interface HTMLWfFlexElement extends Components.WfFlex, HTMLStencilElement {
     }
@@ -195,6 +205,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "wf-button": HTMLWfButtonElement;
         "wf-checkbox": HTMLWfCheckboxElement;
+        "wf-container": HTMLWfContainerElement;
         "wf-flex": HTMLWfFlexElement;
         "wf-grid": HTMLWfGridElement;
         "wf-hr": HTMLWfHrElement;
@@ -218,6 +229,10 @@ declare namespace LocalJSX {
         "variant"?: 'sm' | 'md' | 'lg' | 'xl';
     }
     interface WfCheckbox {
+    }
+    interface WfContainer {
+        "padding"?: string;
+        "width"?: string;
     }
     interface WfFlex {
         "alignItems"?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
@@ -292,6 +307,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "wf-button": WfButton;
         "wf-checkbox": WfCheckbox;
+        "wf-container": WfContainer;
         "wf-flex": WfFlex;
         "wf-grid": WfGrid;
         "wf-hr": WfHr;
@@ -313,6 +329,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "wf-button": LocalJSX.WfButton & JSXBase.HTMLAttributes<HTMLWfButtonElement>;
             "wf-checkbox": LocalJSX.WfCheckbox & JSXBase.HTMLAttributes<HTMLWfCheckboxElement>;
+            "wf-container": LocalJSX.WfContainer & JSXBase.HTMLAttributes<HTMLWfContainerElement>;
             "wf-flex": LocalJSX.WfFlex & JSXBase.HTMLAttributes<HTMLWfFlexElement>;
             "wf-grid": LocalJSX.WfGrid & JSXBase.HTMLAttributes<HTMLWfGridElement>;
             "wf-hr": LocalJSX.WfHr & JSXBase.HTMLAttributes<HTMLWfHrElement>;

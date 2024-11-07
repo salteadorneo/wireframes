@@ -43,7 +43,11 @@ export const config: Config = {
           warn: true,
         },
         {
-          src: 'main.css',
+          src: '*.css',
+          warn: true,
+        },
+        {
+          src: '*.js',
           warn: true,
         },
         {
