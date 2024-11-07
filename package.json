@@ -33,7 +33,8 @@
   "unpkg": "dist/wireframes.esm.js",
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "hydrate/"
   ],
   "scripts": {
     "build": "cd packages/cdn && npm i && npm run build && cd .. && cd .. && stencil build",

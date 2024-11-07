@@ -1,6 +1,7 @@
 dist/
 www/
 loader/
+hydrate/
 
 *~
 *.sw[mnpcod]
@@ -24,3 +25,4 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 .env
+.astro

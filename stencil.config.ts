@@ -19,15 +19,12 @@ export const config: Config = {
       proxiesFile: 'packages/wireframes-vue/src/components.ts',
     }),
     {
+      type: 'dist-hydrate-script',
+    },
+    {
       type: 'dist-custom-elements',
       externalRuntime: false,
-      copy: [
-        {
-          src: '**/*.{woff,woff2}',
-          dest: 'dist/fonts',
-          warn: true,
-        }
-      ]
+      copy: []
     },
     {
       type: 'docs-readme',
