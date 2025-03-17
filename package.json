@@ -45,16 +45,16 @@
     "tailwind": "npx tailwindcss -i ./src/directives.css -o ./www/tailwind.css --watch"
   },
   "dependencies": {
-    "@stencil/core": "^4.22.2"
+    "@stencil/core": "^4.28.2"
   },
   "devDependencies": {
-    "@stencil/react-output-target": "^0.7.4",
-    "@stencil/vue-output-target": "^0.9.0",
+    "@stencil/react-output-target": "^0.8.2",
+    "@stencil/vue-output-target": "^0.10.7",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.13.10",
     "jest": "^29.7.0",
     "jest-cli": "^29.7.0",
-    "puppeteer": "23.7.0",
-    "typescript": "^5.6.3"
+    "puppeteer": "23.11.1",
+    "typescript": "^5.8.2"
   }
 }
