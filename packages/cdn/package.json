@@ -1,6 +1,6 @@
 {
   "name": "wireframes-cdn",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Component library for building wireframes and prototypes",
   "keywords": [
     "wireframe",
@@ -20,8 +20,8 @@
   },
   "devDependencies": {
     "cssnano": "^7.0.6",
-    "postcss": "^8.4.47",
-    "postcss-cli": "^11.0.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.0"
   }
 }
