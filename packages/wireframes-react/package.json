@@ -1,6 +1,6 @@
 {
   "name": "wireframes-react",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Component library for building wireframes and prototypes with React",
   "keywords": [
     "wireframe",
@@ -31,7 +31,8 @@
     "tsc": "tsc -p . --outDir ./dist"
   },
   "dependencies": {
-    "wireframes": "*"
+    "wireframes": "*",
+    "@stencil/react-output-target": "^0.8.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",
