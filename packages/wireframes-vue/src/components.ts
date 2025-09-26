@@ -1,14 +1,14 @@
 /* eslint-disable */
 /* tslint:disable */
 /* auto-generated vue proxies */
-import { defineContainer } from '@stencil/vue-output-target/runtime';
+import { defineContainer, type StencilVueComponent } from '@stencil/vue-output-target/runtime';
 
 import type { JSX } from 'wireframes';
 
 
 
 
-export const WfButton = /*@__PURE__*/ defineContainer<JSX.WfButton>('wf-button', undefined, [
+export const WfButton: StencilVueComponent<JSX.WfButton> = /*@__PURE__*/ defineContainer<JSX.WfButton>('wf-button', undefined, [
   'backgroundColor',
   'color',
   'borderColor',
@@ -16,16 +16,16 @@ export const WfButton = /*@__PURE__*/ defineContainer<JSX.WfButton>('wf-button',
 ]);
 
 
-export const WfCheckbox = /*@__PURE__*/ defineContainer<JSX.WfCheckbox>('wf-checkbox', undefined);
+export const WfCheckbox: StencilVueComponent<JSX.WfCheckbox> = /*@__PURE__*/ defineContainer<JSX.WfCheckbox>('wf-checkbox', undefined);
 
 
-export const WfContainer = /*@__PURE__*/ defineContainer<JSX.WfContainer>('wf-container', undefined, [
+export const WfContainer: StencilVueComponent<JSX.WfContainer> = /*@__PURE__*/ defineContainer<JSX.WfContainer>('wf-container', undefined, [
   'width',
   'padding'
 ]);
 
 
-export const WfFlex = /*@__PURE__*/ defineContainer<JSX.WfFlex>('wf-flex', undefined, [
+export const WfFlex: StencilVueComponent<JSX.WfFlex> = /*@__PURE__*/ defineContainer<JSX.WfFlex>('wf-flex', undefined, [
   'alignItems',
   'justifyContent',
   'gap',
@@ -36,7 +36,7 @@ export const WfFlex = /*@__PURE__*/ defineContainer<JSX.WfFlex>('wf-flex', undef
 ]);
 
 
-export const WfGrid = /*@__PURE__*/ defineContainer<JSX.WfGrid>('wf-grid', undefined, [
+export const WfGrid: StencilVueComponent<JSX.WfGrid> = /*@__PURE__*/ defineContainer<JSX.WfGrid>('wf-grid', undefined, [
   'alignItems',
   'justifyContent',
   'justifyItems',
@@ -44,12 +44,12 @@ export const WfGrid = /*@__PURE__*/ defineContainer<JSX.WfGrid>('wf-grid', undef
 ]);
 
 
-export const WfHr = /*@__PURE__*/ defineContainer<JSX.WfHr>('wf-hr', undefined, [
+export const WfHr: StencilVueComponent<JSX.WfHr> = /*@__PURE__*/ defineContainer<JSX.WfHr>('wf-hr', undefined, [
   'width'
 ]);
 
 
-export const WfImage = /*@__PURE__*/ defineContainer<JSX.WfImage>('wf-image', undefined, [
+export const WfImage: StencilVueComponent<JSX.WfImage> = /*@__PURE__*/ defineContainer<JSX.WfImage>('wf-image', undefined, [
   'width',
   'height',
   'aspectRatio',
@@ -58,7 +58,7 @@ export const WfImage = /*@__PURE__*/ defineContainer<JSX.WfImage>('wf-image', un
 ]);
 
 
-export const WfInput = /*@__PURE__*/ defineContainer<JSX.WfInput>('wf-input', undefined, [
+export const WfInput: StencilVueComponent<JSX.WfInput> = /*@__PURE__*/ defineContainer<JSX.WfInput>('wf-input', undefined, [
   'width',
   'maxWidth',
   'placeholder',
@@ -66,40 +66,42 @@ export const WfInput = /*@__PURE__*/ defineContainer<JSX.WfInput>('wf-input', un
 ]);
 
 
-export const WfLink = /*@__PURE__*/ defineContainer<JSX.WfLink>('wf-link', undefined, [
+export const WfLink: StencilVueComponent<JSX.WfLink> = /*@__PURE__*/ defineContainer<JSX.WfLink>('wf-link', undefined, [
   'href',
   'target'
 ]);
 
 
-export const WfLorem = /*@__PURE__*/ defineContainer<JSX.WfLorem>('wf-lorem', undefined, [
+export const WfLorem: StencilVueComponent<JSX.WfLorem> = /*@__PURE__*/ defineContainer<JSX.WfLorem>('wf-lorem', undefined, [
   'words'
 ]);
 
 
-export const WfP = /*@__PURE__*/ defineContainer<JSX.WfP>('wf-p', undefined, [
+export const WfP: StencilVueComponent<JSX.WfP> = /*@__PURE__*/ defineContainer<JSX.WfP>('wf-p', undefined, [
   'fontSize',
   'textAlign'
 ]);
 
 
-export const WfTabContent = /*@__PURE__*/ defineContainer<JSX.WfTabContent>('wf-tab-content', undefined, [
+export const WfTabContent: StencilVueComponent<JSX.WfTabContent> = /*@__PURE__*/ defineContainer<JSX.WfTabContent>('wf-tab-content', undefined, [
   'name'
 ]);
 
 
-export const WfTabHeader = /*@__PURE__*/ defineContainer<JSX.WfTabHeader>('wf-tab-header', undefined, [
+export const WfTabHeader: StencilVueComponent<JSX.WfTabHeader> = /*@__PURE__*/ defineContainer<JSX.WfTabHeader>('wf-tab-header', undefined, [
   'name',
+  'selected'
+], [
   'selected'
 ]);
 
 
-export const WfTabs = /*@__PURE__*/ defineContainer<JSX.WfTabs>('wf-tabs', undefined, [
+export const WfTabs: StencilVueComponent<JSX.WfTabs> = /*@__PURE__*/ defineContainer<JSX.WfTabs>('wf-tabs', undefined, [
   'names'
 ]);
 
 
-export const WfTitle = /*@__PURE__*/ defineContainer<JSX.WfTitle>('wf-title', undefined, [
+export const WfTitle: StencilVueComponent<JSX.WfTitle> = /*@__PURE__*/ defineContainer<JSX.WfTitle>('wf-title', undefined, [
   'tag',
   'fontWeight',
   'textAlign',
@@ -107,7 +109,7 @@ export const WfTitle = /*@__PURE__*/ defineContainer<JSX.WfTitle>('wf-title', un
 ]);
 
 
-export const WfVideo = /*@__PURE__*/ defineContainer<JSX.WfVideo>('wf-video', undefined, [
+export const WfVideo: StencilVueComponent<JSX.WfVideo> = /*@__PURE__*/ defineContainer<JSX.WfVideo>('wf-video', undefined, [
   'width',
   'maxWidth',
   'height',
