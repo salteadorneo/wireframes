@@ -33,6 +33,6 @@
     "wireframes": "*"
   },
   "devDependencies": {
-    "typescript": "^5.6.3"
+    "typescript": "^5.9.2"
   }
 }
