@@ -54,6 +54,9 @@ export namespace Components {
         "target"?: string;
     }
     interface WfLorem {
+        /**
+          * @default 2
+         */
         "words"?: number;
     }
     interface WfP {
@@ -79,11 +82,17 @@ export namespace Components {
     }
     interface WfTitle {
         "fontWeight"?: string;
+        /**
+          * @default 'h1'
+         */
         "tag"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
         "textAlign"?: string;
         "variant"?: 'sm' | 'md' | 'lg' | 'xl';
     }
     interface WfVideo {
+        /**
+          * @default '16 / 9'
+         */
         "aspectRatio"?: string;
         "height"?: string;
         "margin"?: string;
@@ -271,6 +280,9 @@ declare namespace LocalJSX {
         "target"?: string;
     }
     interface WfLorem {
+        /**
+          * @default 2
+         */
         "words"?: number;
     }
     interface WfP {
@@ -295,11 +307,17 @@ declare namespace LocalJSX {
     }
     interface WfTitle {
         "fontWeight"?: string;
+        /**
+          * @default 'h1'
+         */
         "tag"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
         "textAlign"?: string;
         "variant"?: 'sm' | 'md' | 'lg' | 'xl';
     }
     interface WfVideo {
+        /**
+          * @default '16 / 9'
+         */
         "aspectRatio"?: string;
         "height"?: string;
         "margin"?: string;
