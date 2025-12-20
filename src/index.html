@@ -48,6 +48,7 @@
         <wf-link href="docs.html#installation">Docs</wf-link>
         <wf-link href="docs.html#components">Components</wf-link>
         <wf-link href="playground.html">Playground</wf-link>
+        <wf-link href="es.html" style="font-size:0.98rem;">Español</wf-link>
         <wf-flex align-items="center" gap="1rem">
           <a href="https://www.npmjs.com/package/wireframes" target="_blank" rel="noopener noreferrer">
             <svg width="31" height="13" xmlns="http://www.w3.org/2000/svg">
@@ -72,23 +73,56 @@
     </wf-flex>
   </header>
   <main>
-    <h1 style="display: none;">Component library for building wireframes and prototypes</h1>
-    <wf-flex flex-direction="column" align-items="center" margin="5rem auto">
-      <wf-title tag="h1" text-align="center" variant="lg" style="max-width:650px;margin:0 0 10px;">
-        Component library for building wireframes and prototypes
-      </wf-title>
-      <wf-p text-align="center" font-size="20px">
-        Web Components. Framework agnostic. Open source.
-      </wf-p>
-      <wf-flex align-items="center" gap="12px" margin="40px 0">
-        <wf-button onclick="window.location.href='docs.html'" variant="lg">
-          Get started
-        </wf-button>
+    <!-- HERO SECTION -->
+    <section style="padding: 5rem 0 2rem 0;">
+      <wf-flex flex-direction="column" align-items="center" gap="1.5rem">
+        <wf-title tag="h1" text-align="center" variant="xl" style="max-width:1300px; margin-bottom: 0;">
+          Build wireframes faster and easier<br />
+          <span style="font-size:1.1rem; color:#64748b; font-weight:400;">The UI toolkit for rapid ideation and communication.</span>
+        </wf-title>
+        <wf-p text-align="center" font-size="22px" style="max-width:1300px;">
+          Wireframes is an open source UI component library designed to help you create wireframes and interactive prototypes in minutes.<br />
+          Built with Web Components, it works with any framework or plain HTML. Fast, lightweight, and easy to extend.
+        </wf-p>
+        <wf-flex align-items="center" gap="18px" margin="30px 0">
+          <wf-button onclick="window.location.href='docs.html'" variant="lg" style="font-size:1.2rem;">
+            Get started
+          </wf-button>
+          <wf-link href="playground.html" style="font-size:1.1rem;">Try Playground</wf-link>
+        </wf-flex>
+      </wf-flex>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section style="padding: 3rem 0 4rem 0;">
+      <wf-flex justify-content="center" gap="40px" flex-wrap="wrap">
+        <wf-container padding="2rem" style="max-width:320px;">
+          <wf-title tag="h3">Fast prototyping</wf-title>
+          <wf-p>Ready-to-use components for instant wireframes. No build tools or complex setup needed—just add and start designing.</wf-p>
+        </wf-container>
+        <wf-container padding="2rem" style="max-width:320px;">
+          <wf-title tag="h3">Framework agnostic</wf-title>
+          <wf-p>Compatible with any JavaScript framework or plain HTML. Use it in React, Vue, Angular, or anywhere you want.</wf-p>
+        </wf-container>
+        <wf-container padding="2rem" style="max-width:320px;">
+          <wf-title tag="h3">Open source</wf-title>
+          <wf-p>MIT licensed. Free forever. Community-driven, extensible, and always improving with your feedback.</wf-p>
+        </wf-container>
+      </wf-flex>
+    </section>
+  </main>
+</main>
+
+  <footer style="padding:2.5rem 0 1.5rem 0; border-top:1px solid #e5e7eb; margin-top:2rem;">
+    <wf-flex justify-content="center" align-items="center" gap="2rem">
+      <wf-title tag="h4" variant="sm" style="color:#64748b;">Wireframes</wf-title>
+      <wf-flex gap="1.5rem">
+        <wf-link href="https://github.com/salteadorneo/wireframes" target="_blank">GitHub</wf-link>
+        <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank">NPM</wf-link>
+        <wf-link href="docs.html#components">Docs</wf-link>
       </wf-flex>
     </wf-flex>
-
-    <wf-video margin="60px auto" max-width="800px"></wf-video>
-  </main>
+  </footer>
 </body>
 
 </html>
