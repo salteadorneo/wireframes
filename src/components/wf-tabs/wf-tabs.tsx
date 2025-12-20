@@ -16,13 +16,17 @@ export class WfTabs {
     if (!tabHeaderEl) return;
     tabHeaderEl.getChild().then(tabHeader => {
       tabHeader.select();
+      this.current = tabHeader.name;
     });
 
     const tabsContentEl = Array.from(this.host.querySelectorAll('wf-tab-content')) as any[];
     const [tabContentEl] = tabsContentEl;
-    tabContentEl.getChild().then(tabContent => {
-      tabContent.select();
-    });
+
+    if (tabContentEl) {
+      tabContentEl.getChild().then(tabContent => {
+        tabContent.select();
+      });
+    }
   }
 
   @State()
@@ -30,6 +34,8 @@ export class WfTabs {
 
   @Listen('selected')
   onSelectedTab(event: CustomEvent) {
+    if (!this.host.contains(event.target as Node)) return;
+
     this.current = event.detail.name;
 
     const tabsHeaderEl = Array.from(this.host.querySelectorAll('wf-tab-header')) as any[];
@@ -51,6 +57,8 @@ export class WfTabs {
         }
       });
     });
+    
+    event.stopPropagation();
   }
 
   render() {
