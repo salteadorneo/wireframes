@@ -31,7 +31,15 @@
 
   <link rel="stylesheet" href="main.css" />
 
-  <script data-no-cookie async src="https://cdn.splitbee.io/sb.js"></script>
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+  <script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.write('<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.min.css">');
+    } else {
+      document.write('<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github.min.css">');
+    }
+    hljs.highlightAll();
+  </script>
 </head>
 
 <body>
@@ -44,10 +52,6 @@
         </wf-flex>
       </a>
       <wf-flex align-items="center" gap="2rem" class="menu">
-        <wf-link href="index.html">Home</wf-link>
-        <wf-link href="docs.html#installation">Docs</wf-link>
-        <wf-link href="docs.html#components">Components</wf-link>
-        <wf-link href="playground.html">Playground</wf-link>
         <wf-link href="es.html" style="font-size:0.98rem;">Español</wf-link>
         <wf-flex align-items="center" gap="1rem">
           <a href="https://www.npmjs.com/package/wireframes" target="_blank" rel="noopener noreferrer">
@@ -73,15 +77,14 @@
     </wf-flex>
   </header>
   <main>
-    <!-- HERO SECTION -->
     <section style="padding: 5rem 0 2rem 0;">
       <wf-flex flex-direction="column" align-items="center" gap="1.5rem">
         <wf-title tag="h1" text-align="center" variant="xl" style="max-width:1300px; margin-bottom: 0;">
           Build wireframes faster and easier<br />
         </wf-title>
         <wf-p text-align="center" font-size="22px" style="max-width:1300px;">
-          Wireframes is an open source UI component library designed to help you create wireframes and interactive prototypes in minutes.<br />
-          Built with Web Components, it works with any framework or plain HTML. Fast, lightweight, and easy to extend.
+          Wireframes is an open source UI component library.<br />
+          Fast, lightweight, and easy to extend.
         </wf-p>
         <wf-flex align-items="center" gap="18px" margin="30px 0">
           <wf-button onclick="window.location.href='docs.html'" variant="lg" style="font-size:1.2rem;">
@@ -92,7 +95,6 @@
       </wf-flex>
     </section>
 
-    <!-- FEATURES SECTION -->
     <section style="padding: 3rem 0 4rem 0;">
       <wf-flex justify-content="center" gap="40px" flex-wrap="wrap">
         <wf-container padding="2rem" style="max-width:320px;">
@@ -109,19 +111,41 @@
         </wf-container>
       </wf-flex>
     </section>
+
+    <section id="installation" style="padding: 3rem 0 2rem 0;">
+      <div style="max-width:900px;margin:auto;">
+        <wf-title tag="h2" variant="md">Installation</wf-title>
+        <wf-p style="margin-bottom:2rem;">Choose your preferred method to start using Wireframes:</wf-p>
+        <wf-tabs>
+          <wf-tab-header slot="header" name="npm">NPM</wf-tab-header>
+          <wf-tab-header slot="header" name="react">React</wf-tab-header>
+          <wf-tab-header slot="header" name="vue">Vue</wf-tab-header>
+          <wf-tab-header slot="header" name="cdn">CDN</wf-tab-header>
+          <wf-tab-content slot="content" name="npm">
+            <pre><code>npm i wireframes</code></pre><br />
+            <wf-p>Then initialize:</wf-p>
+            <pre><code>import { defineCustomElements } from 'wireframes/loader';
+defineCustomElements();</code></pre><br />
+            <wf-flex gap="0.7rem" style="margin-top:1.5rem;">
+              <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank" variant="primary">NPM</wf-link>
+            </wf-flex>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="react">
+            <pre><code>npm i wireframes-react</code></pre><br />
+            <wf-link href="https://www.npmjs.com/package/wireframes-react" target="_blank" variant="primary">NPM</wf-link>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="vue">
+            <pre><code>npm i wireframes-vue</code></pre><br />
+            <wf-link href="https://www.npmjs.com/package/wireframes-vue" target="_blank" variant="primary">NPM</wf-link>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="cdn">
+            <pre><code>&lt;script type="module" src="https://cdn.jsdelivr.net/npm/wireframes/dist/wireframes/wireframes.esm.js"&gt;&lt;/script&gt;</code></pre>
+          </wf-tab-content>
+        </wf-tabs>
+      </div>
+    </section>
   </main>
 </main>
-
-  <footer style="padding:2.5rem 0 1.5rem 0; border-top:1px solid #e5e7eb; margin-top:2rem;">
-    <wf-flex justify-content="center" align-items="center" gap="2rem">
-      <wf-title tag="h4" variant="sm" style="color:#64748b;">Wireframes</wf-title>
-      <wf-flex gap="1.5rem">
-        <wf-link href="https://github.com/salteadorneo/wireframes" target="_blank">GitHub</wf-link>
-        <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank">NPM</wf-link>
-        <wf-link href="docs.html#components">Docs</wf-link>
-      </wf-flex>
-    </wf-flex>
-  </footer>
 </body>
 
 </html>

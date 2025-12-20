@@ -20,23 +20,27 @@
   <meta name="twitter:image" content="https://salteadorneo.github.io/wireframes/assets/og.png" />
   <script type="module" src="../build/wireframes.esm.js"></script>
   <link rel="stylesheet" href="../main.css" />
-  <script data-no-cookie async src="https://cdn.splitbee.io/sb.js"></script>
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+  <script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.write('<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.min.css">');
+    } else {
+      document.write('<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github.min.css">');
+    }
+    hljs.highlightAll();
+  </script>
 </head>
 <body>
   <header>
     <wf-flex justify-content="space-between" align-items="center" flex-wrap="wrap" gap="10px">
-      <a href="index.html" style="text-decoration:none;">
+      <a href="/" style="text-decoration:none;">
         <wf-flex align-items="center" gap="10px">
           <wf-image width="50px" text="Logo" border-radius="50%"></wf-image>
           <wf-title font-weight="normal" variant="sm">Wireframes</wf-title>
         </wf-flex>
       </a>
       <wf-flex align-items="center" gap="2rem" class="menu">
-        <wf-link href="index.html">Inicio</wf-link>
-        <wf-link href="../docs.html#installation">Documentación</wf-link>
-        <wf-link href="../docs.html#components">Componentes</wf-link>
-        <wf-link href="../playground.html">Playground</wf-link>
-        <wf-link href="/">English</wf-link>
+        <wf-link href="/" style="font-size:0.98rem;">English</wf-link>
         <wf-flex align-items="center" gap="1rem">
           <a href="https://www.npmjs.com/package/wireframes" target="_blank" rel="noopener noreferrer">
             <svg width="31" height="13" xmlns="http://www.w3.org/2000/svg">
@@ -56,14 +60,14 @@
     </wf-flex>
   </header>
   <main>
-    <!-- HERO SECTION -->
     <section style="padding: 5rem 0 2rem 0;">
       <wf-flex flex-direction="column" align-items="center" gap="1.5rem">
         <wf-title tag="h1" text-align="center" variant="xl" style="max-width:1300px; margin-bottom: 0;">
-          Prototipa rápido y fácil
+          Crea wireframes más rápido y fácil<br />
         </wf-title>
         <wf-p text-align="center" font-size="22px" style="max-width:1300px;">
-          Biblioteca de componentes UI para wireframes y prototipos.<br />Web Components. Agnóstico a frameworks. Súper rápido.
+          Wireframes es una biblioteca de componentes UI open source.<br />
+          Rápida, ligera y fácil de extender.
         </wf-p>
         <wf-flex align-items="center" gap="18px" margin="30px 0">
           <wf-button onclick="window.location.href='../docs.html'" variant="lg" style="font-size:1.2rem;">
@@ -73,33 +77,58 @@
         </wf-flex>
       </wf-flex>
     </section>
-    <!-- FEATURES SECTION -->
+
     <section style="padding: 3rem 0 4rem 0;">
       <wf-flex justify-content="center" gap="40px" flex-wrap="wrap">
         <wf-container padding="2rem" style="max-width:320px;">
           <wf-title tag="h3">Prototipado rápido</wf-title>
-          <wf-p>Componentes listos para usar y crear wireframes al instante. Sin pasos de build.</wf-p>
+          <wf-p>Componentes listos para wireframes instantáneos. Sin herramientas de build ni configuración compleja: solo añade y diseña.</wf-p>
         </wf-container>
         <wf-container padding="2rem" style="max-width:320px;">
           <wf-title tag="h3">Agnóstico a frameworks</wf-title>
-          <wf-p>Funciona con cualquier framework JS o HTML puro. Úsalo donde quieras.</wf-p>
+          <wf-p>Compatible con cualquier framework JavaScript o HTML puro. Úsalo en React, Vue, Angular o donde quieras.</wf-p>
         </wf-container>
         <wf-container padding="2rem" style="max-width:320px;">
           <wf-title tag="h3">Código abierto</wf-title>
-          <wf-p>Licencia MIT. Gratis para siempre. Extensible y con comunidad.</wf-p>
+          <wf-p>Licencia MIT. Gratis para siempre. Extensible y mejora continua con tu feedback.</wf-p>
         </wf-container>
       </wf-flex>
     </section>
+
+    <section id="installation" style="padding: 3rem 0 2rem 0;">
+      <div style="max-width:900px;margin:auto;">
+        <wf-title tag="h2" variant="md">Instalación</wf-title>
+        <wf-p style="margin-bottom:2rem;">Elige tu método preferido para empezar a usar Wireframes:</wf-p>
+        <wf-tabs>
+          <wf-tab-header slot="header" name="npm">NPM</wf-tab-header>
+          <wf-tab-header slot="header" name="react">React</wf-tab-header>
+          <wf-tab-header slot="header" name="vue">Vue</wf-tab-header>
+          <wf-tab-header slot="header" name="cdn">CDN</wf-tab-header>
+          <wf-tab-content slot="content" name="npm">
+            <pre><code>npm i wireframes</code></pre><br />
+            <wf-p>Luego inicializa:</wf-p>
+            <pre><code>import { defineCustomElements } from 'wireframes/loader';
+defineCustomElements();</code></pre><br />
+            <wf-flex gap="0.7rem" style="margin-top:1.5rem;">
+              <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank" variant="primary">NPM</wf-link>
+            </wf-flex>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="react">
+            <pre><code>npm i wireframes-react</code></pre><br />
+            <wf-link href="https://www.npmjs.com/package/wireframes-react" target="_blank" variant="primary">NPM</wf-link>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="vue">
+            <pre><code>npm i wireframes-vue</code></pre><br />
+            <wf-link href="https://www.npmjs.com/package/wireframes-vue" target="_blank" variant="primary">NPM</wf-link>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="cdn">
+            <pre><code>&lt;script type="module" src="https://cdn.jsdelivr.net/npm/wireframes/dist/wireframes/wireframes.esm.js"&gt;&lt;/script&gt;</code></pre>
+          </wf-tab-content>
+        </wf-tabs>
+      </div>
+    </section>
   </main>
-  <footer style="padding:2.5rem 0 1.5rem 0; border-top:1px solid #e5e7eb; margin-top:2rem;">
-    <wf-flex justify-content="center" align-items="center" gap="2rem">
-      <wf-title tag="h4" variant="sm" style="color:#64748b;">Wireframes</wf-title>
-      <wf-flex gap="1.5rem">
-        <wf-link href="https://github.com/salteadorneo/wireframes" target="_blank">GitHub</wf-link>
-        <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank">NPM</wf-link>
-        <wf-link href="../docs.html#components">Documentación</wf-link>
-      </wf-flex>
-    </wf-flex>
-  </footer>
+</main>
 </body>
+
 </html>
