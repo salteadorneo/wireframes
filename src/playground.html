@@ -29,24 +29,45 @@
 
     <script type="module">
         import * as monaco from 'https://cdn.jsdelivr.net/npm/monaco-editor@0.52.0/+esm';
-        const value = `<main style="text-align: center;">
-    <wf-title tag="h1" variant="xl">Google</wf-title>
-
-    <wf-input placeholder="Search"></wf-input>
-
-    <wf-flex justify-content="center" gap="2rem">
-        <wf-button>Google Search</wf-button>
-        <wf-button>I'm Feeling Lucky</wf-button>
+        const defaultValue = `<main style=\"max-width:600px;margin:2rem auto;\">
+  <wf-title tag=\"h1\" variant=\"xl\">Wireframes Playground</wf-title>
+  <wf-p text-align=\"center\">Experimenta con los componentes y diseña tu wireframe en tiempo real.</wf-p>
+  <wf-container padding=\"2rem\" style=\"margin:2rem 0;\">
+    <wf-title tag=\"h2\" variant=\"md\">Sign in</wf-title>
+    <wf-input placeholder=\"Email\" style=\"margin-bottom:1rem;\"></wf-input>
+    <wf-input placeholder=\"Password\" type=\"password\" style=\"margin-bottom:1rem;\"></wf-input>
+    <wf-flex gap=\"1rem\">
+      <wf-button variant=\"primary\">Login</wf-button>
+      <wf-button variant=\"secondary\">Register</wf-button>
     </wf-flex>
+  </wf-container>
 </main>`;
-        document.querySelector('#result').innerHTML = value;
-        const editor = monaco.editor.create(document.querySelector('#monaco'), {
-            value,
-            language: 'html',
-            theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'vs-dark' : "vs",
-        })
-        editor.onDidChangeModelContent(e => {
-            document.querySelector('#result').innerHTML = editor.getValue();
+        let editor;
+        function setResult(val) {
+            document.querySelector('#result').innerHTML = val;
+        }
+        function resetEditor() {
+            editor.setValue(defaultValue);
+        }
+        function copyCode() {
+            navigator.clipboard.writeText(editor.getValue());
+            const btn = document.getElementById('copy-btn');
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy code', 1200);
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            setResult(defaultValue);
+            editor = monaco.editor.create(document.querySelector('#monaco'), {
+                value: defaultValue,
+                language: 'html',
+                theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'vs-dark' : "vs",
+                fontSize: 16,
+                minimap: { enabled: false },
+                automaticLayout: true
+            });
+            editor.onDidChangeModelContent(() => setResult(editor.getValue()));
+            document.getElementById('reset-btn').onclick = resetEditor;
+            document.getElementById('copy-btn').onclick = copyCode;
         });
     </script>
 
@@ -60,15 +81,18 @@
         * {
             box-sizing: border-box;
         }
-
+        header,
+        main,
+        footer {
+            max-width: 100%;
+        }
         body {
             display: flex;
             flex-direction: column;
             height: 100dvh;
         }
-
         main {
-            height: 100%;
+            height: calc(100% - 82px);
             overflow: hidden;
             padding: 0;
         }
@@ -113,9 +137,16 @@
         </wf-flex>
     </header>
     <main>
-        <section style="display: grid; grid-template-columns: 1fr 1fr; height: 100%; overflow: auto;">
+        <div style="padding:1rem;">
+            <wf-flex align-items="center" gap="1.2rem" wrap="wrap">
+                <wf-button id="reset-btn" variant="secondary" title="Reset example">Reset</wf-button>
+                <wf-button id="copy-btn" variant="primary" title="Copy code">Copy code</wf-button>
+                <wf-p style="margin:0; color:#64748b; font-size:1rem;">Edit the code and see the result live. Use any <b>&lt;wf-...&gt;</b> component.</wf-p>
+            </wf-flex>
+        </div>
+        <section role="playground" style="display: grid; grid-template-columns: 1fr 1fr; height: 100%; overflow: auto;">
             <div id="monaco"></div>
-            <div id="result" style="padding: 1rem;"></div>
+            <div id="result"></div>
         </section>
     </main>
 </body>
