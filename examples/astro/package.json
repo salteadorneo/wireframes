@@ -2,7 +2,7 @@
     "private":  true,
     "name":  "demo-astro",
     "dependencies":  {
-                         "astro":  "^5.0.0",
+                         "astro":  "^5.18.2",
                          "wireframes":  "file:C:/Users/mox/AppData/Local/Temp/wireframes-0.1.0.tgz"
                      },
     "type":  "module",
