@@ -27,7 +27,7 @@
     content="Web Components UI library for building wireframes and prototypes. Framework agnostic. Open source." />
   <meta name="twitter:image" content="https://wireframes.salteadorneo.dev/assets/og.png" />
 
-  <script type="module" src="build/wireframes.esm.js"></script>
+  <script type="module" src="lib/index.js"></script>
 
   <link rel="stylesheet" href="main.css" />
 
@@ -126,22 +126,23 @@
           <wf-tab-content slot="content" name="npm">
             <pre><code>npm i wireframes</code></pre><br />
             <wf-p>Then initialize:</wf-p>
-            <pre><code>import { defineCustomElements } from 'wireframes/loader';
-defineCustomElements();</code></pre><br />
+            <pre><code>import 'wireframes';</code></pre><br />
             <wf-flex gap="0.7rem" style="margin-top:1.5rem;">
               <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank" variant="primary">NPM</wf-link>
             </wf-flex>
           </wf-tab-content>
           <wf-tab-content slot="content" name="react">
-            <pre><code>npm i wireframes-react</code></pre><br />
-            <wf-link href="https://www.npmjs.com/package/wireframes-react" target="_blank" variant="primary">NPM</wf-link>
+            <pre><code>npm i wireframes</code></pre><br />
+            <pre><code>import 'wireframes';</code></pre><br />
+            <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank" variant="primary">NPM</wf-link>
           </wf-tab-content>
           <wf-tab-content slot="content" name="vue">
-            <pre><code>npm i wireframes-vue</code></pre><br />
-            <wf-link href="https://www.npmjs.com/package/wireframes-vue" target="_blank" variant="primary">NPM</wf-link>
+            <pre><code>npm i wireframes</code></pre><br />
+            <pre><code>import 'wireframes';</code></pre><br />
+            <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank" variant="primary">NPM</wf-link>
           </wf-tab-content>
           <wf-tab-content slot="content" name="cdn">
-            <pre><code>&lt;script type="module" src="https://cdn.jsdelivr.net/npm/wireframes/dist/wireframes/wireframes.esm.js"&gt;&lt;/script&gt;</code></pre>
+            <pre><code>&lt;script type="module" src="https://cdn.jsdelivr.net/npm/wireframes/lib/index.js"&gt;&lt;/script&gt;</code></pre>
           </wf-tab-content>
         </wf-tabs>
       </div>

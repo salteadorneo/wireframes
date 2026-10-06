@@ -14,7 +14,7 @@
 
   <link rel="canonical" href="https://wireframes.salteadorneo.dev/docs.html" />
 
-  <script type="module" src="build/wireframes.esm.js"></script>
+  <script type="module" src="lib/index.js"></script>
 
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
   <script>
@@ -134,18 +134,20 @@
           <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
           <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
           <wf-tab-content slot="content" name="npm">
-            <pre><code>npm i wireframes-react</code></pre>
+            <pre><code>npm i wireframes</code></pre>
           </wf-tab-content>
           <wf-tab-content slot="content" name="pnpm">
-            <pre><code>pnpm i wireframes-react</code></pre>
+            <pre><code>pnpm i wireframes</code></pre>
           </wf-tab-content>
           <wf-tab-content slot="content" name="yarn">
-            <pre><code>yarn add wireframes-react</code></pre>
+            <pre><code>yarn add wireframes</code></pre>
           </wf-tab-content>
           <wf-tab-content slot="content" name="bun">
-            <pre><code>bun add wireframes-react</code></pre>
+            <pre><code>bun add wireframes</code></pre>
           </wf-tab-content>
         </wf-tabs>
+
+        <wf-p>Import the package once (e.g. in <code>main.jsx</code>) and use the <code>wf-*</code> elements directly in JSX. With React 18 use kebab-case attributes, e.g. <code>aspect-ratio</code>. For TypeScript add <code>/// &lt;reference types="wireframes/react" /&gt;</code>.</wf-p>
 
         <wf-title id="installation-vue" tag="h4">Vue</wf-title>
 
@@ -155,18 +157,20 @@
           <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
           <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
           <wf-tab-content slot="content" name="npm">
-            <pre><code>npm i wireframes-vue</code></pre>
+            <pre><code>npm i wireframes</code></pre>
           </wf-tab-content>
           <wf-tab-content slot="content" name="pnpm">
-            <pre><code>pnpm i wireframes-vue</code></pre>
+            <pre><code>pnpm i wireframes</code></pre>
           </wf-tab-content>
           <wf-tab-content slot="content" name="yarn">
-            <pre><code>yarn add wireframes-vue</code></pre>
+            <pre><code>yarn add wireframes</code></pre>
           </wf-tab-content>
           <wf-tab-content slot="content" name="bun">
-            <pre><code>bun add wireframes-vue</code></pre>
+            <pre><code>bun add wireframes</code></pre>
           </wf-tab-content>
         </wf-tabs>
+
+        <wf-p>Import the package once (e.g. in <code>main.js</code>) and tell Vue that <code>wf-*</code> tags are custom elements: <code>app.config.compilerOptions.isCustomElement = (tag) =&gt; tag.startsWith('wf-')</code> (or the <code>vue({ template: { compilerOptions: { isCustomElement } } })</code> option in Vite).</wf-p>
 
         <wf-title id="installation-javascript" tag="h4">JavaScript</wf-title>
 
@@ -192,8 +196,7 @@
         <wf-p>
           After installing, you need to set up at the root of your application.
         </wf-p>
-        <pre><code class="language-js">import { defineCustomElements } from 'wireframes/loader';
-defineCustomElements();</code></pre>
+        <pre><code class="language-js">import 'wireframes';</code></pre>
       </section>
 
       <section id="cdn" class="container">
@@ -202,7 +205,7 @@ defineCustomElements();</code></pre>
         <wf-p>
           Alternatively, you can use the CDN to load the components in your project.
         </wf-p>
-        <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;</code></pre>
+        <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/lib/index.js'&gt;&lt;/script&gt;</code></pre>
 
         <wf-title tag="h5">Example</wf-title>
 
@@ -212,7 +215,7 @@ defineCustomElements();</code></pre>
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;script type=&quot;module&quot; src='https://www.unpkg.com/wireframes@latest/dist/wireframes/wireframes.esm.js'&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot; src='https://www.unpkg.com/wireframes@latest/lib/index.js'&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
