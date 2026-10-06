@@ -15,6 +15,8 @@
 | `justifyItems`   | `justify-items`   |             | `"center" \| "flex-end" \| "flex-start" \| "space-around" \| "space-between" \| "space-evenly"` | `undefined` |
 
 
-----------------------------------------------
+## Slots
 
-*Built with [StencilJS](https://stenciljs.com/)*
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |

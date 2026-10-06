@@ -14,8 +14,3 @@
 | `margin`      | `margin`       |             | `string` | `undefined` |
 | `maxWidth`    | `max-width`    |             | `string` | `undefined` |
 | `width`       | `width`        |             | `string` | `undefined` |
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*

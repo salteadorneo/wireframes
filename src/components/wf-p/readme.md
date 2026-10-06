@@ -13,6 +13,8 @@
 | `textAlign` | `text-align` | Text align       | `"center" \| "justify" \| "left" \| "right"` | `undefined` |
 
 
-----------------------------------------------
+## Slots
 
-*Built with [StencilJS](https://stenciljs.com/)*
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |

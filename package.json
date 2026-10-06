@@ -1,6 +1,6 @@
 {
   "name": "wireframes",
-  "version": "0.0.25",
+  "version": "0.1.0",
   "description": "Component library for building wireframes and prototypes",
   "keywords": [
     "wireframe",
@@ -21,40 +21,42 @@
   },
   "bugs": {
     "url": "https://github.com/salteadorneo/wireframes/issues",
-    "email": "hola@salteadorneo.dev"
+    "email": "wireframes@salteadorneo.dev"
   },
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
-  "es2015": "dist/esm/index.js",
-  "es2017": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/wireframes.esm.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "unpkg": "lib/index.js",
   "files": [
-    "dist/",
-    "loader/",
-    "hydrate/"
+    "lib/*.js",
+    "lib/*.d.ts",
+    "lib/package.json",
+    "!lib/*.test.js"
   ],
   "scripts": {
-    "build": "cd packages/cdn && npm i && npm run build && cd .. && cd .. && stencil build",
-    "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate",
+    "build": "cd packages/cdn && npm i && npm run build && cd ../.. && node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test lib/wf.test.js",
     "tailwind": "npx tailwindcss -i ./src/directives.css -o ./www/tailwind.css --watch"
   },
-  "dependencies": {
-    "@stencil/core": "^4.39.0"
-  },
   "devDependencies": {
-    "@stencil/react-output-target": "^1.2.0",
-    "@stencil/vue-output-target": "^0.11.8",
-    "@types/jest": "^30.0.0",
-    "@types/node": "^25.0.3",
-    "jest": "^30.2.0",
-    "jest-cli": "^30.2.0",
-    "puppeteer": "24.34.0",
-    "typescript": "^5.9.3"
-  }
+    "@types/node": "^26.6.4",
+    "puppeteer": "25.12.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./loader": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./react": {
+      "types": "./lib/react.d.ts"
+    },
+    "./lib/*": "./lib/*",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": true
 }

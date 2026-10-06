@@ -1,0 +1,13 @@
+{
+    "private":  true,
+    "name":  "demo-astro",
+    "dependencies":  {
+                         "astro":  "^5.18.2",
+                         "wireframes":  "file:C:/Users/mox/AppData/Local/Temp/wireframes-0.1.0.tgz"
+                     },
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "astro dev",
+                    "build":  "astro build"
+                }
+}

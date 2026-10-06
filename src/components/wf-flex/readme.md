@@ -18,6 +18,8 @@
 | `margin`         | `margin`          |             | `string`                                                                                        | `undefined` |
 
 
-----------------------------------------------
+## Slots
 
-*Built with [StencilJS](https://stenciljs.com/)*
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |

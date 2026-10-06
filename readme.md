@@ -24,20 +24,32 @@
 ```bash
 npm i wireframes
 ```
-```bash
-npm i wireframes-react
-```
-```bash
-npm i wireframes-vue
+
+Then import it once. It registers the `wf-*` custom elements and works in plain JavaScript, React and Vue; there are no framework-specific packages.
+
+```js
+import 'wireframes';
 ```
 
-## Packages
+Or from a CDN:
 
-| Name | Version | Downloads |
-| - | - | - |
-| [`wireframes`](https://github.com/salteadorneo/wireframes/tree/main) | [![npm version](https://img.shields.io/npm/v/wireframes.svg)](https://www.npmjs.com/package/wireframes) | [![npm downloads](https://img.shields.io/npm/dt/wireframes.svg)](https://www.npmjs.com/package/wireframes) |
-| [`wireframes-react`](https://github.com/salteadorneo/wireframes/tree/main/packages/wireframes-react) | [![npm version](https://img.shields.io/npm/v/wireframes-react.svg)](https://www.npmjs.com/package/wireframes-react) | [![npm downloads](https://img.shields.io/npm/dt/wireframes-react.svg)](https://www.npmjs.com/package/wireframes-react) |
-| [`wireframes-vue`](https://github.com/salteadorneo/wireframes/tree/main/packages/wireframes-vue) | [![npm version](https://img.shields.io/npm/v/wireframes-vue.svg)](https://www.npmjs.com/package/wireframes-vue) | [![npm downloads](https://img.shields.io/npm/dt/wireframes-vue.svg)](https://www.npmjs.com/package/wireframes-vue) |
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/wireframes/lib/index.js"></script>
+```
+
+### React
+
+Use the elements directly in JSX. With React 18 attributes are kebab-case (`aspect-ratio`). For TypeScript, add `/// <reference types="wireframes/react" />`.
+
+### Vue
+
+Tell Vue that `wf-*` tags are custom elements:
+
+```js
+app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith('wf-');
+```
+
+You can also register only some components: `import { defineWfButton } from 'wireframes'; defineWfButton();`
 
 ## Usage
 
