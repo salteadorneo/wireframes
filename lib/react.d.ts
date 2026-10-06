@@ -1,4 +1,4 @@
-import type { WfButton, WfCheckbox, WfContainer, WfFlex, WfGrid, WfHr, WfImage, WfInput, WfLink, WfLorem, WfP, WfTabs, WfTabHeader, WfTabContent, WfTitle, WfVideo } from './index';
+import type { WfButton, WfCheckbox, WfContainer, WfFlex, WfGrid, WfHr, WfImage, WfInput, WfLink, WfLorem, WfP, WfTabs, WfTabHeader, WfTabContent, WfTitle, WfVideo, WfBadge, WfProgress, WfRadio, WfRadioGroup, WfSelect, WfSlider, WfTable, WfTextarea } from './index';
 
 // Add `/// <reference types="wireframes/react" />` (or list it in tsconfig "types") to type the wf-* elements in JSX
 type Attrs<T> = import('react').DetailedHTMLProps<import('react').HTMLAttributes<T>, T> & Record<string, any>;
@@ -22,6 +22,14 @@ declare module 'react' {
       'wf-tab-content': Attrs<WfTabContent>;
       'wf-title': Attrs<WfTitle>;
       'wf-video': Attrs<WfVideo>;
+      'wf-badge': Attrs<WfBadge>;
+      'wf-progress': Attrs<WfProgress>;
+      'wf-radio': Attrs<WfRadio>;
+      'wf-radio-group': Attrs<WfRadioGroup>;
+      'wf-select': Attrs<WfSelect>;
+      'wf-slider': Attrs<WfSlider>;
+      'wf-table': Attrs<WfTable>;
+      'wf-textarea': Attrs<WfTextarea>;
     }
   }
 }
