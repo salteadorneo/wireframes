@@ -34,9 +34,11 @@
     "!lib/*.test.js"
   ],
   "scripts": {
-    "build": "cd packages/cdn && npm i && npm run build && cd ../.. && node scripts/build.mjs",
+    "docs": "node scripts/docs.mjs",
+    "docs:check": "node scripts/docs.mjs --check",
+    "build": "cd packages/cdn && npm i && npm run build && cd ../.. && node scripts/docs.mjs && node scripts/build.mjs",
     "start": "node scripts/serve.mjs",
-    "test": "node --test lib/wf.test.js",
+    "test": "node scripts/docs.mjs --check && node --test lib/wf.test.js",
     "tailwind": "npx tailwindcss -i ./src/directives.css -o ./www/tailwind.css --watch"
   },
   "devDependencies": {

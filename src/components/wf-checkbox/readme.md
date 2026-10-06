@@ -1,12 +1,9 @@
 # wf-checkbox
 
-
-
-<!-- Auto Generated Below -->
-
+Checkbox with a label.
 
 ## Slots
 
-| Slot | Description      |
-| ---- | ---------------- |
-|      | The default slot |
+| Slot | Description |
+| ---- | ----------- |
+|      | Label text  |

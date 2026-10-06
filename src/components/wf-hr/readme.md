@@ -1,12 +1,9 @@
 # wf-hr
 
-
-
-<!-- Auto Generated Below -->
-
+Horizontal line.
 
 ## Properties
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `width`  | `width`   |             | `string` | `undefined` |
+| `width`  | `width`   | Width       | `string` | `undefined` |

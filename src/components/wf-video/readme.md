@@ -1,16 +1,13 @@
 # wf-video
 
-
-
-<!-- Auto Generated Below -->
-
+Video placeholder.
 
 ## Properties
 
-| Property      | Attribute      | Description | Type     | Default     |
-| ------------- | -------------- | ----------- | -------- | ----------- |
-| `aspectRatio` | `aspect-ratio` |             | `string` | `'16 / 9'`  |
-| `height`      | `height`       |             | `string` | `undefined` |
-| `margin`      | `margin`       |             | `string` | `undefined` |
-| `maxWidth`    | `max-width`    |             | `string` | `undefined` |
-| `width`       | `width`        |             | `string` | `undefined` |
+| Property      | Attribute      | Description   | Type     | Default     |
+| ------------- | -------------- | ------------- | -------- | ----------- |
+| `width`       | `width`        | Width         | `string` | `undefined` |
+| `maxWidth`    | `max-width`    | Maximum width | `string` | `undefined` |
+| `height`      | `height`       | Height        | `string` | `undefined` |
+| `aspectRatio` | `aspect-ratio` | Aspect ratio  | `string` | `'16 / 9'`  |
+| `margin`      | `margin`       | Outer margin  | `string` | `undefined` |

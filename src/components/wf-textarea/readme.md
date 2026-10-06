@@ -1,6 +1,6 @@
-# wf-input
+# wf-textarea
 
-Text input.
+Multi-line text input.
 
 ## Properties
 
@@ -9,4 +9,5 @@ Text input.
 | `width`       | `width`       | Width            | `string`                       | `undefined` |
 | `maxWidth`    | `max-width`   | Maximum width    | `string`                       | `undefined` |
 | `placeholder` | `placeholder` | Placeholder text | `string`                       | `undefined` |
+| `rows`        | `rows`        | Visible rows     | `number \| string`             | `4`         |
 | `variant`     | `variant`     | Size             | `"sm" \| "md" \| "lg" \| "xl"` | `undefined` |

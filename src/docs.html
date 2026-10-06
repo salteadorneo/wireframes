@@ -31,10 +31,8 @@
   <link rel="stylesheet" href="main.css" />
 
   <style>
-    .container table tr th:nth-of-type(1),
-    .container table tr td:nth-of-type(1),
-    .container table tr th:nth-of-type(3),
-    .container table tr td:nth-of-type(3) {
+    .container table tr th:first-child:nth-last-child(5),
+    .container table tr td:first-child:nth-last-child(5) {
       display: none;
     }
   </style>
@@ -80,9 +78,9 @@
   </header>
   <main>
     <section>
-      <nav>
+      <nav class="docs-nav">
         <ul>
-          <li><wf-title tag="h2" variant="sm">Get started</wf-title></li>
+          <li><wf-title tag="h2" variant="xs">Get started</wf-title></li>
           <li><wf-link href="#installation">Installation</wf-link></li>
           <li style="padding-left: 16px;"><wf-link href="#installation-react">React</wf-link></li>
           <li style="padding-left: 16px;"><wf-link href="#installation-vue">Vue</wf-link></li>
@@ -93,12 +91,13 @@
           <li style="padding-left: 16px;"><wf-link href="#cdn-styles-tailwind">Styles + Tailwind CSS</wf-link></li>
           <li><wf-link href="#contributing">Contributing</wf-link></li>
           <br />
-          <li><wf-link href="#blocks"><wf-title tag="h2" variant="sm">Blocks</wf-title></wf-link></li>
+          <li><wf-link href="#blocks"><wf-title tag="h2" variant="xs">Blocks</wf-title></wf-link></li>
           <li><wf-link href="#breadcrumb">Breadcrumb</wf-link></li>
           <li><wf-link href="#cards">Cards</wf-link></li>
           <li><wf-link href="#form">Form</wf-link></li>
           <br />
-          <li><wf-link href="#components"><wf-title tag="h2" variant="sm">Components</wf-title></wf-link></li>
+          <li><wf-link href="#components"><wf-title tag="h2" variant="xs">Components</wf-title></wf-link></li>
+          <li><wf-link href="#badge">Badge</wf-link></li>
           <li><wf-link href="#button">Button</wf-link></li>
           <li><wf-link href="#checkbox">Checkbox</wf-link></li>
           <li><wf-link href="#container">Container</wf-link></li>
@@ -110,7 +109,14 @@
           <li><wf-link href="#link">Link</wf-link></li>
           <li><wf-link href="#lorem">Lorem ipsum</wf-link></li>
           <li><wf-link href="#p">Paragraph</wf-link></li>
+          <li><wf-link href="#progress">Progress</wf-link></li>
+          <li><wf-link href="#radio">Radio</wf-link></li>
+          <li><wf-link href="#radio-group">Radio group</wf-link></li>
+          <li><wf-link href="#select">Select</wf-link></li>
+          <li><wf-link href="#slider">Slider</wf-link></li>
+          <li><wf-link href="#table">Table</wf-link></li>
           <li><wf-link href="#tabs">Tabs</wf-link></li>
+          <li><wf-link href="#textarea">Textarea</wf-link></li>
           <li><wf-link href="#title">Title</wf-link></li>
           <li><wf-link href="#video">Video</wf-link></li>
         </ul>

@@ -1,22 +1,18 @@
 # wf-title
 
-
-
-<!-- Auto Generated Below -->
-
+Heading.
 
 ## Properties
 
-| Property     | Attribute     | Description | Type                                           | Default     |
-| ------------ | ------------- | ----------- | ---------------------------------------------- | ----------- |
-| `fontWeight` | `font-weight` |             | `string`                                       | `undefined` |
-| `tag`        | `tag`         |             | `"h1" \| "h2" \| "h3" \| "h4" \| "h5" \| "h6"` | `'h1'`      |
-| `textAlign`  | `text-align`  |             | `string`                                       | `undefined` |
-| `variant`    | `variant`     |             | `"lg" \| "md" \| "sm" \| "xl"`                 | `undefined` |
-
+| Property     | Attribute     | Description    | Type                                           | Default     |
+| ------------ | ------------- | -------------- | ---------------------------------------------- | ----------- |
+| `tag`        | `tag`         | Heading tag    | `"h1" \| "h2" \| "h3" \| "h4" \| "h5" \| "h6"` | `'h1'`      |
+| `fontWeight` | `font-weight` | Font weight    | `string`                                       | `undefined` |
+| `textAlign`  | `text-align`  | Text alignment | `string`                                       | `undefined` |
+| `variant`    | `variant`     | Size           | `"sm" \| "md" \| "lg" \| "xl"`                 | `undefined` |
 
 ## Slots
 
-| Slot | Description      |
-| ---- | ---------------- |
-|      | The default slot |
+| Slot | Description  |
+| ---- | ------------ |
+|      | Heading text |

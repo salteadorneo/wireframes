@@ -14,18 +14,24 @@ function renderComponent(component, code) {
   </section>`
   document.querySelector(`#${component} code`).textContent = code.replace(/%3C/g, '<').replace(/%3E/g, '>');
 
-  fetch(`https://raw.githubusercontent.com/salteadorneo/wireframes/main/src/components/wf-${component}/readme.md`)
-    .then(response => response.text())
+  fetch(`components/wf-${component}/readme.md`)
+    .then(response => response.ok ? response.text() : '')
     .then(text => {
       text = text.split('\n').slice(1).join('\n');
-      text = text.split('\n').slice(0, -4).join('\n');
-      text = text.replace(/## Properties/g, '#### Properties');
+      text = text.replace(/^(#+) /gm, '$1## ');
       text = text.replace(/`undefined`/g, '');
       text = text.replace(/`/g, '');
       text = text.replace(/"/g, '');
       document.querySelector(`#${component}`).insertAdjacentHTML('beforeend', marked.parse(text));
     });
 }
+
+renderComponent('badge', `<wf-flex align-items="center" gap="1rem" flex-wrap="wrap">
+  <wf-badge variant="sm"></wf-badge>
+  <wf-badge>New</wf-badge>
+  <wf-badge variant="lg">Beta</wf-badge>
+  <wf-badge variant="xl">Pro</wf-badge>
+</wf-flex>`);
 
 renderComponent('button', `<wf-button variant="sm"></wf-button>
 <wf-button></wf-button>
@@ -70,6 +76,34 @@ renderComponent('lorem', `<wf-lorem words="250"></wf-lorem>`);
 
 renderComponent('p', `<wf-p>Default text</wf-p>`);
 
+renderComponent('progress', `<wf-grid gap="1rem" style="width:260px;">
+  <wf-progress value="25"></wf-progress>
+  <wf-progress value="60" variant="lg"></wf-progress>
+  <wf-progress></wf-progress>
+</wf-grid>`);
+
+renderComponent('radio', `<wf-radio name="plan" checked>Free</wf-radio>
+<wf-radio name="plan">Pro</wf-radio>`);
+
+renderComponent('radio-group', `<wf-radio-group>
+  <wf-radio value="small" checked>Small</wf-radio>
+  <wf-radio value="medium">Medium</wf-radio>
+  <wf-radio value="large">Large</wf-radio>
+</wf-radio-group>
+
+<wf-radio-group direction="row" gap="1.5rem">
+  <wf-radio value="yes" checked>Yes</wf-radio>
+  <wf-radio value="no">No</wf-radio>
+</wf-radio-group>`);
+
+renderComponent('select', `<wf-select placeholder="Select an option" width="210px"></wf-select>
+
+<wf-select options="Spain,France,Italy" width="210px"></wf-select>`);
+
+renderComponent('slider', `<wf-slider value="40" width="220px"></wf-slider>`);
+
+renderComponent('table', `<wf-table rows="4" cols="3" header width="360px"></wf-table>`);
+
 renderComponent('tabs', `<wf-tabs>
   <wf-tab-header slot="header" name="tab1">Tab 1</wf-tab-header>
   <wf-tab-header slot="header" name="tab2">Tab 2</wf-tab-header>
@@ -90,6 +124,8 @@ renderComponent('tabs', `<wf-tabs>
     </wf-p>
   </wf-tab-content>
 </wf-tabs>`)
+
+renderComponent('textarea', `<wf-textarea placeholder="Write a message" rows="4" width="260px"></wf-textarea>`);
 
 renderComponent('title', `<wf-title tag="h4">Default title</wf-title>
   

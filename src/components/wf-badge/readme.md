@@ -1,6 +1,6 @@
-# wf-button
+# wf-badge
 
-Button.
+Small label for statuses, tags and counters.
 
 ## Properties
 
@@ -15,4 +15,4 @@ Button.
 
 | Slot | Description |
 | ---- | ----------- |
-|      | Button text |
+|      | Badge text  |

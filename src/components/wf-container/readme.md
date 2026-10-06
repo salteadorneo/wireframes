@@ -1,20 +1,16 @@
 # wf-container
 
-
-
-<!-- Auto Generated Below -->
-
+Box that wraps its content.
 
 ## Properties
 
-| Property  | Attribute | Description | Type     | Default     |
-| --------- | --------- | ----------- | -------- | ----------- |
-| `padding` | `padding` |             | `string` | `undefined` |
-| `width`   | `width`   |             | `string` | `undefined` |
-
+| Property  | Attribute | Description   | Type     | Default     |
+| --------- | --------- | ------------- | -------- | ----------- |
+| `width`   | `width`   | Width         | `string` | `undefined` |
+| `padding` | `padding` | Inner padding | `string` | `undefined` |
 
 ## Slots
 
-| Slot | Description      |
-| ---- | ---------------- |
-|      | The default slot |
+| Slot | Description |
+| ---- | ----------- |
+|      | Content     |

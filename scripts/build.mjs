@@ -18,6 +18,12 @@ for (const entry of await readdir(path.join(root, 'src'), { withFileTypes: true 
   }
 }
 
+// Component readmes shown in the docs
+await cp(path.join(root, 'src', 'components'), path.join(www, 'components'), {
+  recursive: true,
+  filter: (src) => !path.extname(src) || src.endsWith('readme.md'),
+});
+
 // Component library
 await cp(path.join(root, 'lib'), path.join(www, 'lib'), {
   recursive: true,

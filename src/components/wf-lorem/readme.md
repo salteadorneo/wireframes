@@ -1,12 +1,9 @@
 # wf-lorem
 
-
-
-<!-- Auto Generated Below -->
-
+Placeholder text.
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default |
-| -------- | --------- | ----------- | -------- | ------- |
-| `words`  | `words`   |             | `number` | `2`     |
+| Property | Attribute | Description     | Type               | Default |
+| -------- | --------- | --------------- | ------------------ | ------- |
+| `words`  | `words`   | Number of words | `number \| string` | `2`     |

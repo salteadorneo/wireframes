@@ -1,20 +1,16 @@
-# wf-button
+# wf-p
 
-
-
-<!-- Auto Generated Below -->
-
+Paragraph.
 
 ## Properties
 
-| Property    | Attribute    | Description      | Type                                         | Default     |
-| ----------- | ------------ | ---------------- | -------------------------------------------- | ----------- |
-| `fontSize`  | `font-size`  | Size of the font | `string`                                     | `undefined` |
-| `textAlign` | `text-align` | Text align       | `"center" \| "justify" \| "left" \| "right"` | `undefined` |
-
+| Property    | Attribute    | Description    | Type                                         | Default     |
+| ----------- | ------------ | -------------- | -------------------------------------------- | ----------- |
+| `fontSize`  | `font-size`  | Font size      | `string`                                     | `undefined` |
+| `textAlign` | `text-align` | Text alignment | `"left" \| "center" \| "right" \| "justify"` | `undefined` |
 
 ## Slots
 
-| Slot | Description      |
-| ---- | ---------------- |
-|      | The default slot |
+| Slot | Description |
+| ---- | ----------- |
+|      | Text        |

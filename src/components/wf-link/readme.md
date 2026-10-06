@@ -1,20 +1,16 @@
 # wf-link
 
-
-
-<!-- Auto Generated Below -->
-
+Link.
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `href`   | `href`    |             | `string` | `undefined` |
-| `target` | `target`  |             | `string` | `undefined` |
-
+| Property | Attribute | Description                           | Type     | Default     |
+| -------- | --------- | ------------------------------------- | -------- | ----------- |
+| `href`   | `href`    | URL the link points to                | `string` | `undefined` |
+| `target` | `target`  | Where to open the link, e.g. `_blank` | `string` | `undefined` |
 
 ## Slots
 
-| Slot | Description      |
-| ---- | ---------------- |
-|      | The default slot |
+| Slot | Description |
+| ---- | ----------- |
+|      | Link text   |
