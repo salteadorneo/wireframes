@@ -54,15 +54,17 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
         working-directory: ${{ env.BUILD_PATH }}
-      - name: Build with Astro
+      - name: Build site
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} run build
         working-directory: ${{ env.BUILD_PATH }}
