@@ -15,6 +15,13 @@
 | `variant`         | `variant`          |             | `"lg" \| "md" \| "sm" \| "xl"` | `undefined` |
 
 
+## Slots
+
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

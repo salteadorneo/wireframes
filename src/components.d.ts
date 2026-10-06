@@ -324,45 +324,121 @@ declare namespace LocalJSX {
         "maxWidth"?: string;
         "width"?: string;
     }
+
+    interface WfButtonAttributes {
+        "backgroundColor": string;
+        "color": string;
+        "borderColor": string;
+        "variant": 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface WfContainerAttributes {
+        "width": string;
+        "padding": string;
+    }
+    interface WfFlexAttributes {
+        "alignItems": 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
+        "justifyContent": 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
+        "gap": string;
+        "margin": string;
+        "height": string;
+        "flexDirection": string;
+        "flexWrap": 'wrap' | 'nowrap' | 'wrap-reverse';
+    }
+    interface WfGridAttributes {
+        "alignItems": 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
+        "justifyContent": 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
+        "justifyItems": 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
+        "gap": string;
+    }
+    interface WfHrAttributes {
+        "width": string;
+    }
+    interface WfImageAttributes {
+        "width": string;
+        "height": string;
+        "aspectRatio": string;
+        "text": string;
+        "borderRadius": string;
+    }
+    interface WfInputAttributes {
+        "width": string;
+        "maxWidth": string;
+        "placeholder": string;
+        "variant": 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface WfLinkAttributes {
+        "href": string;
+        "target": string;
+    }
+    interface WfLoremAttributes {
+        "words": number;
+    }
+    interface WfPAttributes {
+        "fontSize": string;
+        "textAlign": 'left' | 'center' | 'right' | 'justify';
+    }
+    interface WfTabContentAttributes {
+        "name": string;
+    }
+    interface WfTabHeaderAttributes {
+        "name": string;
+    }
+    interface WfTabsAttributes {
+        "names": string;
+    }
+    interface WfTitleAttributes {
+        "tag": 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+        "fontWeight": string;
+        "textAlign": string;
+        "variant": 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface WfVideoAttributes {
+        "width": string;
+        "maxWidth": string;
+        "height": string;
+        "aspectRatio": string;
+        "margin": string;
+    }
+
     interface IntrinsicElements {
-        "wf-button": WfButton;
+        "wf-button": Omit<WfButton, keyof WfButtonAttributes> & { [K in keyof WfButton & keyof WfButtonAttributes]?: WfButton[K] } & { [K in keyof WfButton & keyof WfButtonAttributes as `attr:${K}`]?: WfButtonAttributes[K] } & { [K in keyof WfButton & keyof WfButtonAttributes as `prop:${K}`]?: WfButton[K] };
         "wf-checkbox": WfCheckbox;
-        "wf-container": WfContainer;
-        "wf-flex": WfFlex;
-        "wf-grid": WfGrid;
-        "wf-hr": WfHr;
-        "wf-image": WfImage;
-        "wf-input": WfInput;
-        "wf-link": WfLink;
-        "wf-lorem": WfLorem;
-        "wf-p": WfP;
-        "wf-tab-content": WfTabContent;
-        "wf-tab-header": WfTabHeader;
-        "wf-tabs": WfTabs;
-        "wf-title": WfTitle;
-        "wf-video": WfVideo;
+        "wf-container": Omit<WfContainer, keyof WfContainerAttributes> & { [K in keyof WfContainer & keyof WfContainerAttributes]?: WfContainer[K] } & { [K in keyof WfContainer & keyof WfContainerAttributes as `attr:${K}`]?: WfContainerAttributes[K] } & { [K in keyof WfContainer & keyof WfContainerAttributes as `prop:${K}`]?: WfContainer[K] };
+        "wf-flex": Omit<WfFlex, keyof WfFlexAttributes> & { [K in keyof WfFlex & keyof WfFlexAttributes]?: WfFlex[K] } & { [K in keyof WfFlex & keyof WfFlexAttributes as `attr:${K}`]?: WfFlexAttributes[K] } & { [K in keyof WfFlex & keyof WfFlexAttributes as `prop:${K}`]?: WfFlex[K] };
+        "wf-grid": Omit<WfGrid, keyof WfGridAttributes> & { [K in keyof WfGrid & keyof WfGridAttributes]?: WfGrid[K] } & { [K in keyof WfGrid & keyof WfGridAttributes as `attr:${K}`]?: WfGridAttributes[K] } & { [K in keyof WfGrid & keyof WfGridAttributes as `prop:${K}`]?: WfGrid[K] };
+        "wf-hr": Omit<WfHr, keyof WfHrAttributes> & { [K in keyof WfHr & keyof WfHrAttributes]?: WfHr[K] } & { [K in keyof WfHr & keyof WfHrAttributes as `attr:${K}`]?: WfHrAttributes[K] } & { [K in keyof WfHr & keyof WfHrAttributes as `prop:${K}`]?: WfHr[K] };
+        "wf-image": Omit<WfImage, keyof WfImageAttributes> & { [K in keyof WfImage & keyof WfImageAttributes]?: WfImage[K] } & { [K in keyof WfImage & keyof WfImageAttributes as `attr:${K}`]?: WfImageAttributes[K] } & { [K in keyof WfImage & keyof WfImageAttributes as `prop:${K}`]?: WfImage[K] };
+        "wf-input": Omit<WfInput, keyof WfInputAttributes> & { [K in keyof WfInput & keyof WfInputAttributes]?: WfInput[K] } & { [K in keyof WfInput & keyof WfInputAttributes as `attr:${K}`]?: WfInputAttributes[K] } & { [K in keyof WfInput & keyof WfInputAttributes as `prop:${K}`]?: WfInput[K] };
+        "wf-link": Omit<WfLink, keyof WfLinkAttributes> & { [K in keyof WfLink & keyof WfLinkAttributes]?: WfLink[K] } & { [K in keyof WfLink & keyof WfLinkAttributes as `attr:${K}`]?: WfLinkAttributes[K] } & { [K in keyof WfLink & keyof WfLinkAttributes as `prop:${K}`]?: WfLink[K] };
+        "wf-lorem": Omit<WfLorem, keyof WfLoremAttributes> & { [K in keyof WfLorem & keyof WfLoremAttributes]?: WfLorem[K] } & { [K in keyof WfLorem & keyof WfLoremAttributes as `attr:${K}`]?: WfLoremAttributes[K] } & { [K in keyof WfLorem & keyof WfLoremAttributes as `prop:${K}`]?: WfLorem[K] };
+        "wf-p": Omit<WfP, keyof WfPAttributes> & { [K in keyof WfP & keyof WfPAttributes]?: WfP[K] } & { [K in keyof WfP & keyof WfPAttributes as `attr:${K}`]?: WfPAttributes[K] } & { [K in keyof WfP & keyof WfPAttributes as `prop:${K}`]?: WfP[K] };
+        "wf-tab-content": Omit<WfTabContent, keyof WfTabContentAttributes> & { [K in keyof WfTabContent & keyof WfTabContentAttributes]?: WfTabContent[K] } & { [K in keyof WfTabContent & keyof WfTabContentAttributes as `attr:${K}`]?: WfTabContentAttributes[K] } & { [K in keyof WfTabContent & keyof WfTabContentAttributes as `prop:${K}`]?: WfTabContent[K] };
+        "wf-tab-header": Omit<WfTabHeader, keyof WfTabHeaderAttributes> & { [K in keyof WfTabHeader & keyof WfTabHeaderAttributes]?: WfTabHeader[K] } & { [K in keyof WfTabHeader & keyof WfTabHeaderAttributes as `attr:${K}`]?: WfTabHeaderAttributes[K] } & { [K in keyof WfTabHeader & keyof WfTabHeaderAttributes as `prop:${K}`]?: WfTabHeader[K] };
+        "wf-tabs": Omit<WfTabs, keyof WfTabsAttributes> & { [K in keyof WfTabs & keyof WfTabsAttributes]?: WfTabs[K] } & { [K in keyof WfTabs & keyof WfTabsAttributes as `attr:${K}`]?: WfTabsAttributes[K] } & { [K in keyof WfTabs & keyof WfTabsAttributes as `prop:${K}`]?: WfTabs[K] };
+        "wf-title": Omit<WfTitle, keyof WfTitleAttributes> & { [K in keyof WfTitle & keyof WfTitleAttributes]?: WfTitle[K] } & { [K in keyof WfTitle & keyof WfTitleAttributes as `attr:${K}`]?: WfTitleAttributes[K] } & { [K in keyof WfTitle & keyof WfTitleAttributes as `prop:${K}`]?: WfTitle[K] };
+        "wf-video": Omit<WfVideo, keyof WfVideoAttributes> & { [K in keyof WfVideo & keyof WfVideoAttributes]?: WfVideo[K] } & { [K in keyof WfVideo & keyof WfVideoAttributes as `attr:${K}`]?: WfVideoAttributes[K] } & { [K in keyof WfVideo & keyof WfVideoAttributes as `prop:${K}`]?: WfVideo[K] };
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "wf-button": LocalJSX.WfButton & JSXBase.HTMLAttributes<HTMLWfButtonElement>;
-            "wf-checkbox": LocalJSX.WfCheckbox & JSXBase.HTMLAttributes<HTMLWfCheckboxElement>;
-            "wf-container": LocalJSX.WfContainer & JSXBase.HTMLAttributes<HTMLWfContainerElement>;
-            "wf-flex": LocalJSX.WfFlex & JSXBase.HTMLAttributes<HTMLWfFlexElement>;
-            "wf-grid": LocalJSX.WfGrid & JSXBase.HTMLAttributes<HTMLWfGridElement>;
-            "wf-hr": LocalJSX.WfHr & JSXBase.HTMLAttributes<HTMLWfHrElement>;
-            "wf-image": LocalJSX.WfImage & JSXBase.HTMLAttributes<HTMLWfImageElement>;
-            "wf-input": LocalJSX.WfInput & JSXBase.HTMLAttributes<HTMLWfInputElement>;
-            "wf-link": LocalJSX.WfLink & JSXBase.HTMLAttributes<HTMLWfLinkElement>;
-            "wf-lorem": LocalJSX.WfLorem & JSXBase.HTMLAttributes<HTMLWfLoremElement>;
-            "wf-p": LocalJSX.WfP & JSXBase.HTMLAttributes<HTMLWfPElement>;
-            "wf-tab-content": LocalJSX.WfTabContent & JSXBase.HTMLAttributes<HTMLWfTabContentElement>;
-            "wf-tab-header": LocalJSX.WfTabHeader & JSXBase.HTMLAttributes<HTMLWfTabHeaderElement>;
-            "wf-tabs": LocalJSX.WfTabs & JSXBase.HTMLAttributes<HTMLWfTabsElement>;
-            "wf-title": LocalJSX.WfTitle & JSXBase.HTMLAttributes<HTMLWfTitleElement>;
-            "wf-video": LocalJSX.WfVideo & JSXBase.HTMLAttributes<HTMLWfVideoElement>;
+            "wf-button": LocalJSX.IntrinsicElements["wf-button"] & JSXBase.HTMLAttributes<HTMLWfButtonElement>;
+            "wf-checkbox": LocalJSX.IntrinsicElements["wf-checkbox"] & JSXBase.HTMLAttributes<HTMLWfCheckboxElement>;
+            "wf-container": LocalJSX.IntrinsicElements["wf-container"] & JSXBase.HTMLAttributes<HTMLWfContainerElement>;
+            "wf-flex": LocalJSX.IntrinsicElements["wf-flex"] & JSXBase.HTMLAttributes<HTMLWfFlexElement>;
+            "wf-grid": LocalJSX.IntrinsicElements["wf-grid"] & JSXBase.HTMLAttributes<HTMLWfGridElement>;
+            "wf-hr": LocalJSX.IntrinsicElements["wf-hr"] & JSXBase.HTMLAttributes<HTMLWfHrElement>;
+            "wf-image": LocalJSX.IntrinsicElements["wf-image"] & JSXBase.HTMLAttributes<HTMLWfImageElement>;
+            "wf-input": LocalJSX.IntrinsicElements["wf-input"] & JSXBase.HTMLAttributes<HTMLWfInputElement>;
+            "wf-link": LocalJSX.IntrinsicElements["wf-link"] & JSXBase.HTMLAttributes<HTMLWfLinkElement>;
+            "wf-lorem": LocalJSX.IntrinsicElements["wf-lorem"] & JSXBase.HTMLAttributes<HTMLWfLoremElement>;
+            "wf-p": LocalJSX.IntrinsicElements["wf-p"] & JSXBase.HTMLAttributes<HTMLWfPElement>;
+            "wf-tab-content": LocalJSX.IntrinsicElements["wf-tab-content"] & JSXBase.HTMLAttributes<HTMLWfTabContentElement>;
+            "wf-tab-header": LocalJSX.IntrinsicElements["wf-tab-header"] & JSXBase.HTMLAttributes<HTMLWfTabHeaderElement>;
+            "wf-tabs": LocalJSX.IntrinsicElements["wf-tabs"] & JSXBase.HTMLAttributes<HTMLWfTabsElement>;
+            "wf-title": LocalJSX.IntrinsicElements["wf-title"] & JSXBase.HTMLAttributes<HTMLWfTitleElement>;
+            "wf-video": LocalJSX.IntrinsicElements["wf-video"] & JSXBase.HTMLAttributes<HTMLWfVideoElement>;
         }
     }
 }

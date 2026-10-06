@@ -12,6 +12,14 @@
 | `names`  | `names`   |             | `string` | `undefined` |
 
 
+## Slots
+
+| Slot        | Description |
+| ----------- | ----------- |
+| `"content"` |             |
+| `"header"`  |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
