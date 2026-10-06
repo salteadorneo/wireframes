@@ -1,0 +1,17 @@
+{
+    "name":  "demo-vue",
+    "scripts":  {
+                    "dev":  "vite",
+                    "build":  "vite build"
+                },
+    "devDependencies":  {
+                            "vite":  "^7.0.0",
+                            "@vitejs/plugin-vue":  "^6.0.0"
+                        },
+    "type":  "module",
+    "dependencies":  {
+                         "vue":  "^3.5.0",
+                         "wireframes":  "file:C:/Users/mox/AppData/Local/Temp/wireframes-0.1.0.tgz"
+                     },
+    "private":  true
+}

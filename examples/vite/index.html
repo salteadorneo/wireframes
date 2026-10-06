@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireframes + Vite</title>
+  </head>
+  <body>
+    <div id="app" style="padding: 2rem">
+      <wf-title tag="h2">Wireframes + Vite</wf-title>
+      <wf-p>Plain JavaScript, no framework.</wf-p>
+      <wf-flex gap="1rem" align-items="center">
+        <wf-image width="80px" text="Logo"></wf-image>
+        <wf-input placeholder="Email" width="220px"></wf-input>
+        <wf-button id="send" variant="lg">Send</wf-button>
+      </wf-flex>
+      <wf-tabs>
+        <wf-tab-header slot="header" name="a">Tab A</wf-tab-header>
+        <wf-tab-header slot="header" name="b">Tab B</wf-tab-header>
+        <wf-tab-content slot="content" name="a"><wf-lorem words="20"></wf-lorem></wf-tab-content>
+        <wf-tab-content slot="content" name="b"><wf-video width="300px"></wf-video></wf-tab-content>
+      </wf-tabs>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
