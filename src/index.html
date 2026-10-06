@@ -116,34 +116,24 @@
     <section id="installation" style="padding: 3rem 0 2rem 0;">
       <div style="max-width:900px;margin:auto;">
         <wf-title tag="h2" variant="md">Installation</wf-title>
-        <wf-p style="margin-bottom:2rem;">Choose your preferred method to start using Wireframes:</wf-p>
+        <wf-p style="margin-bottom:2rem;">Wireframes is a framework-agnostic Web Components library. Install it once and use its <code>wf-*</code> elements in plain HTML, React, Vue, Svelte, Next.js, and other projects.</wf-p>
         <wf-tabs>
-          <wf-tab-header slot="header" name="npm">NPM</wf-tab-header>
-          <wf-tab-header slot="header" name="react">React</wf-tab-header>
-          <wf-tab-header slot="header" name="vue">Vue</wf-tab-header>
+          <wf-tab-header slot="header" name="npm">Package</wf-tab-header>
           <wf-tab-header slot="header" name="cdn">CDN</wf-tab-header>
           <wf-tab-content slot="content" name="npm">
-            <pre><code>npm i wireframes</code></pre><br />
-            <wf-p>Then initialize:</wf-p>
-            <pre><code>import 'wireframes';</code></pre><br />
-            <wf-flex gap="0.7rem" style="margin-top:1.5rem;">
-              <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank" variant="primary">NPM</wf-link>
-            </wf-flex>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="react">
-            <pre><code>npm i wireframes</code></pre><br />
-            <pre><code>import 'wireframes';</code></pre><br />
-            <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank" variant="primary">NPM</wf-link>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="vue">
-            <pre><code>npm i wireframes</code></pre><br />
-            <pre><code>import 'wireframes';</code></pre><br />
-            <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank" variant="primary">NPM</wf-link>
+            <pre><code>npm install wireframes</code></pre>
+            <wf-p>Import once in your application entry point to register the custom elements:</wf-p>
+            <pre><code>import 'wireframes';</code></pre>
           </wf-tab-content>
           <wf-tab-content slot="content" name="cdn">
             <pre><code>&lt;script type="module" src="https://cdn.jsdelivr.net/npm/wireframes/lib/index.js"&gt;&lt;/script&gt;</code></pre>
           </wf-tab-content>
         </wf-tabs>
+        <wf-flex gap="1.5rem" style="margin-top:1.5rem;">
+          <wf-link href="docs.html#installation">Framework setup</wf-link>
+          <wf-link href="https://github.com/salteadorneo/wireframes/tree/main/examples" target="_blank">Examples</wf-link>
+          <wf-link href="https://www.npmjs.com/package/wireframes" target="_blank">NPM</wf-link>
+        </wf-flex>
       </div>
     </section>
   </main>

@@ -1,6 +1,6 @@
 # Wireframes
 
-**Wireframes** is a set of components for building wireframes and prototypes with React, Vue or JavaScript.
+**Wireframes** is a set of Web Components for building wireframes and prototypes in any project or framework.
 
 <p align="center">
   <a href="./LICENSE">
@@ -21,27 +21,35 @@
 
 ## Installation
 
+Install the package:
+
 ```bash
-npm i wireframes
+npm install wireframes
 ```
 
-Then import it once. It registers the `wf-*` custom elements and works in plain JavaScript, React and Vue; there are no framework-specific packages.
+Import it once in your application entry point. This registers all `wf-*` custom elements; no framework-specific package is required.
 
 ```js
 import 'wireframes';
 ```
 
-Or from a CDN:
+To load it without a package manager, use the CDN build:
 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/wireframes/lib/index.js"></script>
 ```
 
-### React
+See the [project examples](https://github.com/salteadorneo/wireframes/tree/main/examples) for working integrations.
 
-Use the elements directly in JSX. With React 18 attributes are kebab-case (`aspect-ratio`). For TypeScript, add `/// <reference types="wireframes/react" />`.
+### Framework integration
 
-### Vue
+The components are standard custom elements, so you can use them directly in HTML templates. Import `wireframes` once in the application entry point, or follow the framework-specific notes below.
+
+#### React
+
+Use the elements directly in JSX. With React 18, use kebab-case attributes such as `aspect-ratio`. For TypeScript, add `/// <reference types="wireframes/react" />`.
+
+#### Vue
 
 Tell Vue that `wf-*` tags are custom elements:
 
@@ -49,7 +57,54 @@ Tell Vue that `wf-*` tags are custom elements:
 app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith('wf-');
 ```
 
-You can also register only some components: `import { defineWfButton } from 'wireframes'; defineWfButton();`
+You can also register only selected components instead of importing the full library:
+
+```js
+import { defineWfButton } from 'wireframes';
+
+defineWfButton();
+```
+
+#### Svelte
+
+Import the package once from your app entry point or a component:
+
+```svelte
+<script>
+  import 'wireframes';
+</script>
+
+<wf-button>Click me</wf-button>
+```
+
+In SvelteKit, import it on the client with `onMount`:
+
+```svelte
+<script>
+  import { onMount } from 'svelte';
+
+  onMount(() => import('wireframes'));
+</script>
+```
+
+#### Next.js
+
+In the App Router, load the package from a client component so its custom elements are registered in the browser:
+
+```tsx
+/// <reference types="wireframes/react" />
+'use client';
+
+import { useEffect } from 'react';
+
+export function WireframesButton() {
+  useEffect(() => {
+    import('wireframes');
+  }, []);
+
+  return <wf-button>Click me</wf-button>;
+}
+```
 
 ## Usage
 

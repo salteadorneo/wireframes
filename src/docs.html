@@ -86,7 +86,8 @@
           <li><wf-link href="#installation">Installation</wf-link></li>
           <li style="padding-left: 16px;"><wf-link href="#installation-react">React</wf-link></li>
           <li style="padding-left: 16px;"><wf-link href="#installation-vue">Vue</wf-link></li>
-          <li style="padding-left: 16px;"><wf-link href="#installation-javascript">JavaScript</wf-link></li>
+          <li style="padding-left: 16px;"><wf-link href="#installation-svelte">Svelte</wf-link></li>
+          <li style="padding-left: 16px;"><wf-link href="#installation-next">Next.js</wf-link></li>
           <li><wf-link href="#cdn">CDN</wf-link></li>
           <li style="padding-left: 16px;"><wf-link href="#cdn-styles">Styles</wf-link></li>
           <li style="padding-left: 16px;"><wf-link href="#cdn-styles-tailwind">Styles + Tailwind CSS</wf-link></li>
@@ -120,82 +121,63 @@
         <wf-title tag="h3">Installation</wf-title>
 
         <wf-p>
-          Wireframes is available as an npm package. You can install it in your project using the package manager of
-          your
-          choice.
+          Wireframes is a framework-agnostic library of standard Web Components. Install it once and use the
+          <code>wf-*</code> custom elements in any project.
         </wf-p>
+
+        <wf-tabs>
+          <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
+          <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
+          <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
+          <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
+          <wf-tab-content slot="content" name="npm">
+            <pre><code>npm install wireframes</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="pnpm">
+            <pre><code>pnpm add wireframes</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="yarn">
+            <pre><code>yarn add wireframes</code></pre>
+          </wf-tab-content>
+          <wf-tab-content slot="content" name="bun">
+            <pre><code>bun add wireframes</code></pre>
+          </wf-tab-content>
+        </wf-tabs>
+
+        <wf-p>Import the package once in your application entry point to register the custom elements:</wf-p>
+        <pre><code class="language-js">import 'wireframes';</code></pre>
 
         <wf-title id="installation-react" tag="h4">React</wf-title>
-
-        <wf-tabs>
-          <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
-          <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
-          <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
-          <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
-          <wf-tab-content slot="content" name="npm">
-            <pre><code>npm i wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="pnpm">
-            <pre><code>pnpm i wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="yarn">
-            <pre><code>yarn add wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="bun">
-            <pre><code>bun add wireframes</code></pre>
-          </wf-tab-content>
-        </wf-tabs>
-
-        <wf-p>Import the package once (e.g. in <code>main.jsx</code>) and use the <code>wf-*</code> elements directly in JSX. With React 18 use kebab-case attributes, e.g. <code>aspect-ratio</code>. For TypeScript add <code>/// &lt;reference types="wireframes/react" /&gt;</code>.</wf-p>
+        <wf-p>Use <code>wf-*</code> elements directly in JSX. With React 18 use kebab-case attributes such as <code>aspect-ratio</code>. For TypeScript, add <code>/// &lt;reference types="wireframes/react" /&gt;</code>.</wf-p>
 
         <wf-title id="installation-vue" tag="h4">Vue</wf-title>
+        <wf-p>Import the package once and tell Vue that <code>wf-*</code> tags are custom elements: <code>app.config.compilerOptions.isCustomElement = (tag) =&gt; tag.startsWith('wf-')</code> (or configure the same option in the Vue Vite plugin).</wf-p>
 
-        <wf-tabs>
-          <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
-          <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
-          <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
-          <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
-          <wf-tab-content slot="content" name="npm">
-            <pre><code>npm i wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="pnpm">
-            <pre><code>pnpm i wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="yarn">
-            <pre><code>yarn add wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="bun">
-            <pre><code>bun add wireframes</code></pre>
-          </wf-tab-content>
-        </wf-tabs>
+        <wf-title id="installation-svelte" tag="h4">Svelte</wf-title>
+        <wf-p>Use the custom elements in Svelte markup and import <code>wireframes</code> once in your app entry point or component. In SvelteKit, load it in <code>onMount</code> so registration happens in the browser:</wf-p>
+        <pre><code class="language-svelte">&lt;script&gt;
+  import { onMount } from 'svelte';
 
-        <wf-p>Import the package once (e.g. in <code>main.js</code>) and tell Vue that <code>wf-*</code> tags are custom elements: <code>app.config.compilerOptions.isCustomElement = (tag) =&gt; tag.startsWith('wf-')</code> (or the <code>vue({ template: { compilerOptions: { isCustomElement } } })</code> option in Vite).</wf-p>
+  onMount(() =&gt; import('wireframes'));
+&lt;/script&gt;
 
-        <wf-title id="installation-javascript" tag="h4">JavaScript</wf-title>
+&lt;wf-button&gt;Click me&lt;/wf-button&gt;</code></pre>
 
-        <wf-tabs>
-          <wf-tab-header slot="header" name="npm">npm</wf-tab-header>
-          <wf-tab-header slot="header" name="pnpm">pnpm</wf-tab-header>
-          <wf-tab-header slot="header" name="yarn">yarn</wf-tab-header>
-          <wf-tab-header slot="header" name="bun">bun</wf-tab-header>
-          <wf-tab-content slot="content" name="npm">
-            <pre><code>npm i wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="pnpm">
-            <pre><code>pnpm i wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="yarn">
-            <pre><code>yarn add wireframes</code></pre>
-          </wf-tab-content>
-          <wf-tab-content slot="content" name="bun">
-            <pre><code>bun add wireframes</code></pre>
-          </wf-tab-content>
-        </wf-tabs>
+        <wf-title id="installation-next" tag="h4">Next.js</wf-title>
+        <wf-p>In the App Router, register the elements from a client component. In a TypeScript file, include the Wireframes React type reference as shown.</wf-p>
+        <pre><code class="language-tsx">/// &lt;reference types="wireframes/react" /&gt;
+'use client';
 
-        <wf-p>
-          After installing, you need to set up at the root of your application.
-        </wf-p>
-        <pre><code class="language-js">import 'wireframes';</code></pre>
+import { useEffect } from 'react';
+
+export function WireframesButton() {
+  useEffect(() =&gt; {
+    import('wireframes');
+  }, []);
+
+  return &lt;wf-button&gt;Click me&lt;/wf-button&gt;;
+}</code></pre>
+        <wf-p>See the <a href="https://github.com/salteadorneo/wireframes/tree/main/examples" target="_blank" rel="noopener noreferrer">project examples</a> for working integrations.</wf-p>
       </section>
 
       <section id="cdn" class="container">
@@ -204,7 +186,7 @@
         <wf-p>
           Alternatively, you can use the CDN to load the components in your project.
         </wf-p>
-        <pre><code>&lt;script type="module" src='https://www.unpkg.com/wireframes@latest/lib/index.js'&gt;&lt;/script&gt;</code></pre>
+        <pre><code>&lt;script type="module" src="https://cdn.jsdelivr.net/npm/wireframes/lib/index.js"&gt;&lt;/script&gt;</code></pre>
 
         <wf-title tag="h5">Example</wf-title>
 
@@ -214,7 +196,7 @@
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;script type=&quot;module&quot; src='https://www.unpkg.com/wireframes@latest/lib/index.js'&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot; src=&quot;https://cdn.jsdelivr.net/npm/wireframes/lib/index.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
