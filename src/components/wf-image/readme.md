@@ -14,8 +14,3 @@
 | `height`       | `height`        |             | `string` | `undefined` |
 | `text`         | `text`          |             | `string` | `undefined` |
 | `width`        | `width`         |             | `string` | `undefined` |
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
