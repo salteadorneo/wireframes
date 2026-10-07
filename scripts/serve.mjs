@@ -14,11 +14,14 @@ const types = {
   '.woff2': 'font/woff2',
   '.png': 'image/png',
   '.md': 'text/markdown; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8',
 };
 
-// Serves src/ directly, with /lib and /cdn mapped like in the built site
+// Serves src/ directly, with /lib and /cdn mapped like in the built site; generated files come from www/
 function resolve(urlPath) {
   const rel = decodeURIComponent(urlPath === '/' ? '/index.html' : urlPath);
+  if (rel === '/sitemap.xml' || rel === '/robots.txt') return path.join(root, 'www', rel);
   if (rel.startsWith('/lib/')) return path.join(root, rel);
   if (rel.startsWith('/cdn/')) return path.join(root, 'packages', 'cdn', 'dist', rel.slice(5));
   return path.join(root, 'src', rel);
